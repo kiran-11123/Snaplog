@@ -1,9 +1,11 @@
-import express from 'express'
-import dotenv from 'dotenv'
+import express from 'express';
 const app = express();
-dotenv.config()
+import dotenv from 'dotenv'
+dotenv.config();
+const port  = process.env.PORT;
 
-const port = process.env.PORT;
+
+
 
 
 
@@ -13,5 +15,5 @@ const port = process.env.PORT;
 
 
 app.listen(port || 5000 , ()=>{
-    console.log("Server is Running.....")
+    console.log("Server is Running")
 })
