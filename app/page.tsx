@@ -2,18 +2,23 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 
 export default function Home() {
 
    const [isOpen, setIsOpen] = useState(false);
+   const navigate = useRouter();
 
 
    function Login(){
+    navigate.push("/signin")
 
    }
 
    function Register(){
+
+    navigate.push("/signup")
 
    }
   return (
@@ -71,7 +76,7 @@ export default function Home() {
 
             <footer className="text-sm w-full bg-gray-800 text-white sm:text-2xl font-montserrat mb-2 text-center px-6 py-4">
 
-                <p>&copy; {new Date().getFullYear()} Brainly Hub. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Snap Log. All rights reserved.</p>
 
             </footer>
 
