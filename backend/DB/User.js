@@ -4,12 +4,16 @@ import mongoose  from "mongoose";
 const User_Schema = new mongoose.Schema({
      email:{type:String},
      username:{type:String},
-     files:[{
-        fileName:String,
-        fileUrl:String,
-        fileType:String,
-        uploadedAt:{type:Date ,default:Date.now()}
+     profile: {type:String},
+     data:[{
+        
+        text:{type:String},
+        images:{type:String},
+        
+
+
      }]
+       
 })
 
 

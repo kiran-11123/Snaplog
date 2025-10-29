@@ -27,7 +27,7 @@ app.use(cors({
 }))
 app.use(cookieParser());
 
-app.use("/api/v1/user/" , Auth_Router);
+app.use("/api/v1/users/" , Auth_Router);
 app.use("/api/v1/data" , data_Router)
 
 

@@ -9,12 +9,7 @@ const connectDB = (async)=>{
     try{
 
     
-    mongoose.connect(process.env.mongodb_url ,{
-
-        useNewUrlParser: true,
-           useUnifiedTopology: true,
-
-})
+    mongoose.connect(process.env.mongodb_url)
 
     
 

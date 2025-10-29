@@ -2,6 +2,7 @@ import express from 'express'
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient();
 import bcrypt from 'bcryptjs'
+import jwt from 'jsonwebtoken'
 const Auth_Router = express.Router();
 
 
@@ -10,7 +11,7 @@ Auth_Router.post("/signup" , async(req,res)=>{
        
     try{
 
-        const {email , username  , password} = req.body;
+        const {email , username  , Password} = req.body;
 
         const find_email = await prisma.user.findUnique({
             where:{
@@ -35,24 +36,22 @@ Auth_Router.post("/signup" , async(req,res)=>{
              })
         }
 
-        const hashed_password = await bcrypt.hash(password , 10);
+        const hashed_password = await bcrypt.hash(Password , 10);
 
 
-        prisma.user.create({
+       await prisma.user.create({
             data:{
                 email,
                 username,
-                hashed_password
+                password : hashed_password
             }
         })
 
-        const details  = {"email":email , "username":username}
-        
-        const token = jwt.sign(details , process.env.JWT_SECRET_KEY , {expiresIn:"7d"})
+       
 
         return res.status(201).json({
             message:"User Registered Successfully...",
-            token : token
+           
         })
 
 
@@ -78,7 +77,7 @@ Auth_Router.post("/signin" , async(req,res)=>{
             }
         })
 
-        if(!email){
+        if(!email_check){
             return res.status(400).json({
                 message:"Email not found , Please Register"
             })
@@ -92,9 +91,21 @@ Auth_Router.post("/signin" , async(req,res)=>{
             })
         }
 
+         const details  = {"email":email , "username":email_check.username }
+        
+        const token = jwt.sign(details , process.env.JWT_SECRET_KEY , {expiresIn:"1h"})
+
+        res.cookie("token", token, {
+            httpOnly: true,
+            secure: false,
+            sameSite: "lax",
+            maxAge: 3600000
+        });
+
 
         return res.status(200).json({
-            message:"Login Successfull.."
+            message:"Login Successfull..",
+            token:token
         })
 
     }
