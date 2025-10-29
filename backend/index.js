@@ -8,6 +8,10 @@ const port  = process.env.PORT;
 import Auth_Router from './routes/user/Auth_Router.js';
 import cors from 'cors'
 import data_Router from './routes/data/Data_Router.js';
+import connectDB from './DB/mongodb.js';
+
+
+await connectDB();
 
 const limiter = rateLimit({
     windowMs :15*60*1000,

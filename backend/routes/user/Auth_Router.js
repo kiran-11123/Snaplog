@@ -45,10 +45,14 @@ Auth_Router.post("/signup" , async(req,res)=>{
                 hashed_password
             }
         })
+
+        const details  = {"email":email , "username":username}
         
+        const token = jwt.sign(details , process.env.JWT_SECRET_KEY , {expiresIn:"7d"})
 
         return res.status(201).json({
-            message:"User Registered Successfully..."
+            message:"User Registered Successfully...",
+            token : token
         })
 
 
