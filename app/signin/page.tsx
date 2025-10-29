@@ -1,6 +1,8 @@
 "use client"
-import { useState } from "react"
+import { useState  } from "react"
+import axios from "axios";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Signin(){
 
@@ -8,10 +10,62 @@ export default function Signin(){
     const [Password , setPassword] = useState('')
     const [message , setMessage] = useState('');
 
+    const router = useRouter();
+
 
     async function SubmitForm(e:any) {
 
         e.preventDefault();
+
+        try{
+
+            const response  = await axios.post("http://localhost:5000/api/v1/users/signin", {
+                email,
+                Password
+            } ,{
+                withCredentials:true
+            })
+
+            if(response.status===200){
+                
+                localStorage.setItem("token" , response.data.token);
+                setMessage("Login Successfull...")
+
+                setTimeout(()=>{
+                   setMessage('');
+                   setEmail('')
+                   setPassword('');
+                },2000)
+                
+                router.replace("/home")
+ 
+            }
+            else{
+                 
+                setMessage(response.data.message);
+            }
+
+        }
+        catch(er){
+             if (typeof er === "object" && er !== null && "response" in er) {
+                const error = er as any;
+                if (error.response && error.response.data && error.response.data.message) {
+                    setMessage(error.response.data.message);
+                } else {
+                    setMessage('error in login');
+                }
+            } else {
+                setMessage('error in login');
+            }
+
+
+            setTimeout(() => {
+                setMessage('')
+                setEmail('')
+                setPassword('')
+              
+            }, 3000)
+        }
         
     }
      

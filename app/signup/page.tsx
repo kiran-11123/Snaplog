@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import Link from "next/link";
-
+import axios from "axios";
 export default function signup(){
 
     const[email , setEmail ] = useState('');
@@ -11,6 +11,57 @@ export default function signup(){
 
 
     async function  submitForm(e:any) {
+
+        e.preventDefault();
+
+        try{
+
+            const response = await axios.post("http://localhost:5000/api/v1/users/signup" ,{
+                email,
+                username,
+                Password,
+            },{
+                withCredentials:true
+            })
+
+            if(response.status===201){
+                 setMessage(response.data.message);
+
+                 setTimeout(()=>{
+
+                    setMessage('');
+                    setEmail('');
+                    setPassword('');
+                    setUsername('');
+
+                 },2000)
+            }
+            else{
+
+                setMessage(response.data.message);
+            }
+
+        }
+        catch(er){
+            if (typeof er === "object" && er !== null && "response" in er) {
+                const error = er as any;
+                if (error.response && error.response.data && error.response.data.message) {
+                    setMessage(error.response.data.message);
+                } else {
+                    setMessage('error in login');
+                }
+            } else {
+                setMessage('error in login');
+            }
+
+
+            setTimeout(() => {
+                setMessage('')
+                setEmail('')
+                setPassword('')
+                setUsername('')
+            }, 3000)
+        }
         
     }
        
