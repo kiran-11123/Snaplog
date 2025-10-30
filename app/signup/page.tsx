@@ -16,6 +16,16 @@ export default function signup(){
 
         try{
 
+            if(!email || !username || !Password){
+                setMessage("All fields are required");
+                return;
+            }
+
+            if(Password.length <5){
+                setMessage("Password length must be more than 5 characters")
+                return;
+            }
+
             const response = await axios.post("http://localhost:5000/api/v1/users/signup" ,{
                 email,
                 username,
