@@ -71,6 +71,8 @@ Auth_Router.post("/signin" , async(req,res)=>{
 
         const {email , Password } = req.body;
 
+      
+
         const email_check = await prisma.user.findUnique({
             where:{
                 email
@@ -84,7 +86,7 @@ Auth_Router.post("/signin" , async(req,res)=>{
         }
 
         const password_check = await bcrypt.compare(Password , email_check.password);
-
+        
         if(!password_check) {
              return res.status(400).json({
                 message:"Password is Wrong"
@@ -92,8 +94,12 @@ Auth_Router.post("/signin" , async(req,res)=>{
         }
 
          const details  = {"email":email , "username":email_check.username }
+
+
         
-        const token = jwt.sign(details , process.env.JWT_SECRET_KEY , {expiresIn:"1h"})
+        const token = jwt.sign(details , process.env.JWT_SECRET , {expiresIn:"1h"})
+
+      
 
         res.cookie("token", token, {
             httpOnly: true,
@@ -101,7 +107,8 @@ Auth_Router.post("/signin" , async(req,res)=>{
             sameSite: "lax",
             maxAge: 3600000
         });
-
+        
+        console.log("before")
 
         return res.status(200).json({
             message:"Login Successfull..",
