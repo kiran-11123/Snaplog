@@ -69,7 +69,7 @@ Auth_Router.post("/signin" , async(req,res)=>{
       
     try{
 
-        const {email , password } = req.body;
+        const {email , Password } = req.body;
 
         const email_check = await prisma.user.findUnique({
             where:{
@@ -83,7 +83,7 @@ Auth_Router.post("/signin" , async(req,res)=>{
             })
         }
 
-        const password_check = await bcrypt.compare(password , email_check.password);
+        const password_check = await bcrypt.compare(Password , email_check.password);
 
         if(!password_check) {
              return res.status(400).json({
