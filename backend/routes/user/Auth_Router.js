@@ -3,8 +3,9 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient();
 import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
+import nodemailer from 'nodemailer'
 const Auth_Router = express.Router();
-
+import transporter from './Mail';
 
 
 Auth_Router.post("/signup" , async(req,res)=>{
@@ -121,6 +122,81 @@ Auth_Router.post("/signin" , async(req,res)=>{
             message:"Internal Server Error..",
             error:er
          })
+    }
+})
+
+
+
+
+
+
+
+
+
+Auth_Router.post("/resetpassword" , async(req,res)=>{
+      
+
+    try{
+
+        const email = req.body;
+
+        const find_user = await prisma.user.findUnique({
+            data:{
+                email
+            }
+        })
+
+        if(!find_user){
+             return res.status(400).json({
+                message:"Email not found..."
+             })
+        }
+
+        let code = Math.random()*100000;
+
+        console.log(code);
+
+        let mailoptions = {
+
+            from :"eventnest.official.main@gmail.com",
+            to:email,
+            subject : "Password Reset Code ",
+            text : "Please find the code to reset the password.",
+            html :`
+               
+            <div style="font-family: Arial, sans-serif; padding: 20px; border: 2px solid #4CAF50; border-radius: 10px; max-width: 600px; margin: auto; background-color: #f9f9f9"> 
+                 
+            <h1 style="color: #4CAF50; text-align: center;" > Enter this code to reset the password </h1>
+
+              <p style="text-align: center; font-size: 16px;  color: #555;">${code}</p>
+            </div>
+
+            `
+        }
+
+        await transporter.sendMail(mailoptions);
+
+        return res.status(200).json({
+          
+
+          message:"Email verified Successfully " ,
+          code :"token"
+        
+        
+        }
+        
+        )
+
+
+
+        
+
+    }
+    catch(er){
+        return res.status(500).json({
+            message:"Internal Server Error",
+            error:er
+        })
     }
 })
 
