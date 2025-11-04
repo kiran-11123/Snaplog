@@ -102,13 +102,16 @@ export default function Signin(){
 
                 </form>
 
-                <div className="w-full mb-10 items-center justify-center text-center mt-3 ">
+                <div className="w-full mb-10 flex  items-center justify-between text-center mt-3 ">
 
-                    <p className="text-sm sm:text-lg text-gray-600">
+                    <p className="text-sm sm:text-lg text-gray-600  ">
                         Don’t have an account?{' '}
                         <Link href="/signup" className="text-blue-500  hover:underline cursor-pointer">
                             Sign up
                         </Link>
+                    </p>
+                    <p className="text-sm sm:text-lg text-gray-600 px-6 py-2 shadow-lg rounded-lg">
+                        <Link href="/forgetpassword" className="text-blue-500 hover:underline cursor-pointer" >Forget password</Link>
                     </p>
 
                 </div>
