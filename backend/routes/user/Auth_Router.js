@@ -153,12 +153,11 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
 
         let code = Math.floor(Math.random()*900000 + 100000);
 
-       
-        const expiry = Date.now() +15*60*100 //15 minutes
+       const expiry = new Date( Date.now() +15*60*1000) //15 minutes
 
         await prisma.user.update({
             where:{email},
-            date:{
+            data:{
                 resetCode : code.toString(),
                 resetCodeExpires : expiry,
             }
@@ -203,6 +202,8 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
     }
     catch(er){
 
+        console.log(er);
+
         return res.status(500).json({
             message:"Internal Server Error",
             error:er
@@ -231,7 +232,7 @@ Auth_Router.post("/verify-code" , async(req,res)=>{
             })
         }
 
-        if(!user.resetCodeExpires < Date.now()){
+        if(user.resetCodeExpires < Date.now()){
              return res.status(400).json({
                 message : "Code is Expired.."
              })
@@ -254,12 +255,16 @@ Auth_Router.post("/verify-code" , async(req,res)=>{
 
 
 
-Auth_Router.post("/resetPassword" , async(req,res)=>{
+Auth_Router.put("/resetPassword" , async(req,res)=>{
         
     try{
 
+
+
         const password = req.body.Password;
         const email = req.body.email;
+
+        console.log(email , password);
 
         const user = await prisma.user.findUnique({
              where:{
@@ -274,12 +279,14 @@ Auth_Router.post("/resetPassword" , async(req,res)=>{
         }
 
 
-        const hashed_password = await bcrypt.hash(Password , 10);
+        const hashed_password = await bcrypt.hash(password , 10);
 
-        await user.update({
+        await prisma.user.update({
             where:{email},
             data:{password : hashed_password}
         })
+
+        console.log("Password reset Successfull..");
 
         return res.status(200).json({
             message:"Password reset Successfull.."
@@ -288,6 +295,8 @@ Auth_Router.post("/resetPassword" , async(req,res)=>{
 
     }
     catch(er){
+
+        console.log(er);
          
         return res.status(500).json({
             message:"Internal Server Error.",
