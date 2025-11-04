@@ -5,7 +5,7 @@ import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import nodemailer from 'nodemailer'
 const Auth_Router = express.Router();
-import transporter from './Mail';
+import transporter from './Mail.js';
 
 
 Auth_Router.post("/signup" , async(req,res)=>{
@@ -138,21 +138,21 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
 
     try{
 
-        const email = req.body;
+        const email = req.body.email;
 
-        const find_user = await prisma.user.findUnique({
-            data:{
+        const find_email = await prisma.user.findUnique({
+            where:{
                 email
             }
         })
 
-        if(!find_user){
+        if(!find_email){
              return res.status(400).json({
                 message:"Email not found..."
              })
         }
 
-        let code = Math.random()*100000;
+        let code = Math.floor(Math.random()*100000 + 100000);
 
         console.log(code);
 
@@ -168,7 +168,7 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
                  
             <h1 style="color: #4CAF50; text-align: center;" > Enter this code to reset the password </h1>
 
-              <p style="text-align: center; font-size: 16px;  color: #555;">${code}</p>
+              <p style="margin-top :10px  text-align: center; font-size: 16px;  color: #555;">${code}</p>
             </div>
 
             `
@@ -187,12 +187,10 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
         
         )
 
-
-
-        
-
     }
     catch(er){
+
+        console.log(er)
         return res.status(500).json({
             message:"Internal Server Error",
             error:er
