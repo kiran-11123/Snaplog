@@ -109,7 +109,6 @@ Auth_Router.post("/signin" , async(req,res)=>{
             maxAge: 3600000
         });
         
-        console.log("before")
 
         return res.status(200).json({
             message:"Login Successfull..",
@@ -152,9 +151,19 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
              })
         }
 
-        let code = Math.floor(Math.random()*100000 + 100000);
+        let code = Math.floor(Math.random()*900000 + 100000);
 
-        console.log(code);
+       
+        const expiry = Date.now() +15*60*100 //15 minutes
+
+        await prisma.user.update({
+            where:{email},
+            date:{
+                resetCode : code.toString(),
+                resetCodeExpires : expiry,
+            }
+        })
+
 
         let mailoptions = {
 
@@ -167,8 +176,9 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
             <div style="font-family: Arial, sans-serif; padding: 20px; border: 2px solid #4CAF50; border-radius: 10px; max-width: 600px; margin: auto; background-color: #f9f9f9"> 
                  
             <h1 style="color: #4CAF50; text-align: center;" > Enter this code to reset the password </h1>
-
-              <p style="margin-top :10px  text-align: center; font-size: 16px;  color: #555;">${code}</p>
+              
+            <div style="margin-top:10px  text-align:center; font-size:16px;  color:black">
+              ${code}
             </div>
 
             `
@@ -176,21 +186,23 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
 
         await transporter.sendMail(mailoptions);
 
+
         return res.status(200).json({
           
 
-          message:"Email verified Successfully " ,
-          code :"token"
+          message:"verification code sent to your Email.. " ,
+          Passcode:code
+         
         
         
         }
         
         )
 
+
     }
     catch(er){
 
-        console.log(er)
         return res.status(500).json({
             message:"Internal Server Error",
             error:er
@@ -198,6 +210,91 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
     }
 })
 
+
+
+Auth_Router.post("/verify-code" , async(req,res)=>{
+      
+    try{
+
+        const email = req.body.email;
+        const code = req.body.code;
+
+        const user = await prisma.user.findUnique({
+             where:{
+                email
+             }
+        })
+
+        if(!user){
+            return res.status(400).json({
+                message : "Email is wrong."
+            })
+        }
+
+        if(!user.resetCodeExpires < Date.now()){
+             return res.status(400).json({
+                message : "Code is Expired.."
+             })
+        }
+
+
+        return res.status(200).json({
+            message : "Code verified Successfully..."
+        })
+
+    }
+    catch(er){
+        return res.status(500).json({
+            message:"Internal Server Error..",
+            error:er
+        })
+    }
+})
+
+
+
+
+Auth_Router.post("/resetPassword" , async(req,res)=>{
+        
+    try{
+
+        const password = req.body.Password;
+        const email = req.body.email;
+
+        const user = await prisma.user.findUnique({
+             where:{
+                email
+             }
+        })
+
+        if(!user){
+             return res.status(400).json({
+                message:"Email is wrong.."
+             })
+        }
+
+
+        const hashed_password = await bcrypt.hash(Password , 10);
+
+        await user.update({
+            where:{email},
+            data:{password : hashed_password}
+        })
+
+        return res.status(200).json({
+            message:"Password reset Successfull.."
+        })
+         
+
+    }
+    catch(er){
+         
+        return res.status(500).json({
+            message:"Internal Server Error.",
+            error:er
+        })
+    }
+})
 
 
 
