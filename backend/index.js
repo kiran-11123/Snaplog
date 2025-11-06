@@ -9,6 +9,7 @@ import Auth_Router from './routes/user/Auth_Router.js';
 import cors from 'cors'
 import data_Router from './routes/data/Data_Router.js';
 import connectDB from './DB/mongodb.js';
+import Bot_Router from './routes/ai/bot.js';
 
 
 await connectDB();
@@ -28,7 +29,8 @@ app.use(cors({
 app.use(cookieParser());
 
 app.use("/api/v1/users/" , Auth_Router);
-app.use("/api/v1/data" , data_Router)
+app.use("/api/v1/data" , data_Router);
+app.use("/api/v1/ai" , Bot_Router );
 
 
 

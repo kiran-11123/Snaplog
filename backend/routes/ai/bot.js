@@ -1,4 +1,4 @@
-import {express ,response } from 'express'
+import express   from 'express'
 import dotenv from 'dotenv';
 import {GoogleGenerativeAI ,HarmCategory , HarmBlockThreshold } from '@google/generative-ai'
 import Authentication_token from '../../middlewares/Authentication_middeware.js';
