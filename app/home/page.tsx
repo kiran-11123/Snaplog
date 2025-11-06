@@ -7,12 +7,22 @@ import { Plus } from "lucide-react";
 import AuthGuard from "../components/AuthGuard"
 import { useSearchParams } from "next/navigation";
 import { use, useState } from "react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
+
 
 import Notes from "../components/NotesForm";
 
 
 
 export default function Home(){
+
+  const router = useRouter();
+  function logoutHandler(){
+
+        localStorage.removeItem("token");
+        router.replace("/");
+    }
 
   const[openModal , setOpenModal] = useState(false);
      return(
@@ -28,7 +38,7 @@ export default function Home(){
                    
                   <div className="px-15  py-2 flex items-center justify-between gap-10 text-lg">
                     <button title="add-content"  onClick={()=>setOpenModal(true)}   className="bg-yellow-500 text-white cursor-pointer  hover:bg-gradient-to-r hover:from-yellow-500 hover:via-yellow-500 to-yellow-800 rounded-full px-2 py-2"><Plus /></button>
-                    <button className="px-4 cursor-pointer py-2 font-mono bg-blue-600 text-white hover:bg-blue-700 rounded-lg font-bold">Logout</button>
+                    <button onClick={logoutHandler}  className="px-4 cursor-pointer py-2 font-mono bg-gradient-to-b from-[#818cf8] via-[#6366f1] to-[#4f46e5] hover:bg-gradient-to-b hover:from-[#818cf8] hover:via-[#242568] hover:to-[#4f46e5] text-white  rounded-lg font-bold">Logout</button>
                   </div>
                   
 

@@ -136,6 +136,7 @@ export default function forgetpassword() {
                     setMessage(error.response.data.message);
                 } else {
                     setMessage('error in login');
+                
                 }
             } else {
                 setMessage('error in login');
@@ -263,9 +264,11 @@ export default function forgetpassword() {
                         Submit
                     </button>
 
+                     {message ? <p className="text-center text-red-500 text-xl  font-bold mb-5">{message}</p> : null}
+
                 </form>
 
-                {message ? <p className="text-center text-red-500 text-xl  font-bold md-5">{message}</p> : null}
+               
 
             </div>)}
 
@@ -297,9 +300,10 @@ export default function forgetpassword() {
                             Submit
                         </button>
 
+                         {message ? <p className="text-center text-red-500 text-xl  font-bold mb-5">{message}</p> : null}
+
                     </form>
 
-                    {message ? <p className="text-center text-red-500 text-xl  font-bold md-5">{message}</p> : null}
 
                 </div>
             )}
@@ -342,9 +346,11 @@ export default function forgetpassword() {
                             Submit
                         </button>
 
+                        {message ? <p className="text-center text-red-500 text-xl  font-bold mb-5">{message}</p> : null}
+
                     </form>
 
-                    {message ? <p className="text-center text-red-500 text-xl  font-bold md-5">{message}</p> : null}
+                    
 
                 </div>
             )}
