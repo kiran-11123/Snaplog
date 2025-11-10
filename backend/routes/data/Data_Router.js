@@ -11,6 +11,7 @@ data_Router.post("/upload_data" ,Authentication_token , async(req,res)=>{
     try{
 
         const data_received = req.body.data;
+        const title  = req.body.title;
 
         if(!data_received || data_received.length===0){
             return res.status(403).json({
@@ -27,11 +28,13 @@ data_Router.post("/upload_data" ,Authentication_token , async(req,res)=>{
              
             user = new data_model({
                 user_id ,
+                title:title,
                 data:[{ data_received}]
             })
         }
 
         else{
+            user.title = title;
             user.data.push({data_received});
         }
 
@@ -69,7 +72,7 @@ data_Router.post("/upload_data" ,Authentication_token , async(req,res)=>{
 
 data_Router.get("/get_data" , Authentication_token , async(req,res)=>{
       
-    try{
+    try{ 
 
          const user_id =req.user.user_id;
 

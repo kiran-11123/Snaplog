@@ -50,7 +50,7 @@ Bot_Router.post("/content" , Authentication_token , async(req,res)=> {
             })
         }
 
-        const prompt = `You are a notes optimization AI. optimize the given text clearly and give the result in a simpler way with atleast 10 lines and i dont want any special characters in the result ${question}`
+        const prompt = `You are a notes optimization AI. optimize the given text clearly and give the result in a simpler way with atleast 10 lines with a title also and i dont want any special characters in the result ${question}`
 
         const result =await chat.sendMessage(prompt);
 

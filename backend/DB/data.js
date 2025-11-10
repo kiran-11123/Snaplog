@@ -4,6 +4,7 @@ import mongoose  from "mongoose";
 const data_Schema = new mongoose.Schema({
    
      id :{type:Number } , 
+     title:{type:String},
      data:[{
         
         text:{type:String},
