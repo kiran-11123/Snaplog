@@ -16,7 +16,12 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
 
         try{
 
-            const response = await axios.post("http://localhost:5000/api/vl/ai/content" , {
+            if(note.trim()===''){
+                setMessage("Please enter some note to optimize...");
+                return;
+            }
+
+            const response = await axios.post("http://localhost:5000/api/v1/ai/content" , {
                 question:note
             }, {withCredentials : true})
 
@@ -135,10 +140,10 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
 
                     <div className="flex justify-end gap-2 text-sm">
 
-                        <button onClick={handleAI} className="cursor-pointer px-4 py-2 bg-gradient-to-r from-[#0f172a]  to-[#334155] hover:bg-gradient-to-r hover:from-[#0f172a] hover:to-[#628bc4] shadow-lg rounded-lg text-white">AI To Optimize</button>
+                        <button onClick={handleAI} className="cursor-pointer px-4 py-2 bg-gradient-to-r from-[#0f172a]  to-[#334155] hover:bg-gradient-to-r hover:from-[#0f172a] hover:to-[#628bc4] shadow-lg rounded-lg text-white">Optimize Using AI</button>
+                        <button onClick={handleSubmit} className=" cursor-pointer px-4 py-2 bg-gradient-to-tr from-[#0891b2] via-[#1d4ed8] to-[#3730a3]  hover:bg-gradient-to-tr hover:from-[#299ab7] hover:via-[#13399f] hover:to-[#140f5e] shadow-lg rounded-lg text-white">Save Note</button>
 
                         <button onClick={onClose} className="cursor-pointer px-4 py-2 bg-gradient-to-bl from-[#f97316] via-[#dc2626] to-[#be123c] hover:bg-gradient-to-bl hover:from-[#f97316] hover:via-[#dc2626] hover:to-[#83132f] shadow-lg rounded-lg text-white">Cancel</button>
-                        <button onClick={handleSubmit} className=" cursor-pointer px-4 py-2 bg-gradient-to-tr from-[#0891b2] via-[#1d4ed8] to-[#3730a3]  hover:bg-gradient-to-tr hover:from-[#299ab7] hover:via-[#13399f] hover:to-[#140f5e] shadow-lg rounded-lg text-white">Save Note</button>
                     </div>
                 </form>
 

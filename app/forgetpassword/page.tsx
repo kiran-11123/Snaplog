@@ -100,7 +100,6 @@ export default function forgetpassword() {
                 withCredentials: true
             })
 
-            console.log(response);
 
             if (response.status === 200) {
                 setMessage(response.data.message);
@@ -175,7 +174,6 @@ export default function forgetpassword() {
                 return;
             }
 
-            console.log(email , Password);
 
             const response = await axios.put("http://localhost:5000/api/v1/users/resetPassword"  ,{
                 email:email,
@@ -184,7 +182,6 @@ export default function forgetpassword() {
                 withCredentials:true
             })
 
-            console.log(response);
 
             if(response.status===200){
                  
