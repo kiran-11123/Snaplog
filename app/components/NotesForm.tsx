@@ -78,9 +78,12 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
 
 
         try{
+
+            const split = note.split('\n')[0];
             
 
             const response = await axios.post("http://localhost:5000/api/v1/data/upload_data",{
+                title:split,
                 data : note
             },{
                 withCredentials:true

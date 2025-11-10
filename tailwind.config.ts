@@ -6,13 +6,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
-        roboto: ["Roboto", ...defaultTheme.fontFamily.sans],
-        montserrat: ["Montserrat", ...defaultTheme.fontFamily.sans],
-        inter: ["Inter", ...defaultTheme.fontFamily.sans],
-        nunito: ["Nunito", ...defaultTheme.fontFamily.sans],
-        // Keep a default alias if you like
-        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+        poppins: ['var(--font-poppins)', ...defaultTheme.fontFamily.sans],
+        roboto: ['var(--font-roboto)', ...defaultTheme.fontFamily.sans],
+        montserrat: ['var(--font-geist-mono)', ...defaultTheme.fontFamily.sans],
+        inter: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
+        nunito: ['var(--font-nunito)', ...defaultTheme.fontFamily.sans],
+       
       },
     },
   },
