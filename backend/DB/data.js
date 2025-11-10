@@ -12,7 +12,8 @@ const data_Schema = new mongoose.Schema({
         
 
 
-     }]
+     }],
+     createdAt:{type:Date , default:Date.now}
        
 })
 

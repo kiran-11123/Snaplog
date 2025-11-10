@@ -67,40 +67,61 @@ data_Router.post("/upload_data" ,Authentication_token , async(req,res)=>{
 
 
 
+data_Router.get("/data_count", Authentication_token , async(req,res)=>{
 
+    try{
 
+        const user_id = req.user.user_id;
 
-data_Router.get("/get_data" , Authentication_token , async(req,res)=>{
-      
-    try{ 
+        const user = await data_model.find({id:user_id});
 
-         const user_id =req.user.user_id;
-
-
-         const user  = await data_model.findOne({user_id});
-
-         if(!user){
+        if(!user){
             return res.status(200).json({
-                message:"Your Notes is Empty.."
+                message:"Data Fetched Successfully..",
+                count:0
             })
-         }
+        }
 
-         return res.status(200).json({
-            message  : "Data Fetched Successfully..",
-            data : user.data
-         })
-
+        return res.status(200).json({
+            message:"Data Fetched Successfully..",
+            count:user.data.length
+        })
     }
     catch(er){
-
         console.log(er);
-
         return res.status(500).json({
             message:"Internal Server Error",
             error:er
         })
     }
-}) 
+})
+
+data_Router.get("/get_data", Authentication_token, async (req, res) => {
+  try {
+    const user_id = req.user.user_id;
+ 
+
+    const user = await data_model.findOne({ id: user_id }); // ✅ important fix
+
+    if (!user || !user.data || user.data.length === 0) {
+      return res.status(200).json({
+        message: "Your Notes are Empty.",
+        data: []
+      });
+    }
+
+    return res.status(200).json({
+      message: "Data Fetched Successfully.",
+      data: user.data
+    });
+  } catch (er) {
+    console.log(er);
+    return res.status(500).json({
+      message: "Internal Server Error",
+      error: er
+    });
+  }
+});
 
 
 
