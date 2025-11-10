@@ -5,7 +5,7 @@ import Authentication_token from '../../middlewares/Authentication_middeware.js'
 dotenv.config();
 const Bot_Router = express.Router();
 const API_KEY = process.env.GEMINI_API_KEY 
-const model  = process.env.MODEL_NAME
+const model1  = process.env.MODEL_NAME
 
 
 
@@ -28,11 +28,11 @@ Bot_Router.post("/content" , Authentication_token , async(req,res)=> {
 
     try{
 
-        const question = req.body;
+        const question = req.body.question;
 
 
         const genAI = new GoogleGenerativeAI(API_KEY);
-        const model = genAI.getGenerativeModel({model : model});
+        const model = genAI.getGenerativeModel({model : model1});
 
 
         const chat =model.startChat({
@@ -50,7 +50,9 @@ Bot_Router.post("/content" , Authentication_token , async(req,res)=> {
             })
         }
 
-        const result =await chat.sendMessage(question);
+        const prompt = `You are a notes optimization AI. optimize the given text clearly and give the result in a simpler way and i dont want any special characters in the result ${question}`
+
+        const result =await chat.sendMessage(prompt);
 
         if(result.error){
             return res.status(400).json({
@@ -66,6 +68,7 @@ Bot_Router.post("/content" , Authentication_token , async(req,res)=> {
         })
     }
     catch(er){
+        console.log(er);
         return res.status(500).json({
             message:"Internal Server Error",
             error:er

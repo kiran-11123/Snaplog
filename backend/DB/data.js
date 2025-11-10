@@ -7,7 +7,7 @@ const data_Schema = new mongoose.Schema({
      data:[{
         
         text:{type:String},
-        images:{type:String},
+        
         
 
 
@@ -16,7 +16,7 @@ const data_Schema = new mongoose.Schema({
 })
 
 
-const data_model = mongoose.model("User" , data_Schema);
+const data_model = mongoose.model("User_data" , data_Schema);
 
 
 
