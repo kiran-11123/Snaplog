@@ -94,7 +94,9 @@ Auth_Router.post("/signin" , async(req,res)=>{
             })
         }
 
-         const details  = {"email":email , "username":email_check.username }
+    
+
+         const details  = {"user_id" : email_check.userId , "email":email , "username":email_check.username }
 
 
         

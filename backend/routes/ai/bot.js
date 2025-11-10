@@ -13,7 +13,7 @@ const GENERATION_CONFIG = {
     temperature :0.9,
     topK:1,
     topP:1,
-    maxOutputTokens : 4096
+    maxOutputTokens : 8000
 }
 
 const SAFETY_SETTINGS   =[
@@ -50,7 +50,7 @@ Bot_Router.post("/content" , Authentication_token , async(req,res)=> {
             })
         }
 
-        const prompt = `You are a notes optimization AI. optimize the given text clearly and give the result in a simpler way and i dont want any special characters in the result ${question}`
+        const prompt = `You are a notes optimization AI. optimize the given text clearly and give the result in a simpler way with atleast 10 lines and i dont want any special characters in the result ${question}`
 
         const result =await chat.sendMessage(prompt);
 
@@ -61,7 +61,7 @@ Bot_Router.post("/content" , Authentication_token , async(req,res)=> {
         }
         
 
-        return res.status(201).json({
+        return res.status(200).json({
             message:"Output Fetched successfully..",
             data : result.response.text(),
              all_data:result.response

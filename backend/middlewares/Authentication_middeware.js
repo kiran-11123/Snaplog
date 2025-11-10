@@ -9,6 +9,7 @@ const Authentication_token = (req,res,next)=>{
 
     const token = req.cookies?.token;
 
+
     if(!token){
         return res.status(401).json({
             message:"Unauthorized : Token Not found.."
@@ -27,7 +28,8 @@ const Authentication_token = (req,res,next)=>{
              })
         }
 
-        res.user = decoded;
+       
+        req.user = decoded;
         next();
 
 
