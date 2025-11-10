@@ -102,7 +102,7 @@ export default function Signin(){
 
                 </form>
 
-                <div className="w-full mb-10 flex  items-center justify-between text-center mt-3 ">
+                <div className="w-full mb-10 flex  flex-col items-center justify-between text-center mt-3 ">
 
                     <p className="text-sm sm:text-lg text-gray-600  ">
                         Don’t have an account?{' '}
