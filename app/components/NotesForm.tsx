@@ -5,6 +5,7 @@ import React, { useState, FormEvent } from "react";
 function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) {
     const [note, setNote] = useState('');
     const[message , setMessage]=useState('');
+    const[loading , SetLoading] = useState(false);
 
     if (!isOpen) return null;
 
@@ -13,13 +14,22 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
 
         e.preventDefault();
 
-
-        try{
-
-            if(note.trim()===''){
+         if(note.trim()===''){
                 setMessage("Please enter some note to optimize...");
                 return;
             }
+
+        if(loading) return;
+
+  
+         SetLoading(true);
+
+
+
+
+        try{
+
+           
 
             const response = await axios.post("http://localhost:5000/api/v1/ai/content" , {
                 question:note
@@ -27,29 +37,32 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
 
             
             if(response.status===200){
+                console.log(response.data.data);
                  
                 setNote(response.data.data);
+               
                 setMessage("AI generated the Data...")
             }
             else{
+              
                 setMessage(response.data.message);
             }
 
         }
         catch(er){
+          
              
             setMessage("AI didn't generate the response..")
         }
 
         finally{
-
+            SetLoading(false);
             
             setTimeout(()=>{
 
                     setMessage('');
-                    setNote('');
-
-                },2000)
+                 
+                },4000)
 
              
 
@@ -61,12 +74,13 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
     async function handleSubmit(e:any) {
 
         e.preventDefault();
+       
 
 
         try{
             
 
-            const response = await axios.post("http://localhost:5000/api/v1/data/upload-data",{
+            const response = await axios.post("http://localhost:5000/api/v1/data/upload_data",{
                 data : note
             },{
                 withCredentials:true
@@ -138,13 +152,15 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
                     
                     />
 
-                    <div className="flex justify-end gap-2 text-sm">
+                    <div className="flex justify-end gap-2 text-sm mb-5">
 
-                        <button onClick={handleAI} className="cursor-pointer px-4 py-2 bg-gradient-to-r from-[#0f172a]  to-[#334155] hover:bg-gradient-to-r hover:from-[#0f172a] hover:to-[#628bc4] shadow-lg rounded-lg text-white">Optimize Using AI</button>
-                        <button onClick={handleSubmit} className=" cursor-pointer px-4 py-2 bg-gradient-to-tr from-[#0891b2] via-[#1d4ed8] to-[#3730a3]  hover:bg-gradient-to-tr hover:from-[#299ab7] hover:via-[#13399f] hover:to-[#140f5e] shadow-lg rounded-lg text-white">Save Note</button>
+                        <button onClick={handleAI} disabled={loading} className="cursor-pointer px-4 py-2 bg-gradient-to-r from-[#0f172a]  to-[#334155] hover:bg-gradient-to-r hover:from-[#0f172a] hover:to-[#628bc4] shadow-lg rounded-lg text-white">{loading ? "Generating.." : "Optimize Using AI" }</button>
+                        <button  onClick={handleSubmit} className=" cursor-pointer px-4 py-2 bg-gradient-to-tr from-[#0891b2] via-[#1d4ed8] to-[#3730a3]  hover:bg-gradient-to-tr hover:from-[#299ab7] hover:via-[#13399f] hover:to-[#140f5e] shadow-lg rounded-lg text-white">Save Note</button>
 
                         <button onClick={onClose} className="cursor-pointer px-4 py-2 bg-gradient-to-bl from-[#f97316] via-[#dc2626] to-[#be123c] hover:bg-gradient-to-bl hover:from-[#f97316] hover:via-[#dc2626] hover:to-[#83132f] shadow-lg rounded-lg text-white">Cancel</button>
                     </div>
+
+                    <div className="flex justify-end gap-2 text-sm mb-5">{message ? <p className="text-red-500">{message}</p> : null} </div>
                 </form>
 
             </div>
