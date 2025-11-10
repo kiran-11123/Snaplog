@@ -27,9 +27,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${poppins.variable} ${geistSans.variable} ${geistMono.variable}`}>
       <body
-        className={`${poppins.variable} ${geistSans.variable} ${inter.variable} ${geistMono.variable} antialiased`}
+        className="antialiased"
       >
         {children}
       </body>

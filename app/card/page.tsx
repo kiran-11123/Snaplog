@@ -52,6 +52,9 @@ export default function Card({ title, data, created_at }: Components) {
                 Efficiency: Containers are lightweight and start quickly, making them ideal for modern development practices like microservices and continuous integration/continuous deployment (CI/CD).
             </div>
 
+         
+
+
             
 
             <div className='flex items-center w-full  justify-between'>

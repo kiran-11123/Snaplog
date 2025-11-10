@@ -1,21 +1,20 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['var(--font-poppins)', ...defaultTheme.fontFamily.sans],
-        geist : ['var(--font-geist-sans)', ...defaultTheme.fontFamily.sans],
-        inter: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
-        geistMono: ['var(--font-geist-mono)', ...defaultTheme.fontFamily.mono],
-
-      },
+      inter: "var(--font-inter)",
+      poppins: "var(--font-poppins)",
+      geistSans: "var(--font-geist-sans)",
+      geistMono: "var(--font-geist-mono)",
     },
-  },
-  variants: {
-    extend: {},
+    },
   },
   plugins: [],
 };
