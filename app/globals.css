@@ -21,3 +21,7 @@
 .custom-scrollbar{
     scroll-behavior: smooth;
 }
+
+.bg-noise{
+    background-image: url("https://www.transparenttextures.com/patterns/noise-pattern.png");
+}

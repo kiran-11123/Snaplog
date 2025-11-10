@@ -7,11 +7,10 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['var(--font-poppins)', ...defaultTheme.fontFamily.sans],
-        roboto: ['var(--font-roboto)', ...defaultTheme.fontFamily.sans],
-        montserrat: ['var(--font-geist-mono)', ...defaultTheme.fontFamily.sans],
+        geist : ['var(--font-geist-sans)', ...defaultTheme.fontFamily.sans],
         inter: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
-        nunito: ['var(--font-nunito)', ...defaultTheme.fontFamily.sans],
-       
+        geistMono: ['var(--font-geist-mono)', ...defaultTheme.fontFamily.mono],
+
       },
     },
   },

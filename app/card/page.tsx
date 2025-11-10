@@ -14,13 +14,13 @@ interface Components {
 export default function Card({ title, data, created_at }: Components) {
     return (
 
-        <div className="w-full max-w-md  bg-gray-200 h-96 p-4 shadow-xl rounded-md flex flex-col border items-center justify-between">
+        <div className="w-full max-w-md  backdrop-blur-xl bg-white/20  border-white h-96 p-4 shadow-xl rounded-md flex flex-col border items-center justify-between">
 
-            <h1 className="text-center px-2 py-1 font-bold font-poppins text-lg">
+            <h1 className="text-center px-2 py-1 font-serif  text-lg">
                 Docker Guide
             </h1>
 
-            <div className="w-full h-72 overflow-auto custom-scrollbar bg-gray-500  rounded-lg shadow-lg text-white text-sm sm:text-md px-2 py-1">
+            <div className="w-full h-84 mb-3 overflow-auto custom-scrollbar font-mono bg-gray-500  rounded-lg shadow-lg text-white text-sm sm:text-md px-2 py-1 whitespace-pre-wrap ">
                 Imagine you are working on building a website that involves multiple tech stack like NodeJs, PostgreSQL, and Redis. And this all the thing install your local machine. and website is perfectly running on your local machine.
 
                 Now suppose you want to share your website with your friend and you send him the github link and it clone that repo but there is one catch , your friend not have NodeJs, PostgreSQL, and Redis installed on his machine. So he is not able to run your website.
@@ -36,9 +36,9 @@ export default function Card({ title, data, created_at }: Components) {
                 Efficiency: Containers are lightweight and start quickly, making them ideal for modern development practices like microservices and continuous integration/continuous deployment (CI/CD).
             </div>
 
-            <div className='flex items-center justify-center w-full'>
+            <div className='flex items-center justify-center w-full gap-75 bg-white py-1 rounded-md shadow-md'>
 
-                <div>25-10-2025</div>
+                <div className='font-bold '>25-10-2025</div>
                <Copy />
 
             </div>
