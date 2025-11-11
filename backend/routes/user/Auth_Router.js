@@ -6,9 +6,12 @@ import jwt from 'jsonwebtoken'
 import nodemailer from 'nodemailer'
 const Auth_Router = express.Router();
 import transporter from './Mail.js';
+import logger from '../../utils/logger.js'; 
 
 
 Auth_Router.post("/signup" , async(req,res)=>{
+
+   logger.info(`POST /signup`);
        
     try{
 
@@ -20,6 +23,7 @@ Auth_Router.post("/signup" , async(req,res)=>{
             }
         })
         if(find_email){
+             logger.warn(`Signup failed: Email already exists (${email})`);
             return res.status(400).json({
                 message:"Email Already Registered, Please Login ..."
             })
@@ -32,6 +36,7 @@ Auth_Router.post("/signup" , async(req,res)=>{
         })
 
         if(username_check){
+            logger.warn(`Signup failed: Username already exists (${username})`);
              return res.status(400).json({
                 message : "Username already exists "
              })
@@ -49,7 +54,8 @@ Auth_Router.post("/signup" , async(req,res)=>{
         })
 
        
-
+        
+         logger.info(`User registered successfully (${email})`);
         return res.status(201).json({
             message:"User Registered Successfully...",
            
@@ -58,6 +64,7 @@ Auth_Router.post("/signup" , async(req,res)=>{
 
     }
     catch(er){
+         logger.error(`Signup Error: ${er.message}`);
         return res.status(500).json({
             message:"Internal Server Error...",
             error:er
@@ -67,6 +74,8 @@ Auth_Router.post("/signup" , async(req,res)=>{
 
 
 Auth_Router.post("/signin" , async(req,res)=>{
+     logger.info(`POST /signin`);
+
       
     try{
 
@@ -81,6 +90,7 @@ Auth_Router.post("/signin" , async(req,res)=>{
         })
 
         if(!email_check){
+             logger.warn(`Login failed: Email not found (${email})`);
             return res.status(400).json({
                 message:"Email not found , Please Register"
             })
@@ -89,6 +99,7 @@ Auth_Router.post("/signin" , async(req,res)=>{
         const password_check = await bcrypt.compare(Password , email_check.password);
         
         if(!password_check) {
+            logger.warn(`Login failed: Incorrect password (${email})`);
              return res.status(400).json({
                 message:"Password is Wrong"
             })
@@ -111,7 +122,8 @@ Auth_Router.post("/signin" , async(req,res)=>{
             maxAge: 3600000
         });
         
-
+        
+        logger.info(`Login successful (${email})`);
         return res.status(200).json({
             message:"Login Successfull..",
             token:token
@@ -119,6 +131,7 @@ Auth_Router.post("/signin" , async(req,res)=>{
 
     }
     catch(er){
+         logger.error(`Signin Error: ${er.message}`);
          return res.status(500).json({
             message:"Internal Server Error..",
             error:er
@@ -135,6 +148,7 @@ Auth_Router.post("/signin" , async(req,res)=>{
 
 
 Auth_Router.post("/resetpassword" , async(req,res)=>{
+       logger.info(`POST /resetpassword`);
       
 
     try{
@@ -148,6 +162,7 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
         })
 
         if(!find_email){
+          logger.warn(`Reset failed: Email not found (${email})`);
              return res.status(400).json({
                 message:"Email not found..."
              })
@@ -205,7 +220,7 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
 
         await transporter.sendMail(mailoptions);
 
-
+        logger.info(`Reset code sent to (${email})`);
         return res.status(200).json({
           
 
@@ -221,8 +236,8 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
 
     }
     catch(er){
-
-        console.log(er);
+            logger.error(`Reset Password Error: ${er.message}`);
+      
 
         return res.status(500).json({
             message:"Internal Server Error",
@@ -234,6 +249,8 @@ Auth_Router.post("/resetpassword" , async(req,res)=>{
 
 
 Auth_Router.post("/verify-code" , async(req,res)=>{
+
+      logger.info(`POST /verify-code`);
       
     try{
 
@@ -247,16 +264,26 @@ Auth_Router.post("/verify-code" , async(req,res)=>{
         })
 
         if(!user){
+            logger.warn(`Code verification failed: Email incorrect (${email})`);
             return res.status(400).json({
                 message : "Email is wrong."
             })
         }
 
         if(user.resetCodeExpires < Date.now()){
+             logger.warn(`Code expired for (${email})`);
              return res.status(400).json({
                 message : "Code is Expired.."
              })
         }
+
+      
+         if (user.resetCode !== code) {
+            logger.warn(`Incorrect OTP attempt for (${email})`);
+            return res.status(400).json({ message: "Incorrect Code" });
+        }
+
+        logger.info(`Code verified successfully (${email})`);
 
 
         return res.status(200).json({
@@ -265,6 +292,7 @@ Auth_Router.post("/verify-code" , async(req,res)=>{
 
     }
     catch(er){
+        logger.error(`Verify Code Error: ${er.message}`);
         return res.status(500).json({
             message:"Internal Server Error..",
             error:er
@@ -276,6 +304,9 @@ Auth_Router.post("/verify-code" , async(req,res)=>{
 
 
 Auth_Router.put("/resetPassword" , async(req,res)=>{
+
+          logger.info(`PUT /resetPassword`);
+
         
     try{
 
@@ -284,7 +315,6 @@ Auth_Router.put("/resetPassword" , async(req,res)=>{
         const password = req.body.Password;
         const email = req.body.email;
 
-        console.log(email , password);
 
         const user = await prisma.user.findUnique({
              where:{
@@ -293,6 +323,7 @@ Auth_Router.put("/resetPassword" , async(req,res)=>{
         })
 
         if(!user){
+            logger.warn(`Password reset failed: Email incorrect (${email})`);
              return res.status(400).json({
                 message:"Email is wrong.."
              })
@@ -306,7 +337,7 @@ Auth_Router.put("/resetPassword" , async(req,res)=>{
             data:{password : hashed_password}
         })
 
-        console.log("Password reset Successfull..");
+       logger.info(`Password reset successful (${email})`);
 
         return res.status(200).json({
             message:"Password reset Successfull.."
@@ -316,7 +347,7 @@ Auth_Router.put("/resetPassword" , async(req,res)=>{
     }
     catch(er){
 
-        console.log(er);
+        logger.error(`Reset Password Update Error: ${er.message}`);
          
         return res.status(500).json({
             message:"Internal Server Error.",

@@ -4,16 +4,21 @@ import Authentication_token from '../../middlewares/Authentication_middeware.js'
 import data_model from '../../DB/data.js';
 import mongoose from 'mongoose';
 import transporter from '../user/Mail.js';
-import { producer, TOPIC } from './kafkaSetup.js';
+import logger from '../../utils/logger.js';
+import { producer ,setupKafka , TOPIC  } from '../kafka/producer.js';
+
 
 data_Router.post("/upload_data", Authentication_token, async (req, res) => {
 
     try {
 
+        logger.info("Request: POST /upload_data");
+
         const data_received = req.body.data;
         const title = req.body.title;
 
         if (!data_received || data_received.length === 0) {
+             logger.warn("Upload attempt with empty data");
             return res.status(403).json({
                 message: "Data Not found to store"
             })
@@ -50,6 +55,8 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
 
         await user.save();
 
+         logger.info(`Data saved for user: ${user_id}`);
+
 
         const message = {
             user_id ,
@@ -64,7 +71,7 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
                 { key: message.user_id, value: JSON.stringify(message) }
             ]
         }).catch(err => console.error('Kafka error:', err));
-
+   logger.info(`Message sent to Kafka for user: ${user_id}`);
 
         return res.status(200).json({
             messsage: "Data Saved Successfully..."
@@ -79,7 +86,7 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
     }
     catch (er) {
 
-        console.log(er)
+      logger.error("Error in /upload_data: " + er.message);
 
         return res.status(500).json({
             message: "Internal Server Error"
@@ -93,6 +100,8 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
 
 data_Router.get("/get_data", Authentication_token, async (req, res) => {
     try {
+
+          logger.info("Request: GET /get_data");
         const user_id = req.user.user_id;
 
 
@@ -100,19 +109,22 @@ data_Router.get("/get_data", Authentication_token, async (req, res) => {
 
 
         if (user.notes.length === 0) {
+              logger.info(`No notes found for user: ${user_id}`);
             return res.status(200).json({
                 message: "Your Notes are Empty.",
                 data: []
             });
         }
 
+         logger.info(`Fetched ${user.notes.length} notes for user: ${user_id}`);
+
         return res.status(200).json({
             message: "Data Fetched Successfully.",
             data: user.notes
         });
     } catch (er) {
-        console.log(er);
-        return res.status(500).json({
+ logger.error("Error in /get_data: " + er.message);
+         return res.status(500).json({
             message: "Internal Server Error",
             error: er
         });
@@ -125,6 +137,8 @@ data_Router.delete("/delete", Authentication_token, async (req, res) => {
 
 
     try {
+         logger.info("Request: DELETE /delete");
+
 
         let objId = req.body.contentId;
         objId = new mongoose.Types.ObjectId(objId);
@@ -137,13 +151,15 @@ data_Router.delete("/delete", Authentication_token, async (req, res) => {
             { new: true }
         );
 
-        console.log(user);
-
         if (user) {
+
+              logger.info(`Note deleted for user: ${user_id}`);
             return res.status(200).json({
                 message: "Content Deleted Successfully"
             })
         }
+
+         logger.warn(`Delete attempt failed — note not found for user: ${user_id}`);
 
         return res.status(404).json({
             message: "Content Not found"
@@ -154,7 +170,7 @@ data_Router.delete("/delete", Authentication_token, async (req, res) => {
     }
     catch (er) {
 
-        console.log(er);
+        logger.error("Error in /delete: " + er.message);
 
         return res.status(500).json({
             message: "Internal Server Error"
@@ -166,6 +182,8 @@ data_Router.delete("/delete", Authentication_token, async (req, res) => {
 data_Router.post("/share", Authentication_token, async (req, res) => {
 
     try {
+
+         logger.info("Request: POST /share");
 
         const username = req.user.username;
         const email = req.body.email;
@@ -210,6 +228,8 @@ data_Router.post("/share", Authentication_token, async (req, res) => {
 
         await transporter.sendMail(mailoptions);
 
+           logger.info(`Mail sent to ${email} by ${username}`);
+
 
         return res.status(200).json({
 
@@ -224,6 +244,8 @@ data_Router.post("/share", Authentication_token, async (req, res) => {
 
     }
     catch (er) {
+
+         logger.error("Error in /share: " + er.message);
 
         return res.status(500).json({
             message: "Internal Server Error"

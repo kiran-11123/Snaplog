@@ -1,0 +1,10 @@
+{
+  message: '✅ Kafka Consumer Connected',
+  level: 'info',
+  timestamp: '2025-11-11T15:58:44.301Z'
+}
+{
+  message: '📡 Subscribed to Topic: notes-topic',
+  level: 'info',
+  timestamp: '2025-11-11T15:58:45.561Z'
+}

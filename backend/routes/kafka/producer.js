@@ -1,12 +1,12 @@
 // kafkaSetup.js
 import { Kafka } from 'kafkajs';
+import logger from "../../utils/logger.js"; // <-- add this
 
 const kafka = new Kafka({
     clientId: 'notes-app',
     brokers: ['localhost:9092'],
 });
 
-// Admin client to manage topics
 const admin = kafka.admin();
 const producer = kafka.producer();
 
@@ -16,10 +16,9 @@ const REPLICATION_FACTOR = 1;
 
 const setupKafka = async () => {
     try {
-        // Connect admin
+        logger.info("⚙️ Connecting Kafka Admin...");
         await admin.connect();
 
-        // Create topic with partitions
         const created = await admin.createTopics({
             topics: [
                 {
@@ -31,27 +30,27 @@ const setupKafka = async () => {
         });
 
         if (created) {
-            console.log(`Topic "${TOPIC}" created with ${PARTITIONS} partitions.`);
+            logger.info(`✅ Topic "${TOPIC}" created with ${PARTITIONS} partitions.`);
         } else {
-            console.log(`Topic "${TOPIC}" already exists.`);
+            logger.info(`ℹ️ Topic "${TOPIC}" already exists.`);
         }
 
-        // Describe topic
         const topicMetadata = await admin.fetchTopicMetadata({ topics: [TOPIC] });
-        console.log('Topic metadata:', JSON.stringify(topicMetadata, null, 2));
+        logger.info(`📄 Topic metadata: ${JSON.stringify(topicMetadata, null, 2)}`);
 
         await admin.disconnect();
+        logger.info("🔌 Kafka Admin disconnected.");
 
-        // Connect producer once (API will reuse this producer)
+        logger.info("🚀 Connecting Kafka Producer...");
         await producer.connect();
-        console.log("Kafka producer connected and ready to use.");
+        logger.info("✅ Kafka Producer is ready to send messages.");
 
     } catch (error) {
-        console.error('Error setting up Kafka:', error);
-        await admin.disconnect();
-        await producer.disconnect();
+        logger.error(`❌ Kafka Setup Error: ${error.message}`);
+        try { await admin.disconnect(); } catch {}
+        try { await producer.disconnect(); } catch {}
     }
 };
 
-// Export producer to use in your API
+// Export producer and topic for use in API
 export { producer, setupKafka, TOPIC };
