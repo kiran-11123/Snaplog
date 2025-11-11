@@ -91,7 +91,7 @@ function DataShare({ isOpen, onClose  , data}: { isOpen?: boolean; onClose?: () 
               onChange={(e) => setEmail(e.target.value)}
               required 
               value={email}
-              className="w-full px-4 py-2 rounded-md border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+              className="w-full px-4 py-2 rounded-md border-2 border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
               placeholder="Enter Email to share"
               type="email" 
             />

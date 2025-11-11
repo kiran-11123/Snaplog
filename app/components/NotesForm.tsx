@@ -140,8 +140,10 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
     
 
     return (
-        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-            <div className="bg-white max-w-lg w-[90%] rounded-lg shadow-md p-6 space-y-4">
+         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+            
+             <div className="bg-white max-w-lg w-[90%] rounded-lg shadow-md p-6 space-y-4">
+                 
                  <div className="flex items-center justify-between ">
 
                     <h2 className="text-xl text-blue-700 ">Add Notes</h2>
@@ -168,7 +170,7 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
                         <button onClick={handleAI} disabled={loading} className="cursor-pointer px-4 py-2 bg-gradient-to-r from-[#0f172a]  to-[#334155] hover:bg-gradient-to-r hover:from-[#0f172a] hover:to-[#628bc4] shadow-lg rounded-lg text-white">{loading ? "Generating.." : "Optimize Using AI" }</button>
                         <button  onClick={handleSubmit} className=" cursor-pointer px-4 py-2 bg-gradient-to-tr from-[#0891b2] via-[#1d4ed8] to-[#3730a3]  hover:bg-gradient-to-tr hover:from-[#299ab7] hover:via-[#13399f] hover:to-[#140f5e] shadow-lg rounded-lg text-white">Save Note</button>
 
-                       
+                      
                     </div>
 
                     <div className="flex justify-end gap-2 text-sm mb-5">{message ? <p className="text-red-500">{message}</p> : null} </div>
