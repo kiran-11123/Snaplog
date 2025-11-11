@@ -91,7 +91,7 @@ export default function Home(){
 
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 justify-center items-center md:grid-cols-3 gap-6 mt-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 p-4 justify-center items-center md:grid-cols-3 gap-6 mt-5">
             {data && data.length > 0 ? (
              data.map((item : Components) => (
               <div
