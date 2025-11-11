@@ -7,7 +7,7 @@ interface Components {
     id:string,
     title: string,
     data: string,
-    created_at: string;
+    created_at: Date;
 
 
 }
@@ -43,7 +43,7 @@ export default function Card({ id ,title, data, created_at }: Components) {
         catch(er){
 
              console.log(er);
-      alert("Error Occured while deleting..")
+            alert("Error Occured while deleting..")
 
         }
 
@@ -77,7 +77,7 @@ export default function Card({ id ,title, data, created_at }: Components) {
 
             </div>
 
-            <div className="w-full flex-1 mb-3 overflow-auto custom-scrollbar font-mono bg-gray-700/80  rounded-lg shadow-lg text-white text-sm sm:text-md px-2 py-1 whitespace-pre-wrap leading-relaxed">
+            <div className="w-full flex-1 mb-3 overflow-auto hover:scale-x-90 hover:transform-all custom-scrollbar font-mono bg-gray-700/80  rounded-lg shadow-lg text-white text-sm sm:text-md px-2 py-1 whitespace-pre-wrap leading-relaxed">
                 {data}
             </div>
 
@@ -89,7 +89,10 @@ export default function Card({ id ,title, data, created_at }: Components) {
             <div className='flex items-center w-full  justify-between'>
 
                 <span className='font-inter text-gray-900/80'>
-                    {created_at ? created_at.toString().split('T')[0] : 'No date'}
+
+    
+                
+                  <span className='font-semibold'>Saved on : </span>{created_at ? created_at.toString().split('T')[0] : 'No date'}
 
                   
                 </span>

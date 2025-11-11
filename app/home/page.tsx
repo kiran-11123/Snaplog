@@ -18,7 +18,7 @@ interface Components {
     _id:string,
     title: string,
     data: string,
-    created_at: string;
+    createdAt: Date;
 
 
 }
@@ -41,7 +41,9 @@ export default function Home(){
         }) 
 
         if(response.status===200){
+          console.log(response.data.data[0].createdAt)
            SetData(response.data.data);
+           
         }
         
 
@@ -88,18 +90,18 @@ export default function Home(){
 
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 justify-center items-center md:grid-cols-3 gap-6 mt-5">
             {data && data.length > 0 ? (
              data.map((item : Components) => (
               <div
                 key={item._id}
-                className="transition-all duration-300 ease-in-out hover:outline hover:outline-2 hover:outline-blue-300 hover:border hover:border-blue-400 hover:shadow-xl hover:shadow-gray-300/50 rounded-2xl"
+                className="transition-all flex items-center max-w-md justify-center duration-300 ease-in-out hover:outline hover:outline-2 hover:outline-blue-300 hover:border hover:border-blue-400 hover:shadow-xl hover:shadow-gray-300/50 rounded-l"
               >
                 <Card
                   id={item._id}
                   title={item.title}
                   data={item.data}
-                  created_at={item.created_at}
+                  created_at={item.createdAt}
                  
                   
                  
