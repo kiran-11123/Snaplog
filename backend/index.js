@@ -11,6 +11,7 @@ import data_Router from './routes/data/Data_Router.js';
 import connectDB from './DB/mongodb.js';
 import Bot_Router from './routes/ai/bot.js';
 import logger from "./utils/logger.js";
+import workspace_Router from './routes/data/workspace.js';
 
 await connectDB()
   
@@ -37,6 +38,7 @@ app.use(limiter);
 app.use("/api/v1/users/", Auth_Router);
 app.use("/api/v1/data", data_Router);
 app.use("/api/v1/ai", Bot_Router);
+app.use("/api/v1/workspace" , workspace_Router)
 
 // Global Error Logger
 app.use((err, req, res, next) => {

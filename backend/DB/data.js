@@ -2,6 +2,8 @@ import mongoose  from "mongoose";
 
 
 const data_Schema = new mongoose.Schema({
+
+     
    
      userid :{type:Number } , 
      
