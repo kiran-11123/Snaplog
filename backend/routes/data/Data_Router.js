@@ -4,7 +4,7 @@ import Authentication_token from '../../middlewares/Authentication_middeware.js'
 import data_model from '../../DB/data.js';
 import mongoose from 'mongoose';
 import transporter from '../user/Mail.js';
-
+import { producer, TOPIC } from './kafkaSetup.js';
 
 data_Router.post("/upload_data", Authentication_token, async (req, res) => {
 
@@ -46,9 +46,25 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
                 data: data_received
             });
         }
-
+ 
 
         await user.save();
+
+
+        const message = {
+            user_id ,
+            title,
+            data:data_received,
+            timestamp : Date.now()
+        }
+
+        await producer.send({
+            topic: TOPIC,
+            messages: [
+                { key: message.user_id, value: JSON.stringify(message) }
+            ]
+        }).catch(err => console.error('Kafka error:', err));
+
 
         return res.status(200).json({
             messsage: "Data Saved Successfully..."
