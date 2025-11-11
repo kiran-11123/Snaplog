@@ -1,6 +1,6 @@
 // kafkaConsumer.js
 import { Kafka } from 'kafkajs';
-import kafka_kafka_logger from './kafka_logging'; // <-- add this import
+import kafka_logger from './kafka_logging.js'; // <-- add this import
 
 // Initialize Kafka client
 const kafka = new Kafka({

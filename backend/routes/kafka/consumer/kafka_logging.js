@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const logFilePath = path.join(__dirname, '..', '..', 'logs', 'notes.log');
+const logFilePath = path.join(__dirname, '..',  'kafka_logs', 'notes.log');
 
 // Logger Setup
 const kafka_logger = winston.createLogger({

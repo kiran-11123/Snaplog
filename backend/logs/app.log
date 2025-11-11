@@ -1,90 +1,205 @@
 {
   message: 'MongoDB connected..',
   level: 'info',
-  timestamp: '2025-11-11T15:53:36.740Z'
+  timestamp: '2025-11-11T16:11:47.143Z'
 }
 {
   message: '🚀 Server is running on port 5000',
   level: 'info',
-  timestamp: '2025-11-11T15:53:36.751Z'
+  timestamp: '2025-11-11T16:11:47.153Z'
 }
 {
-  message: 'MongoDB connected..',
+  message: 'GET /api/v1/data/get_data',
   level: 'info',
-  timestamp: '2025-11-11T15:59:56.329Z'
+  timestamp: '2025-11-11T16:12:00.639Z'
 }
 {
-  message: '🚀 Server is running on port 5000',
+  message: 'Request: GET /get_data',
   level: 'info',
-  timestamp: '2025-11-11T15:59:56.337Z'
+  timestamp: '2025-11-11T16:12:00.661Z'
 }
 {
-  message: 'MongoDB connected..',
+  message: 'Fetched 4 notes for user: 6',
   level: 'info',
-  timestamp: '2025-11-11T16:00:05.811Z'
+  timestamp: '2025-11-11T16:12:00.703Z'
 }
 {
-  message: '🚀 Server is running on port 5000',
+  message: 'OPTIONS /api/v1/ai/content',
   level: 'info',
-  timestamp: '2025-11-11T16:00:05.821Z'
+  timestamp: '2025-11-11T16:12:56.987Z'
 }
 {
-  message: 'MongoDB connected..',
+  message: 'POST /api/v1/ai/content',
   level: 'info',
-  timestamp: '2025-11-11T16:00:24.660Z'
+  timestamp: '2025-11-11T16:12:57.219Z'
 }
 {
-  message: '🚀 Server is running on port 5000',
+  message: 'Inside the /content  with post method',
   level: 'info',
-  timestamp: '2025-11-11T16:00:24.676Z'
+  timestamp: '2025-11-11T16:12:57.225Z'
 }
 {
-  message: 'MongoDB connected..',
-  level: 'info',
-  timestamp: '2025-11-11T16:00:29.813Z'
+  message: 'Inside the safeGeneration method',
+  level: 'warn',
+  timestamp: '2025-11-11T16:12:57.227Z'
 }
 {
-  message: '🚀 Server is running on port 5000',
-  level: 'info',
-  timestamp: '2025-11-11T16:00:29.821Z'
+  message: 'Attempt 1',
+  level: 'warn',
+  timestamp: '2025-11-11T16:12:57.228Z'
 }
 {
-  message: 'MongoDB connected..',
-  level: 'info',
-  timestamp: '2025-11-11T16:00:44.455Z'
+  message: 'Model overloaded (503), retry attempt 1...',
+  level: 'warn',
+  timestamp: '2025-11-11T16:12:58.348Z'
 }
 {
-  message: '🚀 Server is running on port 5000',
-  level: 'info',
-  timestamp: '2025-11-11T16:00:44.462Z'
+  message: 'Attempt 2',
+  level: 'warn',
+  timestamp: '2025-11-11T16:13:00.355Z'
 }
 {
-  message: 'MongoDB connected..',
-  level: 'info',
-  timestamp: '2025-11-11T16:00:57.172Z'
+  message: 'Model overloaded (503), retry attempt 2...',
+  level: 'warn',
+  timestamp: '2025-11-11T16:13:01.028Z'
 }
 {
-  message: '🚀 Server is running on port 5000',
-  level: 'info',
-  timestamp: '2025-11-11T16:00:57.181Z'
+  message: 'Attempt 3',
+  level: 'warn',
+  timestamp: '2025-11-11T16:13:05.048Z'
 }
 {
-  message: 'MongoDB connected..',
-  level: 'info',
-  timestamp: '2025-11-11T16:01:03.717Z'
+  message: 'Model overloaded (503), retry attempt 3...',
+  level: 'warn',
+  timestamp: '2025-11-11T16:13:05.696Z'
 }
 {
-  message: '🚀 Server is running on port 5000',
+  message: 'OPTIONS /api/v1/data/upload_data',
   level: 'info',
-  timestamp: '2025-11-11T16:01:03.726Z'
+  timestamp: '2025-11-11T16:13:07.889Z'
 }
 {
-  message: 'MongoDB connected..',
+  message: 'POST /api/v1/data/upload_data',
   level: 'info',
-  timestamp: '2025-11-11T16:01:18.418Z'
+  timestamp: '2025-11-11T16:13:07.893Z'
 }
 {
-  message: '🚀 Server is running on port 5000',
+  message: 'Request: POST /upload_data',
   level: 'info',
-  timestamp: '2025-11-11T16:01:18.427Z'
+  timestamp: '2025-11-11T16:13:07.895Z'
+}
+{
+  message: 'Data saved for user: 6',
+  level: 'info',
+  timestamp: '2025-11-11T16:13:08.274Z'
+}
+{
+  message: 'Message sent to Kafka for user: 6',
+  level: 'info',
+  timestamp: '2025-11-11T16:13:08.278Z'
+}
+{
+  message: 'Attempt 4',
+  level: 'warn',
+  timestamp: '2025-11-11T16:13:11.710Z'
+}
+{
+  status: 429,
+  statusText: 'Too Many Requests',
+  errorDetails: [
+    {
+      '@type': 'type.googleapis.com/google.rpc.Help',
+      links: [
+        {
+          description: 'Learn more about Gemini API quotas',
+          url: 'https://ai.google.dev/gemini-api/docs/rate-limits'
+        }
+      ]
+    },
+    {
+      '@type': 'type.googleapis.com/google.rpc.QuotaFailure',
+      violations: [
+        {
+          quotaMetric: 'generativelanguage.googleapis.com/generate_content_free_tier_requests',
+          quotaId: 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier',
+          quotaDimensions: { location: 'global', model: 'gemini-2.5-pro' },
+          quotaValue: '2'
+        }
+      ]
+    },
+    {
+      '@type': 'type.googleapis.com/google.rpc.RetryInfo',
+      retryDelay: '48s'
+    }
+  ],
+  level: 'warn',
+  message: 'Error came with 500 status code [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n' +
+    '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2\n' +
+    'Please retry in 48.519242344s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-pro"},"quotaValue":"2"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"48s"}]',
+  stack: 'Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n' +
+    '* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 2\n' +
+    'Please retry in 48.519242344s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.5-pro"},"quotaValue":"2"}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"48s"}]\n' +
+    '    at handleResponseNotOk (file:///F:/projects/other/Blogging_website/backend/node_modules/@google/generative-ai/dist/index.mjs:432:11)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async makeRequest (file:///F:/projects/other/Blogging_website/backend/node_modules/@google/generative-ai/dist/index.mjs:401:9)\n' +
+    '    at async generateContent (file:///F:/projects/other/Blogging_website/backend/node_modules/@google/generative-ai/dist/index.mjs:865:22)\n' +
+    '    at async ChatSession.sendMessage (file:///F:/projects/other/Blogging_website/backend/node_modules/@google/generative-ai/dist/index.mjs:1208:9)\n' +
+    '    at async safeGenerate (file:///F:/projects/other/Blogging_website/backend/routes/ai/bot.js:45:28)\n' +
+    '    at async file:///F:/projects/other/Blogging_website/backend/routes/ai/bot.js:88:26',
+  timestamp: '2025-11-11T16:13:11.927Z'
+}
+{
+  message: 'GET /api/v1/data/get_data',
+  level: 'info',
+  timestamp: '2025-11-11T16:13:18.358Z'
+}
+{
+  message: 'Request: GET /get_data',
+  level: 'info',
+  timestamp: '2025-11-11T16:13:18.362Z'
+}
+{
+  message: 'Fetched 5 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-11T16:13:18.434Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/upload_data',
+  level: 'info',
+  timestamp: '2025-11-11T16:18:18.068Z'
+}
+{
+  message: 'POST /api/v1/data/upload_data',
+  level: 'info',
+  timestamp: '2025-11-11T16:18:18.084Z'
+}
+{
+  message: 'Request: POST /upload_data',
+  level: 'info',
+  timestamp: '2025-11-11T16:18:18.099Z'
+}
+{
+  message: 'Data saved for user: 6',
+  level: 'info',
+  timestamp: '2025-11-11T16:18:18.223Z'
+}
+{
+  message: 'Message sent to Kafka for user: 6',
+  level: 'info',
+  timestamp: '2025-11-11T16:18:18.226Z'
+}
+{
+  message: 'GET /api/v1/data/get_data',
+  level: 'info',
+  timestamp: '2025-11-11T16:18:25.345Z'
+}
+{
+  message: 'Request: GET /get_data',
+  level: 'info',
+  timestamp: '2025-11-11T16:18:25.350Z'
+}
+{
+  message: 'Fetched 6 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-11T16:18:25.404Z'
 }

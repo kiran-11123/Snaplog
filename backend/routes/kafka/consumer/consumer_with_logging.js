@@ -3,7 +3,7 @@ import { Kafka } from 'kafkajs';
 import winston from 'winston';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import kafka_kafka_logger from './kafka_logging';
+import kafka_logger from './kafka_logging.js';
 
 // Kafka Setup
 const kafka = new Kafka({
