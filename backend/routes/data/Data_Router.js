@@ -3,48 +3,47 @@ const data_Router = express.Router();
 import Authentication_token from '../../middlewares/Authentication_middeware.js';
 import data_model from '../../DB/data.js';
 import mongoose from 'mongoose';
+import transporter from '../user/Mail.js';
 
 
+data_Router.post("/upload_data", Authentication_token, async (req, res) => {
 
-
-data_Router.post("/upload_data" ,Authentication_token , async(req,res)=>{
-      
-    try{
+    try {
 
         const data_received = req.body.data;
-        const title  = req.body.title;
+        const title = req.body.title;
 
-        if(!data_received || data_received.length===0){
+        if (!data_received || data_received.length === 0) {
             return res.status(403).json({
-                message:"Data Not found to store"
+                message: "Data Not found to store"
             })
         }
 
 
-        const user_id =  req.user.user_id;
+        const user_id = req.user.user_id;
 
-        let user = await data_model.findOne({userid : user_id})
+        let user = await data_model.findOne({ userid: user_id })
 
-        if(!user){
-             
+        if (!user) {
+
             user = new data_model({
-                userid :user_id,
-              
-                notes:[{
-                   title,
-                   data:data_received
+                userid: user_id,
+
+                notes: [{
+                    title,
+                    data: data_received
                 }]
-           
-                    
-                    
+
+
+
             })
         }
 
-        else{
+        else {
 
             user.notes.push({
                 title,
-                data :data_received
+                data: data_received
             });
         }
 
@@ -52,7 +51,7 @@ data_Router.post("/upload_data" ,Authentication_token , async(req,res)=>{
         await user.save();
 
         return res.status(200).json({
-            messsage:"Data Saved Successfully..."
+            messsage: "Data Saved Successfully..."
         })
 
 
@@ -62,54 +61,54 @@ data_Router.post("/upload_data" ,Authentication_token , async(req,res)=>{
 
 
     }
-    catch(er){
+    catch (er) {
 
         console.log(er)
-         
+
         return res.status(500).json({
-            message:"Internal Server Error"
+            message: "Internal Server Error"
         })
     }
-} )
+})
 
 
 
 
 
 data_Router.get("/get_data", Authentication_token, async (req, res) => {
-  try {
-    const user_id = req.user.user_id;
-   
-
-    const user = await data_model.findOne({ userid: user_id }); // ✅ important fix
+    try {
+        const user_id = req.user.user_id;
 
 
-    if (user.notes.length === 0) {
-      return res.status(200).json({
-        message: "Your Notes are Empty.",
-        data: []
-      });
+        const user = await data_model.findOne({ userid: user_id }); // ✅ important fix
+
+
+        if (user.notes.length === 0) {
+            return res.status(200).json({
+                message: "Your Notes are Empty.",
+                data: []
+            });
+        }
+
+        return res.status(200).json({
+            message: "Data Fetched Successfully.",
+            data: user.notes
+        });
+    } catch (er) {
+        console.log(er);
+        return res.status(500).json({
+            message: "Internal Server Error",
+            error: er
+        });
     }
-
-    return res.status(200).json({
-      message: "Data Fetched Successfully.",
-      data: user.notes
-    });
-  } catch (er) {
-    console.log(er);
-    return res.status(500).json({
-      message: "Internal Server Error",
-      error: er
-    });
-  }
 });
 
 
 
-data_Router.delete("/delete" , Authentication_token , async(req,res)=>{
-      
+data_Router.delete("/delete", Authentication_token, async (req, res) => {
 
-    try{
+
+    try {
 
         let objId = req.body.contentId;
         objId = new mongoose.Types.ObjectId(objId);
@@ -117,49 +116,101 @@ data_Router.delete("/delete" , Authentication_token , async(req,res)=>{
         const user_id = req.user.user_id;
 
         const user = await data_model.findOneAndUpdate(
-            { userid : user_id },
+            { userid: user_id },
             { $pull: { notes: { _id: objId } } },
             { new: true }
         );
 
         console.log(user);
 
-        if(user){
+        if (user) {
             return res.status(200).json({
-                message:"Content Deleted Successfully"
+                message: "Content Deleted Successfully"
             })
         }
 
         return res.status(404).json({
-            message:"Content Not found"
+            message: "Content Not found"
         });
 
 
 
     }
-    catch(er){
+    catch (er) {
 
         console.log(er);
-         
+
         return res.status(500).json({
-            message:"Internal Server Error"
+            message: "Internal Server Error"
         })
     }
 })
 
 
-data_Router.post("/share" , Authentication_token , async(req,res)=>{
-        
-    try{
+data_Router.post("/share", Authentication_token, async (req, res) => {
 
-         const email = req.body.email;
-         const data = req.body.data;
+    try {
+
+        const username = req.user.username;
+        const email = req.body.email;
+        const data = req.body.data;
+
+        let mailoptions = {
+            from: "eventnest.official.main@gmail.com",
+            to: email,
+            subject: `Notes Content Shared By ${username}`,
+            text: "",
+            html: `
+    <div style="font-family: Arial, sans-serif; padding: 20px; border: 2px solid #4CAF50; border-radius: 10px; max-width: 600px; margin: auto; background-color: #f9f9f9;">
+
+      <h1 style="color: #4CAF50; text-align: center; margin-bottom: 20px;">
+        Notes Shared By ${username}
+      </h1>
+
+      <p style="font-size: 15px; color:#444; text-align:center; margin-bottom: 15px;">
+        Here is the note content:
+      </p>
+
+      <div style="
+        white-space: pre-wrap;
+        padding: 15px;
+        background-color: #ffffff;
+        border-left: 5px solid #4CAF50;
+        border-radius: 6px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #111;
+      ">
+        ${data}
+      </div>
+
+      <p style="color:#666; font-size: 14px; text-align:center; margin-top: 25px;">
+        Sent via EventNest Notes Sharing System.
+      </p>
+
+    </div>
+  `
+        };
+
+        await transporter.sendMail(mailoptions);
+
+
+        return res.status(200).json({
+
+
+            message: "Data sent successfully..",
+
+
+
+
+        })
+
 
     }
-    catch(er){
-         
+    catch (er) {
+
         return res.status(500).json({
-            message:"Internal Server Error"
+            message: "Internal Server Error"
         })
     }
 })
@@ -171,4 +222,4 @@ data_Router.post("/share" , Authentication_token , async(req,res)=>{
 
 
 
-export  default data_Router;
+export default data_Router;
