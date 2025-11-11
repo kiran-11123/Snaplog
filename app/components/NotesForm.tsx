@@ -3,11 +3,17 @@ import axios from "axios";
 import { X } from 'lucide-react';
 
 import React, { useState, FormEvent } from "react";
+interface NotesProps {
+  isOpen: boolean;
+  onClose: () => void;
+  workItem?: any;
+}
 
-function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) {
+function Notes({isOpen , onClose ,workItem} :NotesProps) {
     const [note, setNote] = useState('');
     const[message , setMessage]=useState('');
     const[loading , SetLoading] = useState(false);
+    const [selected, setSelected] = useState("");
 
     if (!isOpen) return null;
 
@@ -156,6 +162,26 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
 
 
                 <form  className="space-y-3" >
+
+                     <div className="w-full flex-flex-col">
+      <div className="text-sm text-red-600 font-mono">choose workspace</div>
+
+      <select
+      title="dropdown"
+        value={selected}
+        onChange={(e) => setSelected(e.target.value)}
+        className="w-full  text-sm p-2 rounded bg-gray-700 text-white border border-gray-500"
+      >
+        <option value="Default">Default</option>
+
+        {workItem.map((name:string, index:number) => (
+          <option key={index} value={name}>
+            {name}
+          </option>
+        ))}
+      </select>
+    </div>
+ 
 
                     <textarea 
                       
