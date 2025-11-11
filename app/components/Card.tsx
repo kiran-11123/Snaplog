@@ -77,7 +77,7 @@ export default function Card({ id ,title, data, created_at }: Components) {
 
             </div>
 
-            <div className="w-full flex-1 mb-3 overflow-auto hover:scale-x-90 hover:transform-all custom-scrollbar font-mono bg-gray-700/80  rounded-lg shadow-lg text-white text-sm sm:text-md px-2 py-1 whitespace-pre-wrap leading-relaxed">
+            <div className="w-full flex-1 mb-3 overflow-auto  custom-scrollbar font-mono bg-gray-700/80  rounded-lg shadow-lg text-white text-sm sm:text-md px-2 py-1 whitespace-pre-wrap leading-relaxed">
                 {data}
             </div>
 

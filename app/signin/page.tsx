@@ -96,7 +96,7 @@ export default function Signin(){
                     </div>
 
 
-                    <button className="text-center transition duration-300 hover:bg-blue-800 font-bold hover:border hover:border-gray-300 shadow-lg  text-lg sm:xl  w-full rounded-lg bg-blue-500 text-white mb-5 px-3 py-2">
+                    <button className="text-center transition duration-300 cursor-pointer hover:bg-blue-800 font-bold hover:border hover:border-gray-300 shadow-lg  text-lg sm:xl  w-full rounded-lg bg-blue-500 text-white mb-5 px-3 py-2">
                         Login
                     </button>
 

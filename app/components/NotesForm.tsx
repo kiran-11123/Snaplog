@@ -1,5 +1,7 @@
 "use client"
 import axios from "axios";
+import { X } from 'lucide-react';
+
 import React, { useState, FormEvent } from "react";
 
 function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) {
@@ -141,8 +143,16 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
         <div className="fixed inset-0 bg-gray-200 bg-opacity-80 flex items-center justify-center z-80">
             
             <div className="bg-white w-full max-w-xl rounded-lg shadow-md p-6 space-y-4">
+                 
+                 <div className="flex items-center justify-between ">
 
-                <h2 className="text-xl text-blue-700 ">Add Notes</h2>
+                    <h2 className="text-xl text-blue-700 ">Add Notes</h2>
+
+                    <button title="X" onClick={onClose} className="hover:text-red-600border rounded-full "><X /></button>
+
+
+                 </div>
+
 
                 <form  className="space-y-3" >
 
@@ -160,7 +170,7 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
                         <button onClick={handleAI} disabled={loading} className="cursor-pointer px-4 py-2 bg-gradient-to-r from-[#0f172a]  to-[#334155] hover:bg-gradient-to-r hover:from-[#0f172a] hover:to-[#628bc4] shadow-lg rounded-lg text-white">{loading ? "Generating.." : "Optimize Using AI" }</button>
                         <button  onClick={handleSubmit} className=" cursor-pointer px-4 py-2 bg-gradient-to-tr from-[#0891b2] via-[#1d4ed8] to-[#3730a3]  hover:bg-gradient-to-tr hover:from-[#299ab7] hover:via-[#13399f] hover:to-[#140f5e] shadow-lg rounded-lg text-white">Save Note</button>
 
-                        <button onClick={onClose} className="cursor-pointer px-4 py-2 bg-gradient-to-bl from-[#f97316] via-[#dc2626] to-[#be123c] hover:bg-gradient-to-bl hover:from-[#f97316] hover:via-[#dc2626] hover:to-[#83132f] shadow-lg rounded-lg text-white">Cancel</button>
+                       
                     </div>
 
                     <div className="flex justify-end gap-2 text-sm mb-5">{message ? <p className="text-red-500">{message}</p> : null} </div>

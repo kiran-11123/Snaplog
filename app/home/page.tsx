@@ -55,7 +55,9 @@ export default function Home(){
 
     FetchData();
         
-  },[])
+  },[data])
+
+ 
 
   const router = useRouter();
   function logoutHandler(){
@@ -95,7 +97,7 @@ export default function Home(){
              data.map((item : Components) => (
               <div
                 key={item._id}
-                className="transition-all flex items-center max-w-md justify-center duration-300 ease-in-out hover:outline hover:outline-2 hover:outline-blue-300 hover:border hover:border-blue-400 hover:shadow-xl hover:shadow-gray-300/50 rounded-l"
+                className="transition-all flex border items-center max-w-md justify-center duration-300 ease-in-out hover:outline hover:outline-2 hover:outline-blue-300 hover:border hover:border-blue-400 hover:shadow-xl hover:shadow-gray-300/50 rounded-l"
               >
                 <Card
                   id={item._id}
