@@ -140,10 +140,8 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
     
 
     return (
-        <div className="fixed inset-0 bg-gray-200 bg-opacity-80 flex items-center justify-center z-80">
-            
-            <div className="bg-white w-full max-w-xl rounded-lg shadow-md p-6 space-y-4">
-                 
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+            <div className="bg-white max-w-lg w-[90%] rounded-lg shadow-md p-6 space-y-4">
                  <div className="flex items-center justify-between ">
 
                     <h2 className="text-xl text-blue-700 ">Add Notes</h2>

@@ -2,7 +2,9 @@
 import { Copy } from 'lucide-react';
 import { useState } from 'react';
 import { Trash } from 'lucide-react';
+import { Share2 } from 'lucide-react';
 import axios from 'axios';
+import DataShare from './DataShare';
 interface Components {
     id:string,
     title: string,
@@ -13,9 +15,27 @@ interface Components {
 }
 
 
+
+
+
 export default function Card({ id ,title, data, created_at }: Components) {
 
     const [copied, setCopied] =  useState(false);
+
+     const[open1 , setOpenModal1] = useState(false);
+
+    async function ShareNotes(id:string){
+
+        try{
+
+        }
+        catch(er){
+
+             console.log(er);
+            alert("Error Occured while sharing..")
+
+        }
+    }
 
     async function DeleteNotes(id :string){
 
@@ -70,8 +90,19 @@ export default function Card({ id ,title, data, created_at }: Components) {
             <h1 className="text-center px-2 py-1 font-poppins font-semibold  text-lg">
                {title}
             </h1>
+            
+            <div className='flex justify-between gap-4 items-center'>
+
+            <button onClick={()=>setOpenModal1(true)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Share2 /></button>
+
 
             <button onClick={()=>DeleteNotes(id)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Trash /></button>
+
+
+            </div>
+
+
+            {open1 && <DataShare isOpen={open1} onClose={()=>setOpenModal1(false)} data={data} />}
 
            
 
