@@ -148,6 +148,21 @@ data_Router.delete("/delete" , Authentication_token , async(req,res)=>{
 })
 
 
+data_Router.post("/share" , Authentication_token , async(req,res)=>{
+        
+    try{
+
+         const email = req.body.email;
+         const data = req.body.data;
+
+    }
+    catch(er){
+         
+        return res.status(500).json({
+            message:"Internal Server Error"
+        })
+    }
+})
 
 
 
