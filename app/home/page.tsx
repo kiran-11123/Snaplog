@@ -54,7 +54,43 @@ export default function Home(){
 
     FetchData();
         
-  },[data])
+  },[])
+
+
+
+
+  setTimeout(()=>{
+
+    useEffect(()=>{
+
+    async function FetchData(){
+         
+      try{
+
+        const response = await axios.get("http://localhost:5000/api/v1/data/get_data" , {
+          withCredentials:true
+        }) 
+
+        if(response.status===200){
+           SetData(response.data.data);
+           
+        }
+        
+
+      }
+      catch (err) {
+        console.error("Error fetching content", err);
+      }
+    }
+
+    FetchData();
+        
+  },[])
+
+
+  },5000)
+
+
 
  
 

@@ -92,6 +92,7 @@ function Notes({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void }) 
             })
 
             if(response.status==200){
+                 window.location.reload();
                 setMessage("Notes Added Successfully...")
 
 
