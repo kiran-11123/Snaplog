@@ -2,6 +2,7 @@ import express from 'express'
 const data_Router = express.Router();
 import Authentication_token from '../../middlewares/Authentication_middeware.js';
 import data_model from '../../DB/data.js';
+import mongoose from 'mongoose';
 
 
 
@@ -22,20 +23,29 @@ data_Router.post("/upload_data" ,Authentication_token , async(req,res)=>{
 
         const user_id =  req.user.user_id;
 
-        let user = await data_model.findOne({user_id})
+        let user = await data_model.findOne({userid : user_id})
 
         if(!user){
              
             user = new data_model({
-                user_id ,
-                title:title,
-                data:[{ data_received}]
+                userid :user_id,
+              
+                notes:[{
+                   title,
+                   data:data_received
+                }]
+           
+                    
+                    
             })
         }
 
         else{
-            user.title = title;
-            user.data.push({data_received});
+
+            user.notes.push({
+                title,
+                data :data_received
+            });
         }
 
 
@@ -66,44 +76,15 @@ data_Router.post("/upload_data" ,Authentication_token , async(req,res)=>{
 
 
 
-
-data_Router.get("/data_count", Authentication_token , async(req,res)=>{
-
-    try{
-
-        const user_id = req.user.user_id;
-
-        const user = await data_model.find({id:user_id});
-
-        if(!user){
-            return res.status(200).json({
-                message:"Data Fetched Successfully..",
-                count:0
-            })
-        }
-
-        return res.status(200).json({
-            message:"Data Fetched Successfully..",
-            count:user.data.length
-        })
-    }
-    catch(er){
-        console.log(er);
-        return res.status(500).json({
-            message:"Internal Server Error",
-            error:er
-        })
-    }
-})
-
 data_Router.get("/get_data", Authentication_token, async (req, res) => {
   try {
     const user_id = req.user.user_id;
- 
+   
 
-    const user = await data_model.findOne({ id: user_id }); // ✅ important fix
+    const user = await data_model.findOne({ userid: user_id }); // ✅ important fix
 
-    if (!user || !user.data || user.data.length === 0) {
+
+    if (user.notes.length === 0) {
       return res.status(200).json({
         message: "Your Notes are Empty.",
         data: []
@@ -112,7 +93,7 @@ data_Router.get("/get_data", Authentication_token, async (req, res) => {
 
     return res.status(200).json({
       message: "Data Fetched Successfully.",
-      data: user.data
+      data: user.notes
     });
   } catch (er) {
     console.log(er);
@@ -122,6 +103,49 @@ data_Router.get("/get_data", Authentication_token, async (req, res) => {
     });
   }
 });
+
+
+
+data_Router.delete("/delete" , Authentication_token , async(req,res)=>{
+      
+
+    try{
+
+        let objId = req.body.contentId;
+        objId = new mongoose.Types.ObjectId(objId);
+
+        const user_id = req.user.user_id;
+
+        const user = await data_model.findOneAndUpdate(
+            { userid : user_id },
+            { $pull: { notes: { _id: objId } } },
+            { new: true }
+        );
+
+        console.log(user);
+
+        if(user){
+            return res.status(200).json({
+                message:"Content Deleted Successfully"
+            })
+        }
+
+        return res.status(404).json({
+            message:"Content Not found"
+        });
+
+
+
+    }
+    catch(er){
+
+        console.log(er);
+         
+        return res.status(500).json({
+            message:"Internal Server Error"
+        })
+    }
+})
 
 
 

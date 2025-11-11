@@ -3,17 +3,17 @@ import mongoose  from "mongoose";
 
 const data_Schema = new mongoose.Schema({
    
-     id :{type:Number } , 
-     title:{type:String},
-     data:[{
+     userid :{type:Number } , 
+     
+     notes:[{
+        title:{type:Object},
+        data:{type:Object},
         
-        text:{type:String},
-        
-        
+      createdAt:{type:Date , default:Date.now}
 
 
      }],
-     createdAt:{type:Date , default:Date.now}
+    
        
 })
 
