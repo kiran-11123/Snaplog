@@ -32,7 +32,7 @@ function Workspace({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void
             }, {withCredentials : true})
 
             if(response.status===200){
-                 
+                 window.location.reload();
                 setMessage(response.data.message);
             }
             else{

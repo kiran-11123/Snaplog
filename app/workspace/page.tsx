@@ -17,6 +17,7 @@ import Notes from "../components/NotesForm";
 
 interface Components {
     _id:string,
+    workspace_name: string,
     title: string,
     data: string,
     createdAt: Date;
@@ -98,6 +99,7 @@ export default function workspace_page(){
                 className="transition-all flex border items-center max-w-md justify-center duration-300 ease-in-out hover:outline hover:outline-2 hover:outline-blue-300 hover:border hover:border-blue-400 hover:shadow-xl hover:shadow-gray-300/50 rounded-l"
               >
                 <Card
+                  workspace_name={item.workspace_name}
                   id={item._id}
                   title={item.title}
                   data={item.data}

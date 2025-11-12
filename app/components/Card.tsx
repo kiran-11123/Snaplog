@@ -7,6 +7,7 @@ import axios from 'axios';
 import DataShare from './DataShare';
 interface Components {
     id:string,
+    workspace_name: string,
     title: string,
     data: string,
     created_at: Date;
@@ -18,7 +19,7 @@ interface Components {
 
 
 
-export default function Card({ id ,title, data, created_at }: Components) {
+export default function Card({ workspace_name , id ,title, data, created_at }: Components) {
 
     const [copied, setCopied] =  useState(false);
 
@@ -44,7 +45,11 @@ export default function Card({ id ,title, data, created_at }: Components) {
         try{
 
             const response = await axios.delete("http://localhost:5000/api/v1/data/delete" ,{
-      data:{contentId:id},
+      data:{
+        contentId:id,
+        workspace_name:workspace_name
+
+      },
       withCredentials:true
     })
 

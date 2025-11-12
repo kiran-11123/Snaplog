@@ -14,6 +14,7 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
     const[message , setMessage]=useState('');
     const[loading , SetLoading] = useState(false);
     const [selected, setSelected] = useState("");
+    const [title, setTitle] = useState('');
 
     if (!isOpen) return null;
 
@@ -88,11 +89,11 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
 
         try{
 
-            const split = note.split('\n')[0];
+            
             
 
             const response = await axios.post("http://localhost:5000/api/v1/data/upload_data",{
-                title:split,
+                title:title,
                 workspace:selected,
                 data : note
             },{
@@ -183,10 +184,18 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
         ))}
       </select>
     </div>
- 
+  
+                     <div className="text-sm"> 
+                        <label className="font-bold text-lg sm:text-xl block mb-1">
+                            Title
+                        </label>
+
+                        <input required onChange={(e) => setTitle(e.target.value)}  value={title} className="w-full px-4 py-2 rounded-md border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Enter  Title" type="text" />
+                    </div>
+
 
                     <textarea 
-                      
+                      required
                       value={note}
                       onChange={(e)=> setNote(e.target.value)}
                       placeholder="Write your note...."
