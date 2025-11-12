@@ -6,6 +6,7 @@ import mongoose from 'mongoose';
 import transporter from '../user/Mail.js';
 import logger from '../../utils/logger.js';
 import { producer ,setupKafka , TOPIC  } from '../kafka/producer.js';
+import workspace_model from '../../DB/workspace.js';
 
 
 data_Router.post("/upload_data", Authentication_token, async (req, res) => {
@@ -16,6 +17,7 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
 
         const data_received = req.body.data;
         const title = req.body.title;
+        const workspace = req.body.workspace;
 
         if (!data_received || data_received.length === 0) {
              logger.warn("Upload attempt with empty data");
@@ -27,33 +29,29 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
 
         const user_id = req.user.user_id;
 
-        let user = await data_model.findOne({ userid: user_id })
+       let check_workspace = await workspace_model.findOne({workspace_name : workspace})
 
-        if (!user) {
+        if (!check_workspace) {
 
-            user = new data_model({
+          
+                check_workspace = new workspace_model({
+                workspace_name : workspace_title,
                 userid: user_id,
-
-                notes: [{
-                    title,
-                    data: data_received
-                }]
-
-
-
+                notes : []
             })
+           
         }
 
         else {
 
-            user.notes.push({
+            workspace.notes.push({
                 title,
                 data: data_received
             });
         }
  
 
-        await user.save();
+        await workspace.save();
 
          logger.info(`Data saved for user: ${user_id}`);
 
@@ -98,14 +96,15 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
 
 
 
-data_Router.get("/get_data", Authentication_token, async (req, res) => {
+data_Router.get("/workspace_get_data", Authentication_token, async (req, res) => {
     try {
 
           logger.info("Request: GET /get_data");
         const user_id = req.user.user_id;
+        const workspace = req.body;
 
 
-        const user = await data_model.findOne({ userid: user_id }); // ✅ important fix
+        const user = await data_model.findOne({ workspace_name: workspace }); // ✅ important fix
 
 
         if (user.notes.length === 0) {
