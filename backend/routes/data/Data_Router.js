@@ -151,13 +151,14 @@ data_Router.delete("/delete", Authentication_token, async (req, res) => {
 
 
         let objId = req.body.contentId;
+        const workspace_name = req.body.workspace_name;
         objId = new mongoose.Types.ObjectId(objId);
 
         const user_id = req.user.user_id;
 
-        const user = await data_model.findOneAndUpdate(
+        const user = await workspace_model.findOneAndUpdate(
             { userid: user_id },
-            { $pull: { notes: { _id: objId } } },
+            { $pull: { notes: { _id: objId, workspace_name: workspace_name } } },
             { new: true }
         );
 
