@@ -15,7 +15,6 @@ import { NotebookTabs } from 'lucide-react';
 import Workspace from "../components/workspace";
 import Notes from "../components/NotesForm";
 
-
 interface Components {
     _id:string,
     title: string,
@@ -25,10 +24,12 @@ interface Components {
 
 }
 
-export default function workspace_page({searchParams}:any){
+export default function workspace_page(){
 
-
-     const { title } = searchParams;
+      
+   const searchParams = useSearchParams();
+    const title = searchParams.get('title');
+     console.log("workspace title is " , title);
 
 
  const [data, SetData] = useState<Components[]>([]);
