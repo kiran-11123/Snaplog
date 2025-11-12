@@ -17,11 +17,12 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
 
         const data_received = req.body.data;
         const title = req.body.title;
-        const workspace = req.body.workspace;
+        let workspace = req.body.workspace;
 
-        console.log("data is ", data_received )
-          console.log("title is ", title )
-          console.log("workspace is" , workspace)
+        if(!workspace){
+
+            workspace = "Default"
+        }
 
         if (!data_received || data_received.length === 0) {
              logger.warn("Upload attempt with empty data");
@@ -40,10 +41,15 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
 
           
                 check_workspace = new workspace_model({
-                workspace_name : workspace_title,
+                workspace_name : workspace,
                 userid: user_id,
                 notes : []
             })
+
+             check_workspace.notes.push({
+                title,
+                data: data_received
+            });
            
         }
 
@@ -109,12 +115,16 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
 
         
         const user_id = req.user.user_id;
-        const workspace = req.body.workspace_name;
+        let workspace = req.body.workspace_name;
+       
+        console.log(workspace)
 
         
 
 
         const user = await workspace_model.findOne({ workspace_name: workspace }); 
+
+        console.log(user)
 
         if (user.notes.length === 0) {
               logger.info(`No notes found for user: ${user_id}`);
