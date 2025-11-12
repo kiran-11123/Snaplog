@@ -5,12 +5,15 @@ import { Trash } from 'lucide-react';
 import { Share2 } from 'lucide-react';
 import axios from 'axios';
 import DataShare from './DataShare';
+import { Heart } from 'lucide-react';
+
 interface Components {
-    id:string,
+    id: string,
     workspace_name: string,
     title: string,
     data: string,
-    created_at: Date;
+    created_at: Date
+    favourite: boolean
 
 
 }
@@ -19,55 +22,80 @@ interface Components {
 
 
 
-export default function Card({ workspace_name , id ,title, data, created_at }: Components) {
+export default function Card({  workspace_name, id , title, data, created_at ,favourite }: Components) {
 
-    const [copied, setCopied] =  useState(false);
+    const [copied, setCopied] = useState(false);
 
-     const[open1 , setOpenModal1] = useState(false);
-
-    async function ShareNotes(id:string){
-
-        try{
-
-        }
-        catch(er){
-
-             console.log(er);
-            alert("Error Occured while sharing..")
-
-        }
-    }
-
-    async function DeleteNotes(id :string){
+    const [open1, setOpenModal1] = useState(false);
 
 
+    async function HandleFavourites(id: string) {
 
-        try{
+        try {
 
-            const response = await axios.delete("http://localhost:5000/api/v1/data/delete" ,{
-      data:{
-        contentId:id,
-        workspace_name:workspace_name
-
+            const response = await axios.post(
+      "http://localhost:5000/api/v1/data/favourites",
+      {
+        contentId: id,
+        workspace_name: workspace_name,
       },
-      withCredentials:true
-    })
+      {
+        withCredentials: true,
+      }
+    );
+            if (response.status === 200) {
+                 alert(response.data.message);
+                window.location.reload();
 
-    console.log(response);
-
-    if(response.status===200){
-      alert("Content Deleted Successfully");
-      window.location.reload();
-    }
-    else{
-      alert("Error Occured while deleting..") 
-      console.log(response.data)
-    }
+                
+            }
+            else{
+                alert(response.data.message);
+            }
 
         }
-        catch(er){
+        catch (er) {
+            
+            console.log(er);
+            alert("Error occured while making favourites: " );
 
-             console.log(er);
+        }
+
+    }
+
+  
+
+    async function DeleteNotes(id: string) {
+
+
+
+        try {
+
+
+            const response = await axios.delete("http://localhost:5000/api/v1/data/delete", {
+                data: {
+                    contentId: id,
+                    workspace_name: workspace_name
+
+                },
+                withCredentials: true
+            })
+
+            console.log(response);
+
+            if (response.status === 200) {
+                alert(response.data.message);
+                window.location.reload();
+            }
+            else {
+                alert(response.data.message);   
+                console.log(response.data)
+            }
+
+        }
+        catch (er) {
+
+            console.log(er);
             alert("Error Occured while deleting..")
 
         }
@@ -80,36 +108,45 @@ export default function Card({ workspace_name , id ,title, data, created_at }: C
             await navigator.clipboard.writeText(data);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
-        }       catch (err) { 
+        } catch (err) {
 
             console.error('Failed to copy text: ', err);
-          }
+        }
 
     }
     return (
 
         <div className="w-full max-w-md  backdrop-blur-xl bg-white/20  border-white h-96 p-4 shadow-xl rounded-md flex flex-col border items-center justify-between">
-             
-             <div className='w-full flex items-center justify-between mb-1'>
 
-            <h1 className="text-center px-2 py-1 font-poppins font-semibold  text-lg">
-               {title}
-            </h1>
-            
-            <div className='flex justify-between gap-4 items-center'>
+            <div className='w-full flex items-center justify-between mb-1'>
 
-            <button onClick={()=>setOpenModal1(true)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Share2 /></button>
+                <h1 className="text-center px-2 py-1 font-poppins font-semibold  text-lg">
+                    {title}
+                </h1>
+
+                <div className='flex justify-between gap-4 items-center'>
+
+                    <button
+                        onClick={() => HandleFavourites(id)}
+                        className={`font-sm cursor-pointer rounded-full transition-shadow ${favourite ? " text-red-500" : "text-black"
+                            }`}
+                        title="heart"
+                    >
+                        <Heart />
+                    </button>
+
+                    <button onClick={() => setOpenModal1(true)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Share2 /></button>
 
 
-            <button onClick={()=>DeleteNotes(id)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Trash /></button>
+                    <button onClick={() => DeleteNotes(id)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Trash /></button>
 
 
-            </div>
+                </div>
 
 
-            {open1 && <DataShare isOpen={open1} onClose={()=>setOpenModal1(false)} data={data} />}
+                {open1 && <DataShare isOpen={open1} onClose={() => setOpenModal1(false)} data={data} />}
 
-           
+
 
             </div>
 
@@ -117,20 +154,20 @@ export default function Card({ workspace_name , id ,title, data, created_at }: C
                 {data}
             </div>
 
-         
 
 
-            
+
+
 
             <div className='flex items-center w-full  justify-between'>
 
                 <span className='font-inter text-gray-900/80'>
 
-    
-                
-                  <span className='font-semibold'>Saved on : </span>{created_at ? created_at.toString().split('T')[0] : 'No date'}
 
-                  
+
+                    <span className='font-semibold'>Saved on : </span>{created_at ? created_at.toString().split('T')[0] : 'No date'}
+
+
                 </span>
 
                 <button title="Copy" onClick={handleCopy} className='flex items-center p-2 bg-gray-300 rounded-md hover:bg-gray-400 hover:opacity-80 transition-shadow shadow-md'>

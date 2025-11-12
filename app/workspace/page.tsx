@@ -17,9 +17,10 @@ import Notes from "../components/NotesForm";
 
 interface Components {
     _id:string,
-    workspace_name: string,
+    workspace_name: string | null,
     title: string,
     data: string,
+    favourite:boolean,
     createdAt: Date;
 
 
@@ -29,8 +30,7 @@ export default function workspace_page(){
 
       
    const searchParams = useSearchParams();
-    const title = searchParams.get('title');
-     console.log("workspace title is " , title);
+const title: string = searchParams.get('title') ?? "";
 
 
  const [data, SetData] = useState<Components[]>([]);
@@ -42,7 +42,7 @@ export default function workspace_page(){
       try{
 
         const response  = await axios.post("http://localhost:5000/api/v1/data/workspace_get_data", {
-               workspace_title:title
+               workspace_name:title
             } ,{
                 withCredentials:true
             })
@@ -97,17 +97,17 @@ export default function workspace_page(){
               <div
                 key={item._id}
                 className="transition-all flex border items-center max-w-md justify-center duration-300 ease-in-out hover:outline hover:outline-2 hover:outline-blue-300 hover:border hover:border-blue-400 hover:shadow-xl hover:shadow-gray-300/50 rounded-l"
-              >
+              >  
+            
                 <Card
-                  workspace_name={item.workspace_name}
-                  id={item._id}
-                  title={item.title}
-                  data={item.data}
-                  created_at={item.createdAt}
-                 
-                  
-                 
-                />
+    key={item._id}
+    id={item._id}
+    workspace_name={title}
+    title={item.title}
+    data={item.data}
+    created_at={item.createdAt}
+    favourite={item.favourite}
+  />
               </div>
             ))
           ) : (
