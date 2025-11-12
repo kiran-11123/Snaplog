@@ -30,7 +30,7 @@ export default function workspace_page(){
 
       
    const searchParams = useSearchParams();
-const title: string = searchParams.get('title') ?? "";
+const title: string = searchParams.get('title') ?? "Default";
 
 
  const [data, SetData] = useState<Components[]>([]);

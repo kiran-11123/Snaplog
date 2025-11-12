@@ -186,7 +186,7 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
     </div>
   
                      <div className="text-sm"> 
-                        <label className="font-bold text-lg sm:text-xl block mb-1">
+                        <label className=" text-md sm:text-lg block mb-1">
                             Title
                         </label>
 
