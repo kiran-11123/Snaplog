@@ -109,14 +109,13 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
 
         
         const user_id = req.user.user_id;
-        const workspace = req.body.workspace_title;
+        const workspace = req.body.workspace_name;
 
         
 
 
         const user = await workspace_model.findOne({ workspace_name: workspace }); 
 
-         console.log("user data is " , user)
         if (user.notes.length === 0) {
               logger.info(`No notes found for user: ${user_id}`);
             return res.status(200).json({
@@ -129,7 +128,8 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
 
         return res.status(200).json({
             message: "Data Fetched Successfully.",
-            data: user.notes
+            data: user.notes,
+            workspace_name : user.workspace_name
         });
     } catch (er) {
  logger.error("Error in /get_data: " + er.message);
@@ -141,54 +141,52 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
 });
 
 
-
-
 data_Router.delete("/delete", Authentication_token, async (req, res) => {
+  try {
+    logger.info("Request: DELETE /delete");
 
+    let objId = req.body.contentId;
+    const workspace_name = req.body.workspace_name;
 
-    try {
-         logger.info("Request: DELETE /delete");
-
-
-        let objId = req.body.contentId;
-        const workspace_name = req.body.workspace_name;
-        objId = new mongoose.Types.ObjectId(objId);
-
-        const user_id = req.user.user_id;
-
-        const user = await workspace_model.findOneAndUpdate(
-            { userid: user_id },
-            { $pull: { notes: { _id: objId, workspace_name: workspace_name } } },
-            { new: true }
-        );
-
-        if (user) {
-
-              logger.info(`Note deleted for user: ${user_id}`);
-            return res.status(200).json({
-                message: "Content Deleted Successfully"
-            })
-        }
-
-         logger.warn(`Delete attempt failed — note not found for user: ${user_id}`);
-
-        return res.status(404).json({
-            message: "Content Not found"
-        });
-
-
-
+    if (!objId || !workspace_name) {
+      return res.status(400).json({
+        message: "Missing contentId or workspace_name",
+      });
     }
-    catch (er) {
 
-        logger.error("Error in /delete: " + er.message);
+    const user_id = req.user.userid; // ✅ consistent with your favourites route
+    const objIdObj = new mongoose.Types.ObjectId(objId);
 
-        return res.status(500).json({
-            message: "Internal Server Error"
-        })
+    // Find and update workspace
+    const updatedWorkspace = await workspace_model.findOneAndUpdate(
+      {
+       
+        workspace_name: workspace_name, // ✅ workspace level field
+      },
+      {
+        $pull: { notes: { _id: objIdObj } }, // ✅ remove only note by _id
+      },
+      { new: true }
+    );
+
+    if (!updatedWorkspace) {
+      logger.warn(`Delete attempt failed — workspace not found for user: ${user_id}`);
+      return res.status(404).json({
+        message: "Workspace not found or note does not exist",
+      });
     }
-})
 
+    logger.info(`Note deleted for user: ${user_id}`);
+    return res.status(200).json({
+      message: "Note deleted successfully",
+    });
+  } catch (er) {
+    logger.error("Error in /delete: " + er.message);
+    return res.status(500).json({
+      message: "Internal Server Error",
+    });
+  }
+});
 
 data_Router.post("/share", Authentication_token, async (req, res) => {
 
@@ -265,7 +263,59 @@ data_Router.post("/share", Authentication_token, async (req, res) => {
 })
 
 
+data_Router.post("/favourites", Authentication_token, async (req, res) => {
+  try {
+    logger.info("Request: POST /favourites");
 
+    let objId = req.body.contentId;
+    const workspace_name = req.body.workspace_name;
+
+    if (!objId || !workspace_name) {
+      return res.status(400).json({
+        message: "Missing contentId or workspace_name",
+      });
+    }
+
+    const user_id = req.user.userid;
+    const objIdObj = new mongoose.Types.ObjectId(objId);
+
+    // Find the workspace that belongs to this user
+    const workspace = await workspace_model.findOne({
+      workspace_name: workspace_name,
+    });
+
+    if (!workspace) {
+      logger.warn("Workspace not found...");
+      return res.status(404).json({
+        message: "Workspace not found",
+      });
+    }
+
+    // Find the note to toggle favourite
+    const note = workspace.notes.id(objIdObj);
+    if (!note) {
+      return res.status(404).json({
+        message: "Note not found",
+      });
+    }
+
+    // Toggle favourite
+    note.favourite = !note.favourite;
+
+    await workspace.save();
+
+    logger.info("Favourite status updated successfully");
+    return res.status(200).json({
+      message: "Favourite status updated successfully",
+      favourite: note.favourite,
+    });
+  } catch (er) {
+    logger.error("Error in /favourites: " + er.message);
+    return res.status(500).json({
+      message: "Internal Server Error",
+    });
+  }
+});
 
 
 

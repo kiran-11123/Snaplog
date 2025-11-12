@@ -9,8 +9,9 @@ const workspace_Schema = new mongoose.Schema({
      notes:[{
         title:{type:Object},
         data:{type:Object},
+        favourite :{type:Boolean , default:false},
         
-      createdAt:{type:Date , default:Date.now}
+        createdAt:{type:Date , default:Date.now}
 
 
      }],
