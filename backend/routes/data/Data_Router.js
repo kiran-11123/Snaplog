@@ -19,6 +19,10 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
         const title = req.body.title;
         const workspace = req.body.workspace;
 
+        console.log("data is ", data_received )
+          console.log("title is ", title )
+          console.log("workspace is" , workspace)
+
         if (!data_received || data_received.length === 0) {
              logger.warn("Upload attempt with empty data");
             return res.status(403).json({
@@ -30,6 +34,7 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
         const user_id = req.user.user_id;
 
        let check_workspace = await workspace_model.findOne({workspace_name : workspace})
+       console.log(check_workspace)
 
         if (!check_workspace) {
 
@@ -43,20 +48,21 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
         }
 
         else {
-
-            workspace.notes.push({
+            
+            console.log("inside the else")
+            check_workspace.notes.push({
                 title,
                 data: data_received
             });
         }
  
 
-        await workspace.save();
+        await check_workspace.save();
 
-         logger.info(`Data saved for user: ${user_id}`);
+        logger.info(`Data saved for user: ${user_id}`);
 
 
-        const message = {
+       const message = {
             user_id ,
             title,
             data:data_received,
@@ -69,7 +75,7 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
                 { key: message.user_id, value: JSON.stringify(message) }
             ]
         }).catch(err => console.error('Kafka error:', err));
-   logger.info(`Message sent to Kafka for user: ${user_id}`);
+       logger.info(`Message sent to Kafka for user: ${user_id}`); 
 
         return res.status(200).json({
             messsage: "Data Saved Successfully..."
@@ -96,17 +102,21 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
 
 
 
-data_Router.get("/workspace_get_data", Authentication_token, async (req, res) => {
+data_Router.post("/workspace_get_data", Authentication_token, async (req, res) => {
     try {
 
-          logger.info("Request: GET /get_data");
+          logger.info("Request: POST /workspace_get_data");
+
+        
         const user_id = req.user.user_id;
-        const workspace = req.body;
+        const workspace = req.body.workspace_title;
+
+        
 
 
-        const user = await data_model.findOne({ workspace_name: workspace }); // ✅ important fix
+        const user = await workspace_model.findOne({ workspace_name: workspace }); 
 
-
+         console.log("user data is " , user)
         if (user.notes.length === 0) {
               logger.info(`No notes found for user: ${user_id}`);
             return res.status(200).json({
@@ -129,6 +139,7 @@ data_Router.get("/workspace_get_data", Authentication_token, async (req, res) =>
         });
     }
 });
+
 
 
 
