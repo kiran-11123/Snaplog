@@ -40,7 +40,8 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
            
 
             const response = await axios.post("http://localhost:5000/api/v1/ai/content" , {
-                question:note
+                question:note,
+              
             }, {withCredentials : true})
 
             
@@ -92,6 +93,7 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
 
             const response = await axios.post("http://localhost:5000/api/v1/data/upload_data",{
                 title:split,
+                workspace:selected,
                 data : note
             },{
                 withCredentials:true

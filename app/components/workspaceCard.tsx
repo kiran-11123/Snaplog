@@ -13,10 +13,10 @@ interface Components {
 export default function WorkspaceCard({ workspace_name }: Components) {
    
     const router = useRouter();
-     
-    async function  ToWorkSpace(e:any) {
 
-        e.preventDefault();
+    async function  ToWorkSpace(workspace_name:string){
+
+      
         router.push(`/workspace?title=${encodeURIComponent(workspace_name)}`);
 
 
