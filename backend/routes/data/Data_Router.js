@@ -19,10 +19,7 @@ data_Router.post("/upload_data", Authentication_token, async (req, res) => {
         const title = req.body.title;
         let workspace = req.body.workspace;
 
-        if(!workspace){
-
-            workspace = "Default"
-        }
+       
 
         if (!data_received || data_received.length === 0) {
              logger.warn("Upload attempt with empty data");
@@ -168,27 +165,46 @@ data_Router.delete("/delete", Authentication_token, async (req, res) => {
     const objIdObj = new mongoose.Types.ObjectId(objId);
 
     // Find and update workspace
-    const updatedWorkspace = await workspace_model.findOneAndUpdate(
-      {
-       
-        workspace_name: workspace_name, // ✅ workspace level field
-      },
-      {
-        $pull: { notes: { _id: objIdObj } }, // ✅ remove only note by _id
-      },
-      { new: true }
-    );
 
-    if (!updatedWorkspace) {
-      logger.warn(`Delete attempt failed — workspace not found for user: ${user_id}`);
-      return res.status(404).json({
-        message: "Workspace not found or note does not exist",
-      });
+    const find_workspace = await workspace_model.find({workspace_name : workspace_name})
+
+    if(!find_workspace){
+       logger.warn("WorkSpace not found..")
+       return res.status(400).json({
+        message:"WorkSpace not found"
+       })
     }
 
-    logger.info(`Note deleted for user: ${user_id}`);
+    const find_DataById = find_workspace.notes.id(objIdObj);
+
+    if(find_DataById){
+       
+      logger.warn("Note not found...") 
+      return res.status(404).json({
+        message:"Note not found"
+       })
+    }
+
+    find_workspace.recentlyDeleted.push({
+         title:find_DataById.title,
+         data : find_DataById.data,
+         favourite : false,
+         deletedAt : new Date()
+    })
+    
+
+    find_DataById.deleteOne();
+    await find_workspace.save();
+
+
+    
+
+
+
+   
+    logger.info(`Note moved t0 recently deleted for user ${user_id}`);
     return res.status(200).json({
-      message: "Note deleted successfully",
+      message: "Note moved t0 recently deleted",
     });
   } catch (er) {
     logger.error("Error in /delete: " + er.message);
@@ -327,6 +343,53 @@ data_Router.post("/favourites", Authentication_token, async (req, res) => {
   }
 });
 
+
+
+data_Router.post("/recently_deleted" , Authentication_token , async(req,res)=>{
+        
+  try{
+
+    logger.info("Request: POST /recently_deleted");
+
+
+    const workspace_name = req.body.workspace_name;
+
+    const find_workspace =  await workspace_model.findOne({workspace_name : workspace_name})
+
+    if(!find_workspace){
+      return res.status(400).json({
+        message:"Work Space is not there..."
+      })
+    }
+
+     if (user.recentlyDeleted.length === 0) {
+              logger.info(`No Recent deletions found for user: ${user_id}`);
+            return res.status(200).json({
+                message: "Your Bin is Empty.",
+                data: []
+            });
+        }
+
+         logger.info(`Fetched ${user.recentlyDeleted.length} notes for user: ${user_id}`);
+
+        return res.status(200).json({
+            message: "Data Fetched Successfully.",
+            data: user.recentlyDeleted,
+            workspace_name : user.workspace_name
+
+        })
+
+
+
+  }
+  catch(er){
+       
+    logger.warn("Error in Recenlty Deleted : " + er.message )
+     return res.status(500).json({
+      message: "Internal Server Error",
+    });
+  }
+})
 
 
 

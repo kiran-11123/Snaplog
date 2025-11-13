@@ -16,6 +16,14 @@ const workspace_Schema = new mongoose.Schema({
 
      }],
 
+     recentlyDeleted:[{
+           title:{type:Object},
+           data:{type:Object},
+           favourite :{type:Boolean , default:false},
+        
+           createdAt:{type:Date , default:Date.now}
+     }]
+
 })
 
 
