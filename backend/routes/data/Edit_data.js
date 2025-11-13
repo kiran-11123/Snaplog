@@ -3,18 +3,19 @@ const Edit_Router = express.Router();
 import workspace_model from '../../DB/workspace.js';
 import Authentication_token from '../../middlewares/Authentication_middeware.js';
 import logger from '../../utils/logger.js';
-
-Edit_Router.update("/edit" , Authentication_token , async(req,res)=>{
+import mongoose from 'mongoose';
+Edit_Router.post("/edit_notes" , Authentication_token , async(req,res)=>{
        
     try{
 
-        logger.info("Request: Update /edit")
-          
-        const id = req.data.id;
+        logger.info("Request: Update /edit_notes")
+         const id = req.body.contentId;
+
          const data_received = req.body.data;
-        const title = req.body.title;
-        let workspace = req.body.workspace;
+         let workspace = req.body.workspace_name;
         const user_id = req.user.userid;
+
+        
 
             const objIdObj = new mongoose.Types.ObjectId(id);
         
@@ -39,7 +40,7 @@ Edit_Router.update("/edit" , Authentication_token , async(req,res)=>{
         }
         
 
-            const note = workspace.notes.id(objIdObj);
+    const note = find_workspace.notes.id(objIdObj);
     if (!note) {
       return res.status(404).json({
         message: "Note not found",
@@ -47,9 +48,10 @@ Edit_Router.update("/edit" , Authentication_token , async(req,res)=>{
     }
 
     // Toggle favourite
-    note.data = data;
+    note.data = data_received;
+    note.createdAt = Date.now();
 
-    await workspace.save();
+    await find_workspace.save();
 
       logger.info(`Notes Edited successfully for the userid ${user_id}`);
     return res.status(200).json({
