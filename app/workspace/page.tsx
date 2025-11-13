@@ -6,7 +6,7 @@
 
 import { Plus } from "lucide-react";
 import AuthGuard from "../components/AuthGuard"
-import { useSearchParams } from "next/navigation";
+import { permanentRedirect, useSearchParams } from "next/navigation";
 import { use, useState , useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -14,6 +14,8 @@ import Card from "../components/Card";
 import { NotebookTabs } from 'lucide-react';
 import Workspace from "../components/workspace";
 import Notes from "../components/NotesForm";
+import { Trash2 } from 'lucide-react';
+
 
 interface Components {
     _id:string,
@@ -28,7 +30,7 @@ interface Components {
 
 export default function workspace_page(){
 
-      
+       
    const searchParams = useSearchParams();
 const title: string = searchParams.get('title') ?? "Default";
 
@@ -64,6 +66,13 @@ const title: string = searchParams.get('title') ?? "Default";
   },[])
 
 
+   function recentlyDeleted() {
+
+         router.push(`/recentlydeleted?title=${encodeURIComponent(title)}`);
+   
+  }
+
+
 
 
 
@@ -88,7 +97,7 @@ const title: string = searchParams.get('title') ?? "Default";
                   
             <h1 className="font-serif px-4 py-2 rounded-lg shadow-2xl bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#27272a] via-[#52525b] to-[#a1a1aa] text-blue-800">WorkSpace : {title}</h1>
 
-
+            <button title="recently deleted notes" onClick={recentlyDeleted}  className=" font-sm rounded-full hover:transition-shadow"><Trash2 /> </button>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 p-4 justify-center items-center md:grid-cols-3 gap-6 mt-5">
