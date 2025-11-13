@@ -194,9 +194,12 @@ export default function Card({  workspace_name, id , title, data, created_at ,fa
 
             </div>
 
-            {message && <div className='text-md w-full font-inter text-gray-800'>{message}</div>}
+         
 
             </div>
+
+
+               {message && <div className='text-md w-full font-inter text-gray-800'>{message}</div>}
 
 
 

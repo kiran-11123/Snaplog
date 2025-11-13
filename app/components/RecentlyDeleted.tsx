@@ -172,9 +172,11 @@ export default function DeleteCard({  workspace_name, id , title, data, created_
                     {copied && <span className='text-xs text-black '>Copied!</span>}
                 </button>
 
-                {message && <div className='text-md w-full font-inter text-gray-800'>{message}</div> }
+               
 
             </div>
+
+             {message && <div className='text-md w-full font-inter text-gray-800'>{message}</div> }
 
 
 
