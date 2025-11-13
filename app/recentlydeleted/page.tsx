@@ -5,13 +5,13 @@ import { useState } from "react"
 import { useEffect } from "react";
 import Card from "../components/Card";
 import { useSearchParams } from 'next/navigation'
+import DeleteCard from "../components/RecentlyDeleted";
 
 interface Components {
     _id:string,
     workspace_name: string | null,
     title: string,
     data: string,
-    favourite:boolean,
     createdAt: Date;
 
 
@@ -38,7 +38,7 @@ export default function recentlyDeleted(){
                 withCredentials:true
             })
 
-            
+
             if(response.status ===200){
            
                 setData(response.data.data);
@@ -80,14 +80,13 @@ export default function recentlyDeleted(){
                 className="transition-all flex border items-center max-w-md justify-center duration-300 ease-in-out hover:outline hover:outline-2 hover:outline-blue-300 hover:border hover:border-blue-400 hover:shadow-xl hover:shadow-gray-300/50 rounded-l"
               >  
             
-                <Card
+                <DeleteCard
     key={item._id}
     id={item._id}
     workspace_name={title}
     title={item.title}
     data={item.data}
     created_at={item.createdAt}
-    favourite={item.favourite}
   />
               </div>
             ))
