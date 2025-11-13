@@ -363,6 +363,22 @@ data_Router.post("/recently_deleted" , Authentication_token , async(req,res)=>{
       })
     }
 
+   /*  const cutoffDate = new Date();
+      cutoffDate.setDate(cutoffDate.getDate() - 10); // 10 days ago
+
+      const beforeCount = find_workspace.recentlyDeleted.length;
+
+      find_workspace.recentlyDeleted = find_workspace.recentlyDeleted.filter(note => {
+          return note.deletedAt >= cutoffDate;
+      });
+
+      const afterCount = find_workspace.recentlyDeleted.length;
+
+      if (beforeCount !== afterCount) {
+          logger.info(`Cleaned up ${beforeCount - afterCount} old notes from recently deleted for user: ${user_id}`);
+      }  */
+
+
      if (find_workspace.recentlyDeleted.length === 0) {
               logger.info(`No Recent deletions found for user: ${user_id}`);
             return res.status(200).json({
@@ -370,6 +386,10 @@ data_Router.post("/recently_deleted" , Authentication_token , async(req,res)=>{
                 data: []
             });
         }
+
+     
+
+      await find_workspace.save();
 
          logger.info(`Fetched ${find_workspace.recentlyDeleted.length} notes for user: ${user_id}`);
 
