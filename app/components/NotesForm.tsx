@@ -18,7 +18,7 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
 
     if (!isOpen) return null;
 
-
+   
     async function handleAI(e:any) {
 
         e.preventDefault();
@@ -176,7 +176,7 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
         className="w-full  text-sm p-2 rounded bg-gray-700 text-white border border-gray-500"
       >
         <option value="Default">Default</option>
-
+        
         {workItem.map((name:string, index:number) => (
           <option key={index} value={name}>
             {name}
