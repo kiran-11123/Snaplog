@@ -22,6 +22,7 @@ interface Components {
 export default function DeleteCard({  workspace_name, id , title, data, created_at  }: Components) {
 
     const [copied, setCopied] = useState(false);
+    const [message, setMessage] = useState<string>("");
 
   
     async function RestoreNote(id: string) {
@@ -43,19 +44,19 @@ export default function DeleteCard({  workspace_name, id , title, data, created_
             console.log(response);
 
             if (response.status === 200) {
-                alert(response.data.message);
-                window.location.reload();
+                setMessage(response.data.message);
+                setTimeout(() => {
+                    window.location.reload();
+                }, 1000);
             }
             else {
-                alert(response.data.message);   
-                console.log(response.data)
+                setMessage(response.data.message);   
             }
 
         }
         catch (er) {
 
-            console.log(er);
-            alert("Error Occured while restoring..")
+            setMessage("Error Occured while restoring..")
 
         }
 
@@ -85,19 +86,20 @@ export default function DeleteCard({  workspace_name, id , title, data, created_
             console.log(response);
 
             if (response.status === 200) {
-                alert(response.data.message);
-                window.location.reload();
+                setMessage(response.data.message);
+                setTimeout(() => {
+                    window.location.reload();
+                }, 1000);
             }
             else {
-                alert(response.data.message);   
-                console.log(response.data)
+                setMessage(response.data.message);   
+                
             }
 
         }
         catch (er) {
 
-            console.log(er);
-            alert("Error Occured while deleting..")
+            setMessage("Error Occured while deleting permanently..")
 
         }
 
@@ -169,6 +171,8 @@ export default function DeleteCard({  workspace_name, id , title, data, created_
 
                     {copied && <span className='text-xs text-black '>Copied!</span>}
                 </button>
+
+                {message && <div className='text-md w-full font-inter text-gray-800'>{message}</div> }
 
             </div>
 

@@ -47,7 +47,6 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
 
             
             if(response.status===200){
-                console.log(response.data.data);
                  
                 setNote(response.data.data);
                
@@ -101,8 +100,11 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
             })
 
             if(response.status==200){
-                 window.location.reload();
+                
                 setMessage("Notes Added Successfully...")
+                setTimeout(()=>{
+                    window.location.reload();
+                },1000);
 
 
                
