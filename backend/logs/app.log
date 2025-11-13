@@ -7978,3 +7978,2446 @@
   level: 'info',
   timestamp: '2025-11-13T13:55:38.421Z'
 }
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T13:55:50.077Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T13:55:50.088Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:08.486Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:08.492Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:08.689Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:08.703Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:08.721Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:08.725Z'
+}
+{
+  message: 'Error in Recenlty Deleted : user is not defined',
+  level: 'warn',
+  timestamp: '2025-11-13T13:57:08.751Z'
+}
+{
+  message: 'Error in Recenlty Deleted : user is not defined',
+  level: 'warn',
+  timestamp: '2025-11-13T13:57:08.763Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:11.447Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:11.452Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:11.458Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:11.461Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:11.467Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:11.470Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:11.505Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:11.510Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:13.604Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:13.608Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T13:57:13.610Z'
+}
+{
+  message: "Error in /delete: Cannot read properties of undefined (reading 'id')",
+  level: 'error',
+  timestamp: '2025-11-13T13:57:13.639Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T13:58:19.638Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T13:58:19.648Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T13:58:26.799Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T13:58:26.809Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T13:58:28.300Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T13:58:28.308Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T13:58:31.718Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T13:58:31.799Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T13:58:31.805Z'
+}
+{
+  message: "Error in /delete: Cannot read properties of undefined (reading '_id')",
+  level: 'error',
+  timestamp: '2025-11-13T13:58:31.841Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:00:16.490Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:00:16.496Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:00:25.508Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:00:25.514Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:00:36.436Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:00:36.443Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:00:43.465Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:00:43.824Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:00:43.839Z'
+}
+{
+  message: "Error in /delete: Cannot read properties of undefined (reading 'findOne')",
+  level: 'error',
+  timestamp: '2025-11-13T14:00:43.896Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:01:03.084Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:01:03.089Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:01:08.184Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:01:08.190Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:25.675Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:25.686Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:34.721Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:34.921Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:34.934Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:34.988Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:37.189Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:37.192Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:37.195Z'
+}
+{
+  message: 'Error in /delete: note.remove is not a function',
+  level: 'error',
+  timestamp: '2025-11-13T14:03:37.234Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:40.358Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:40.364Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:40.400Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:40.408Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:40.412Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-13T14:03:40.437Z'
+}
+{
+  message: 'OPTIONS /api/v1/users/signin',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:02.318Z'
+}
+{
+  message: 'POST /api/v1/users/signin',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:02.322Z'
+}
+{
+  message: 'POST /signin',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:02.324Z'
+}
+{
+  message: 'Login successful (kiran.12345sadara@gmail.com)',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:05.490Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:05.552Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:05.556Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:05.581Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:05.585Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:05.587Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:05.615Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:07.222Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:07.225Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:07.228Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:07.231Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:07.236Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:07.241Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:07.261Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:07.283Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:08.707Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:08.710Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:08.712Z'
+}
+{
+  message: 'Error in /delete: note.remove is not a function',
+  level: 'error',
+  timestamp: '2025-11-13T14:04:08.754Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:21.929Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:21.935Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:26.182Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:26.332Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:26.340Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:26.622Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:31.381Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:31.386Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:04:31.388Z'
+}
+{
+  message: "Error in /delete: Cannot read properties of undefined (reading 'id')",
+  level: 'error',
+  timestamp: '2025-11-13T14:04:31.416Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:05:05.792Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:05:05.800Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:05:12.697Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:05:12.844Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:05:12.850Z'
+}
+{
+  message: 'Error in /delete: note.remove is not a function',
+  level: 'error',
+  timestamp: '2025-11-13T14:05:12.892Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:06:28.468Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:06:28.481Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:06:40.162Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:06:40.171Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:06:42.702Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:06:42.713Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:06:55.481Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:06:55.488Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:07:42.229Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:07:42.235Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:07:55.534Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:07:55.540Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/favourites',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:21.666Z'
+}
+{
+  message: 'POST /api/v1/data/favourites',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:21.729Z'
+}
+{
+  message: 'Request: POST /favourites',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:21.735Z'
+}
+{
+  message: 'Favourite status updated successfully',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:21.818Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:26.602Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:26.615Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:26.630Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:26.679Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:28.437Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:28.440Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:28.442Z'
+}
+{
+  message: "Error in /delete: Cannot read properties of undefined (reading 'id')",
+  level: 'error',
+  timestamp: '2025-11-13T14:08:28.473Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:50.486Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:08:50.508Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:09:17.050Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:09:17.210Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:09:17.227Z'
+}
+{
+  message: "Error in /delete: Cannot read properties of undefined (reading '_id')",
+  level: 'error',
+  timestamp: '2025-11-13T14:09:17.276Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:09:52.280Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:09:52.372Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:10:38.872Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:10:38.878Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:10:44.104Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:10:44.112Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:10:52.738Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:10:52.829Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:10:52.835Z'
+}
+{
+  message: "Error in /delete: Cannot read properties of undefined (reading '_id')",
+  level: 'error',
+  timestamp: '2025-11-13T14:10:52.875Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:23.070Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:23.076Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:23.095Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:23.111Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:23.117Z'
+}
+{
+  message: "Error in /delete: Cannot read properties of undefined (reading '_id')",
+  level: 'error',
+  timestamp: '2025-11-13T14:11:23.330Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:42.624Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:42.632Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:42.648Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:42.724Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:42.729Z'
+}
+{
+  message: "Error in /delete: Cannot read properties of undefined (reading '_id')",
+  level: 'error',
+  timestamp: '2025-11-13T14:11:42.954Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:51.541Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:51.545Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:11:51.548Z'
+}
+{
+  message: "Error in /delete: Cannot read properties of undefined (reading '_id')",
+  level: 'error',
+  timestamp: '2025-11-13T14:11:51.579Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:12:09.670Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:12:09.675Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:12:16.205Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:12:16.272Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:12:16.278Z'
+}
+{
+  message: 'Error in /delete: find_workspace.notes._id is not a function',
+  level: 'error',
+  timestamp: '2025-11-13T14:12:16.315Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:12:51.672Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:12:51.679Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:12:54.714Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:12:54.785Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:12:54.792Z'
+}
+{
+  message: 'Error in /delete: find_workspace.notes._id is not a function',
+  level: 'error',
+  timestamp: '2025-11-13T14:12:54.832Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:13:09.764Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:13:09.772Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:13:13.441Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:13:13.465Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:13:13.473Z'
+}
+{
+  message: 'Error in /delete: find_workspace.notes._id is not a function',
+  level: 'error',
+  timestamp: '2025-11-13T14:13:13.514Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:13:24.921Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:13:24.926Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:13:28.016Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:13:28.038Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:13:28.045Z'
+}
+{
+  message: 'Error in /delete: find_workspace.notes._id is not a function',
+  level: 'error',
+  timestamp: '2025-11-13T14:13:28.080Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:14:20.383Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:14:20.388Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:14:20.392Z'
+}
+{
+  message: 'Error in /delete: find_workspace.notes._id is not a function',
+  level: 'error',
+  timestamp: '2025-11-13T14:14:20.525Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:15:18.316Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:15:18.321Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:16:04.005Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:16:04.011Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:16:18.763Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:16:18.775Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:16:24.903Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:16:24.910Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:16:27.258Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:16:27.430Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:16:27.436Z'
+}
+{
+  message: 'Error in /delete: find_workspace.notes._id is not a function',
+  level: 'error',
+  timestamp: '2025-11-13T14:16:27.483Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:30.861Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:30.867Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:36.994Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:37.059Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:37.065Z'
+}
+{
+  message: 'Note moved to recently deleted for user undefined',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:37.149Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:40.684Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:40.690Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:40.696Z'
+}
+{
+  message: 'No notes found for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:40.739Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:45.400Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:45.406Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:45.410Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:45.414Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:45.419Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:17:45.421Z'
+}
+{
+  message: 'Error in Recenlty Deleted : user is not defined',
+  level: 'warn',
+  timestamp: '2025-11-13T14:17:45.437Z'
+}
+{
+  message: 'Error in Recenlty Deleted : user is not defined',
+  level: 'warn',
+  timestamp: '2025-11-13T14:17:45.449Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:18:32.421Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:18:32.427Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:18:35.327Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:18:35.334Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:18:39.827Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:18:39.836Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:18:55.808Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:18:55.815Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:00.411Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:00.417Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:00.534Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:00.613Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:00.618Z'
+}
+{
+  message: 'Error in Recenlty Deleted : user is not defined',
+  level: 'warn',
+  timestamp: '2025-11-13T14:19:00.662Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:09.916Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:09.923Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:10.052Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:10.070Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:10.076Z'
+}
+{
+  message: 'Error in Recenlty Deleted : user is not defined',
+  level: 'warn',
+  timestamp: '2025-11-13T14:19:10.135Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:20.571Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:20.576Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:29.998Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:30.031Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:30.039Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:30.080Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/favourites',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:34.821Z'
+}
+{
+  message: 'POST /api/v1/data/favourites',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:34.825Z'
+}
+{
+  message: 'Request: POST /favourites',
+  level: 'info',
+  timestamp: '2025-11-13T14:19:34.828Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:20:50.246Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:20:50.251Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:20:50.255Z'
+}
+{
+  message: 'Note not found...',
+  level: 'warn',
+  timestamp: '2025-11-13T14:20:50.285Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:20.926Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:20.928Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:20.937Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:20.942Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:20.950Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:20.953Z'
+}
+{
+  message: 'No notes found for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:20.972Z'
+}
+{
+  message: 'No notes found for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:20.981Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:23.411Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:23.413Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:23.444Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:23.451Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:23.453Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-13T14:21:23.482Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/upload_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:39.012Z'
+}
+{
+  message: 'POST /api/v1/data/upload_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:39.015Z'
+}
+{
+  message: 'Request: POST /upload_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:39.018Z'
+}
+{
+  message: 'Data saved for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:39.165Z'
+}
+{
+  message: 'Message sent to Kafka for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:39.172Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:40.436Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:40.441Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:40.475Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:41.768Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:41.771Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:41.776Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:41.781Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:41.784Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:41.808Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:41.816Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:48.901Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:48.904Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:48.934Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:48.938Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:48.940Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-13T14:23:48.967Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/upload_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:41.166Z'
+}
+{
+  message: 'POST /api/v1/data/upload_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:41.171Z'
+}
+{
+  message: 'Request: POST /upload_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:41.174Z'
+}
+{
+  message: 'Data saved for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:41.247Z'
+}
+{
+  message: 'Message sent to Kafka for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:41.249Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:42.115Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:42.125Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:42.179Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:44.215Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:44.222Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:44.231Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:44.239Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:44.243Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:44.246Z'
+}
+{
+  message: 'Fetched 2 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:44.269Z'
+}
+{
+  message: 'Fetched 2 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:44.275Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:47.517Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:47.523Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:47.534Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:47.547Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:47.557Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:47.560Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:47.579Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:47.586Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:56.324Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:56.329Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:56.334Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:56.337Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:56.343Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:56.349Z'
+}
+{
+  message: 'Fetched 2 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:56.373Z'
+}
+{
+  message: 'Fetched 2 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:26:56.382Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:30:42.394Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:30:42.412Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:30:42.418Z'
+}
+{
+  message: 'Fetched 2 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:30:42.467Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:31:23.673Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:31:23.678Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:31:23.684Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:31:23.691Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:31:23.698Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:31:23.706Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-13T14:31:23.726Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-13T14:31:23.748Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:32:01.622Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:32:01.632Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:32:01.640Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-13T14:32:01.683Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:32:03.019Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:32:03.023Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-13T14:32:03.050Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:33:19.158Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:33:19.165Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:33:47.533Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:33:47.542Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:33:57.291Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:33:57.297Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:04.625Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:04.636Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:14.785Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:14.792Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:20.004Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:20.010Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:27.363Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:27.371Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:37.899Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:37.904Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:42.201Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:42.209Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:44.425Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:34:44.431Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:35:53.962Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:35:53.969Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:36:01.630Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:36:01.637Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:36:03.920Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:36:03.931Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:36:25.914Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:36:25.925Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:36:29.968Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:36:29.975Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:36:35.867Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:36:35.874Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:36:51.671Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:36:51.677Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:37:05.344Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:37:05.356Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:37:12.055Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:37:12.061Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:38:32.711Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:38:32.719Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:38:41.184Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:38:41.190Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:38:47.222Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:38:47.231Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:39:17.418Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:39:17.424Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:39:31.330Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:39:31.340Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:39:40.174Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:39:40.184Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/permanent_delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:40:19.583Z'
+}
+{
+  message: 'DELETE /api/v1/data/permanent_delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:40:19.817Z'
+}
+{
+  message: 'Request: delete /permanent_delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:40:19.830Z'
+}
+{
+  level: 'warn',
+  message: 'Error in /permanent_delete function  find_workspace.recentlyDeleted.deleteOne is not a function',
+  stack: 'TypeError: find_workspace.recentlyDeleted.deleteOne is not a function\n' +
+    '    at file:///F:/projects/other/Blogging_website/backend/routes/data/Data_Router.js:427:36\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  timestamp: '2025-11-13T14:40:19.890Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:20.815Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:20.824Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:23.272Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:23.278Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/permanent_delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:31.413Z'
+}
+{
+  message: 'DELETE /api/v1/data/permanent_delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:31.492Z'
+}
+{
+  message: 'Request: delete /permanent_delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:31.498Z'
+}
+{
+  level: 'info',
+  message: 'Notes Deleted Permanently for userid  ',
+  timestamp: '2025-11-13T14:45:31.576Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:37.626Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:37.632Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:37.641Z'
+}
+{
+  message: 'No Recent deletions found for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:37.674Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:40.595Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:40.599Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:40.605Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:40.617Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:40.621Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:40.623Z'
+}
+{
+  message: 'Fetched 2 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:40.701Z'
+}
+{
+  message: 'Fetched 2 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:40.708Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:43.617Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:43.621Z'
+}
+{
+  message: 'Fetched 2 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:43.655Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/favourites',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:46.517Z'
+}
+{
+  message: 'POST /api/v1/data/favourites',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:46.520Z'
+}
+{
+  message: 'Request: POST /favourites',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:46.522Z'
+}
+{
+  message: 'Favourite status updated successfully',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:46.582Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:48.264Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:48.272Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:48.295Z'
+}
+{
+  message: 'Fetched 2 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:48.329Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:52.222Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:52.226Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:52.258Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:52.265Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:52.268Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:52.301Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:53.434Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:53.440Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:53.448Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:53.452Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:53.456Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:53.459Z'
+}
+{
+  message: 'Fetched 2 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:53.484Z'
+}
+{
+  message: 'Fetched 2 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:45:53.494Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:46:18.902Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:46:18.909Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:49:43.720Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:49:43.725Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:49:55.746Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:49:55.753Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:50:01.470Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:50:01.480Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:50:24.395Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:50:24.405Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:50:37.247Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:50:37.252Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:50:51.683Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:50:51.689Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:51:00.861Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:51:00.869Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:51:06.737Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:51:06.749Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:51:14.876Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:51:14.891Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:52:35.748Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:52:35.754Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:52:45.812Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:52:45.822Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:52:56.632Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:52:56.638Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:05.438Z'
+}
+{
+  message: 'DELETE /api/v1/data/delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:05.681Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:05.689Z'
+}
+{
+  message: 'Note moved to recently deleted for user undefined',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:05.778Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:10.950Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:10.954Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:10.957Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:10.991Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:29.547Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:29.553Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:33.296Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:33.304Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:33.436Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:33.452Z'
+}
+{
+  message: 'POST /api/v1/data/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:33.469Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:33.475Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:33.502Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:33.508Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:37.752Z'
+}
+{
+  message: 'POST /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-13T14:53:37.756Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-13T14:54:12.214Z'
+}
+{
+  message: 'POST /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-13T14:54:12.216Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:54:55.285Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:54:55.292Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-13T14:54:57.688Z'
+}
+{
+  message: 'POST /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-13T14:54:57.847Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-13T14:55:20.535Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-13T14:55:20.540Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-13T14:55:26.050Z'
+}
+{
+  message: 'POST /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-13T14:55:26.068Z'
+}

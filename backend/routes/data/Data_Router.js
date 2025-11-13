@@ -161,12 +161,12 @@ data_Router.delete("/delete", Authentication_token, async (req, res) => {
       });
     }
 
-    const user_id = req.user.userid; // ✅ consistent with your favourites route
+    const user_id = req.user.userid; 
     const objIdObj = new mongoose.Types.ObjectId(objId);
 
     // Find and update workspace
 
-    const find_workspace = await workspace_model.find({workspace_name : workspace_name})
+    const find_workspace = await workspace_model.findOne({workspace_name : workspace_name})
 
     if(!find_workspace){
        logger.warn("WorkSpace not found..")
@@ -175,9 +175,14 @@ data_Router.delete("/delete", Authentication_token, async (req, res) => {
        })
     }
 
-    const find_DataById = find_workspace.notes.id(objIdObj);
 
-    if(find_DataById){
+    console.log(find_workspace);
+
+    const find_DataById = find_workspace.notes.id( objIdObj);
+
+    console.log(find_DataById)
+
+    if(!find_DataById){
        
       logger.warn("Note not found...") 
       return res.status(404).json({
@@ -195,17 +200,12 @@ data_Router.delete("/delete", Authentication_token, async (req, res) => {
 
     find_DataById.deleteOne();
     await find_workspace.save();
-
-
-    
-
-
-
-   
-    logger.info(`Note moved t0 recently deleted for user ${user_id}`);
+    logger.info(`Note moved to recently deleted for user ${user_id}`);
     return res.status(200).json({
-      message: "Note moved t0 recently deleted",
+      message: "Note moved to recently deleted",
     });
+
+
   } catch (er) {
     logger.error("Error in /delete: " + er.message);
     return res.status(500).json({
@@ -350,7 +350,8 @@ data_Router.post("/recently_deleted" , Authentication_token , async(req,res)=>{
   try{
 
     logger.info("Request: POST /recently_deleted");
-
+     
+    const user_id = req.user.userid;
 
     const workspace_name = req.body.workspace_name;
 
@@ -362,7 +363,7 @@ data_Router.post("/recently_deleted" , Authentication_token , async(req,res)=>{
       })
     }
 
-     if (user.recentlyDeleted.length === 0) {
+     if (find_workspace.recentlyDeleted.length === 0) {
               logger.info(`No Recent deletions found for user: ${user_id}`);
             return res.status(200).json({
                 message: "Your Bin is Empty.",
@@ -370,13 +371,12 @@ data_Router.post("/recently_deleted" , Authentication_token , async(req,res)=>{
             });
         }
 
-         logger.info(`Fetched ${user.recentlyDeleted.length} notes for user: ${user_id}`);
+         logger.info(`Fetched ${find_workspace.recentlyDeleted.length} notes for user: ${user_id}`);
 
         return res.status(200).json({
             message: "Data Fetched Successfully.",
-            data: user.recentlyDeleted,
-            workspace_name : user.workspace_name
-
+            data: find_workspace.recentlyDeleted,
+           
         })
 
 
@@ -390,6 +390,130 @@ data_Router.post("/recently_deleted" , Authentication_token , async(req,res)=>{
     });
   }
 })
+
+
+data_Router.delete("/permanent_delete", Authentication_token, async (req, res) => { 
+
+
+  try{
+
+    logger.info("Request: delete /permanent_delete")
+
+    
+    let objId = req.body.contentId;
+    const workspace_name = req.body.workspace_name;
+
+    if (!objId || !workspace_name) {
+      return res.status(400).json({
+        message: "Missing contentId or workspace_name",
+      });
+    }
+
+    const user_id = req.user.userid; 
+    const objIdObj = new mongoose.Types.ObjectId(objId);
+
+
+    const find_workspace = await workspace_model.findOne({workspace_name:workspace_name});
+
+
+    if(!find_workspace){
+       logger.warn("Workspace is not present...")
+       return res.status(404).json({
+        message:"Workspace is not present..."
+       })
+    }
+
+
+    find_workspace.recentlyDeleted.pull({_id : objIdObj});
+
+    await find_workspace.save();
+
+
+    logger.info("Notes Deleted Permanently for userid  " ,user_id)
+
+    return res.status(200).json({
+      message:"Notes deleted permanently.."
+    })
+
+  }
+  catch(er){
+      logger.warn("Error in /permanent_delete function " ,er)
+      return res.status(500).json({
+        message:"Internal Server Error"
+      })
+  }
+
+
+
+
+})
+
+
+data_Router.delete("/restore", Authentication_token, async (req, res) => {
+
+  try {
+    logger.info("Request: Restore /restore");
+
+    let objId = req.body.contentId;
+    const workspace_name = req.body.workspace_name;
+
+    if (!objId || !workspace_name) {
+      return res.status(400).json({
+        message: "Missing contentId or workspace_name",
+      });
+    }
+
+    const user_id = req.user.userid; 
+    const objIdObj = new mongoose.Types.ObjectId(objId);
+
+    // Find and update workspace
+
+    const find_workspace = await workspace_model.findOne({workspace_name : workspace_name})
+
+    if(!find_workspace){
+       logger.warn("WorkSpace not found..")
+       return res.status(400).json({
+        message:"WorkSpace not found"
+       })
+    }
+
+
+
+    const find_DataById = find_workspace.recentlyDeleted.id( objIdObj);
+    
+    console.log(find_DataById)
+
+    if(!find_DataById){
+       
+      logger.warn("Note not found...") 
+      return res.status(404).json({
+        message:"Note not found"
+       })
+    }
+
+    find_workspace.notes.push({
+         title:find_DataById.title,
+         data : find_DataById.data,
+         deletedAt : new Date()
+    })
+    
+
+    find_DataById.deleteOne();
+    await find_workspace.save();
+    logger.info(`Note moved to Notes for user ${user_id}`);
+    return res.status(200).json({
+      message: "Note moved to Notes",
+    });
+
+
+  } catch (er) {
+    logger.error("Error in /restore: " + er.message);
+    return res.status(500).json({
+      message: "Internal Server Error",
+    });
+  }
+});
+
 
 
 
