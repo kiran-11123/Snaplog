@@ -114,7 +114,7 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
         
         const user_id = req.user.user_id;
         let workspace = req.body.workspace_name;
-    /*   
+      
         try{
 
         
@@ -145,7 +145,7 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
           logger.error("Error while fetching data from redis: " + er.message);
       }
         
-*/
+
 
         const user = await workspace_model.findOne({ workspace_name: workspace }); 
 
@@ -160,12 +160,12 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
 
          logger.info(`Fetched ${user.notes.length} notes for user: ${user_id} and also stored in redis `);
         
-    /*    try {
-            await redis_client.setEx(`workspace:${workspace}`, 3600, JSON.stringify(user.notes));
+      try {
+            await redis_client.setEx(`workspace:${workspace}`, 120, JSON.stringify(user.notes));
             logger.info(`Fetched ${user.notes.length} notes for user: ${user_id} and stored in redis`);
         } catch (redisErr) {
             logger.warn("Redis storage error: " + redisErr.message);
-        }   */
+        }   
         
         console.log("user notes is " , user.notes);
         return res.status(200).json({
@@ -239,12 +239,12 @@ data_Router.delete("/delete", Authentication_token, async (req, res) => {
     await find_workspace.save();
     logger.info(`Note moved to recently deleted for user ${user_id}`);
 
-    /*  try {
+      try {
             await redis_client.del(`workspace:${workspace_name}`);
             logger.info("Redis cache invalidated for workspace: " + workspace_name);
         } catch (redisErr) {
             logger.warn("Redis invalidation error: " + redisErr.message);
-        }   */
+        }   
  
     return res.status(200).json({
       message: "Note moved to recently deleted",
@@ -376,6 +376,20 @@ data_Router.post("/favourites", Authentication_token, async (req, res) => {
     await workspace.save();
 
     logger.info("Favourite status updated successfully");
+
+    const cachedData = await redis_client.get(`workspace:${workspace_name}`);
+   
+
+    if(cachedData){ 
+        try {
+            await redis_client.del(`workspace:${workspace_name}`);
+            logger.info("Redis cache invalidated for workspace: " + workspace_name);
+        } catch (redisErr) {
+            logger.warn("Redis invalidation error: " + redisErr.message);
+        }
+
+    }
+   
     return res.status(200).json({
       message: "Favourite status updated successfully",
       favourite: note.favourite,
@@ -400,6 +414,8 @@ data_Router.post("/recently_deleted" , Authentication_token , async(req,res)=>{
 
     const workspace_name = req.body.workspace_name;
 
+   
+    
     const find_workspace =  await workspace_model.findOne({workspace_name : workspace_name})
 
     if(!find_workspace){
@@ -566,6 +582,19 @@ data_Router.delete("/restore", Authentication_token, async (req, res) => {
     find_DataById.deleteOne();
     await find_workspace.save();
     logger.info(`Note moved to Notes for user ${user_id}`);
+     
+    const cachedData = await redis_client.get(`workspace:${workspace_name}`);
+
+    if(cachedData){ 
+
+        try {
+            await redis_client.del(`workspace:${workspace_name}`);
+            logger.info("Redis cache invalidated for workspace: " + workspace_name);
+        } catch (redisErr) {
+            logger.warn("Redis invalidation error: " + redisErr.message);
+
+    }
+  }
     return res.status(200).json({
       message: "Note moved to Notes",
     });
