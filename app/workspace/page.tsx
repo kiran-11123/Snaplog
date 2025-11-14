@@ -96,7 +96,7 @@ const title: string = searchParams.get('title') ?? "Default";
 
             <div className="flex justify-between items-center mt-2  w-full text-black bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#44403c] via-[#78716c] to-[#d6d3d1] rounded-md px-6 py-4 font-bold  shadow-xl ">
                   
-            <h1 className="font-serif px-4 py-2 text-lg rounded-lg shadow-2xl bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#27272a] via-[#52525b] to-[#a1a1aa] text-blue-800">WorkSpace : {title}</h1>
+            <h1 className="font-serif px-4 py-2 text-lg mngf rounded-lg shadow-2xl bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#27272a] via-[#52525b] to-[#a1a1aa] text-blue-800">WorkSpace : {title}</h1>
 
             <button title="recently deleted notes" onClick={recentlyDeleted}  className="px-2 py-2 rounded-lg bg-blue-600 text-white  hover:bg-blue-800 hover:transition-shadow text-sm">Recent Deletes </button>
             </div>
