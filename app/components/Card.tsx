@@ -106,7 +106,7 @@ export default function Card({  workspace_name, id , title, data, created_at ,fa
         catch (er) {
 
             console.log(er);
-            alert("Error Occured while deleting..")
+            setMessage("Error Occured while deleting..")
 
         }
 
