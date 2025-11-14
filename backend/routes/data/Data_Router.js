@@ -7,6 +7,7 @@ import transporter from '../user/Mail.js';
 import logger from '../../utils/logger.js';
 import { producer ,setupKafka , TOPIC  } from '../kafka/producer.js';
 import workspace_model from '../../DB/workspace.js';
+import redis_client from '../redis/redis-client.js';
 
 
 data_Router.post("/upload_data", Authentication_token, async (req, res) => {
@@ -113,15 +114,41 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
         
         const user_id = req.user.user_id;
         let workspace = req.body.workspace_name;
-       
-        console.log(workspace)
+    /*   
+        try{
 
         
+        const cachedData = await redis_client.get(`workspace:${workspace}`);
 
+        if(cachedData){
+              
+          if(cachedData.length===0){
+                 logger.info(`No notes found for user: ${user_id} in redis cache`);
+                 return res.status(200).json({
+                  message: "Your Notes are Empty.",
+                  data: []
+                 })
+          }
+          else{
+              
+             logger.info("Notes Data found for the workspace in redis cache.")
+             console.log(JSON.parse(cachedData));
+             return res.status(200).json({
+                message: "Data Fetched Successfully.",
+                data:cachedData ? JSON.parse(cachedData) : [],
+                workspace_name : workspace
+             })
+          }
+        }  
+      }
+      catch(er){
+          logger.error("Error while fetching data from redis: " + er.message);
+      }
+        
+*/
 
         const user = await workspace_model.findOne({ workspace_name: workspace }); 
 
-        console.log(user)
 
         if (user.notes.length === 0) {
               logger.info(`No notes found for user: ${user_id}`);
@@ -131,8 +158,16 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
             });
         }
 
-         logger.info(`Fetched ${user.notes.length} notes for user: ${user_id}`);
-
+         logger.info(`Fetched ${user.notes.length} notes for user: ${user_id} and also stored in redis `);
+        
+    /*    try {
+            await redis_client.setEx(`workspace:${workspace}`, 3600, JSON.stringify(user.notes));
+            logger.info(`Fetched ${user.notes.length} notes for user: ${user_id} and stored in redis`);
+        } catch (redisErr) {
+            logger.warn("Redis storage error: " + redisErr.message);
+        }   */
+        
+        console.log("user notes is " , user.notes);
         return res.status(200).json({
             message: "Data Fetched Successfully.",
             data: user.notes,
@@ -163,6 +198,8 @@ data_Router.delete("/delete", Authentication_token, async (req, res) => {
 
     const user_id = req.user.userid; 
     const objIdObj = new mongoose.Types.ObjectId(objId);
+
+    
 
     // Find and update workspace
 
@@ -201,6 +238,14 @@ data_Router.delete("/delete", Authentication_token, async (req, res) => {
     find_DataById.deleteOne();
     await find_workspace.save();
     logger.info(`Note moved to recently deleted for user ${user_id}`);
+
+    /*  try {
+            await redis_client.del(`workspace:${workspace_name}`);
+            logger.info("Redis cache invalidated for workspace: " + workspace_name);
+        } catch (redisErr) {
+            logger.warn("Redis invalidation error: " + redisErr.message);
+        }   */
+ 
     return res.status(200).json({
       message: "Note moved to recently deleted",
     });
