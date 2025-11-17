@@ -212,6 +212,47 @@ Delete_Router.delete("/permanent_delete", Authentication_token, async (req, res)
 
 })
 
+Delete_Router.post("/delete_workspace" , Authentication_token , async(req,res)=>{
+      
+    try{
+
+
+        const workspace = req.body.workspace_name;
+        const find_workspace = await workspace_model.findOne({workspace_name : workspace});
+        console.log(find_workspace)
+
+        if(!find_workspace){
+             logger.warn("Workspace is not present please check the workspace");
+             return res.status(404).json({
+                message:"Workspace not found to delete ..."
+             })
+        }
+
+           await workspace_model.deleteOne({ _id: find_workspace._id });
+         logger.info("Workspace deleted in the DB");
+
+    try {
+            await redis_client.del(`workspace:${workspace_name}`);
+            logger.info("Redis cache invalidated for workspace: " + workspace_name);
+        } catch (redisErr) {
+            logger.warn("Redis invalidation error: " + redisErr.message);
+        }   
+
+    }
+     catch(er){
+         logger.warn("Error occcured while deleting the workspace"  , er);
+         return res.status(500).json({
+            message:"Internal Server Error",
+            error:er
+         })
+     }
+
+      return res.status(200).json({
+      message:"workspace deleted permanently.."
+    })
+
+})
+
 
 
 
