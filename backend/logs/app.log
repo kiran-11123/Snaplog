@@ -5398,3 +5398,1253 @@
   level: 'info',
   timestamp: '2025-11-17T14:25:56.935Z'
 }
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:00.012Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:03.474Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:03.479Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:06.982Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:07.211Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:07.219Z'
+}
+{
+  message: 'No notes found for user: 6',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:07.272Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:09.590Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:09.595Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:09.642Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:09.652Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:09.656Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:09.693Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:10.699Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:10.703Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:10.707Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:10.710Z'
+}
+{
+  message: 'No notes found for user: 6',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:10.737Z'
+}
+{
+  message: 'No notes found for user: 6',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:10.742Z'
+}
+{
+  message: 'OPTIONS /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:12.392Z'
+}
+{
+  message: 'OPTIONS /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:12.396Z'
+}
+{
+  message: 'POST /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:12.403Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:12.407Z'
+}
+{
+  message: 'POST /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:12.413Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:12.415Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:12.480Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:12.482Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:14.435Z'
+}
+{
+  message: 'DELETE /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:14.438Z'
+}
+{
+  message: 'Request: Restore /restore',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:14.440Z'
+}
+{
+  message: 'Note moved to Notes for user undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:14.526Z'
+}
+{
+  message: 'POST /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:15.857Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:15.863Z'
+}
+{
+  message: 'No Recent deletions found for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:15.906Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:16.867Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:16.871Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:16.873Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:16.878Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:16.887Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:16.889Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:16.915Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:16.923Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:16.927Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/favourites',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:20.578Z'
+}
+{
+  message: 'POST /api/v1/data/favourites',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:20.580Z'
+}
+{
+  message: 'Request: POST /favourites',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:20.583Z'
+}
+{
+  message: 'Favourite status updated successfully',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:20.649Z'
+}
+{
+  message: 'Redis cache invalidated for workspace: DSA',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:20.653Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:22.040Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:22.045Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:22.050Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:22.083Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:22.084Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:23.943Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:23.949Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:23.988Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:23.993Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:23.995Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:24.025Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:24.993Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:24.995Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:24.998Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:25.001Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:25.028Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:25.030Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:25.034Z'
+}
+{
+  message: 'OPTIONS /api/v1/delete/delete',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:26.563Z'
+}
+{
+  message: 'DELETE /api/v1/delete/delete',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:26.566Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:26.568Z'
+}
+{
+  message: 'Note moved to recently deleted for user undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:26.659Z'
+}
+{
+  message: 'Redis cache invalidated for workspace: Default',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:26.662Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:27.885Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:27.889Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:27.893Z'
+}
+{
+  message: 'No notes found for user: 6',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:27.927Z'
+}
+{
+  message: 'OPTIONS /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:30.422Z'
+}
+{
+  message: 'POST /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:30.429Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:30.431Z'
+}
+{
+  message: 'OPTIONS /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:30.433Z'
+}
+{
+  message: 'POST /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:30.436Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:30.438Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:30.490Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:30.506Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:31.659Z'
+}
+{
+  message: 'DELETE /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:31.663Z'
+}
+{
+  message: 'Request: Restore /restore',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:31.665Z'
+}
+{
+  message: 'Note moved to Notes for user undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:31.735Z'
+}
+{
+  message: 'POST /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:32.992Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:32.995Z'
+}
+{
+  message: 'No Recent deletions found for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:33.030Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:34.347Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:34.355Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:34.360Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:34.363Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:34.369Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:34.371Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:34.392Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:34.393Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:26:34.401Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:23.256Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:23.269Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:23.307Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:23.314Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:23.315Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:23.349Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:24.866Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:24.870Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:24.875Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:24.878Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:24.882Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:24.885Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:24.913Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:24.917Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:24.921Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:26.340Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:26.342Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:26.376Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:26.381Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:26.383Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:26.419Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:27.338Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:27.342Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:27.348Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:27.352Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:27.374Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:27.375Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:27.389Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:28.632Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:28.634Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:28.668Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:28.672Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:28.675Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:28.706Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:29.783Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:29.785Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:29.789Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:29.791Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:29.820Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:29.826Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:31.536Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:31.538Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:31.574Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:31.579Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:31.582Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:31.619Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:32.315Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:32.317Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:32.318Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:32.321Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:32.324Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:32.326Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:32.354Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:32.357Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:32.359Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:33.886Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:33.889Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:33.919Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:33.924Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:33.927Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:28:33.956Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:34.819Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:34.821Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:34.827Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:34.830Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:34.833Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:34.835Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:34.863Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:34.869Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:36.764Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:36.767Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:36.804Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:36.810Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:36.813Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:36.846Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:38.384Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:38.387Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:38.389Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:38.392Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:38.420Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:38.428Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:41.857Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:41.860Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:41.967Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:42.088Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:42.090Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:42.228Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:43.089Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:43.092Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:43.095Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:43.099Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:43.136Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:43.169Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:43.171Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:43.174Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:43.227Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:45.876Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:45.878Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:45.910Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:45.914Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:45.916Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:45.952Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:47.777Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:47.780Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:47.784Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:47.786Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:47.812Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:47.839Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/favourites',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:50.276Z'
+}
+{
+  message: 'POST /api/v1/data/favourites',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:50.279Z'
+}
+{
+  message: 'Request: POST /favourites',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:50.280Z'
+}
+{
+  message: 'Favourite status updated successfully',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:50.379Z'
+}
+{
+  message: 'Redis cache invalidated for workspace: DSA',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:50.385Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:52.306Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:52.313Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:52.316Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:52.350Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:52.354Z'
+}
+{
+  message: 'OPTIONS /api/v1/delete/delete',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:56.843Z'
+}
+{
+  message: 'DELETE /api/v1/delete/delete',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:56.846Z'
+}
+{
+  message: 'Request: DELETE /delete',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:56.852Z'
+}
+{
+  message: 'Note moved to recently deleted for user undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:56.936Z'
+}
+{
+  message: 'Redis cache invalidated for workspace: DSA',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:56.939Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:58.193Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:58.202Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:58.207Z'
+}
+{
+  message: 'No notes found for user: 6',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:58.242Z'
+}
+{
+  message: 'OPTIONS /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:59.857Z'
+}
+{
+  message: 'POST /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:59.865Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:59.870Z'
+}
+{
+  message: 'OPTIONS /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:59.876Z'
+}
+{
+  message: 'POST /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:59.882Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:59.885Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:59.937Z'
+}
+{
+  message: 'Fetched 1 notes for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:29:59.943Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:01.972Z'
+}
+{
+  message: 'DELETE /api/v1/data/restore',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:01.976Z'
+}
+{
+  message: 'Request: Restore /restore',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:01.978Z'
+}
+{
+  message: 'Note moved to Notes for user undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:02.048Z'
+}
+{
+  message: 'POST /api/v1/delete/recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:03.318Z'
+}
+{
+  message: 'Request: POST /recently_deleted',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:03.320Z'
+}
+{
+  message: 'No Recent deletions found for user: undefined',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:03.351Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:04.869Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:04.875Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:04.880Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:04.883Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:04.889Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:04.891Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:04.912Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:04.915Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-17T14:30:04.922Z'
+}
