@@ -80,7 +80,7 @@ export default function Card({  workspace_name, id , title, data, created_at ,fa
         try {
 
 
-            const response = await axios.delete("http://localhost:5000/api/v1/data/delete", {
+            const response = await axios.delete("http://localhost:5000/api/v1/delete/delete", {
                 data: {
                     contentId: id,
                     workspace_name: workspace_name

@@ -32,7 +32,7 @@ export default function recentlyDeleted(){
 
              try{
 
-            const response = await axios.post("http://localhost:5000/api/v1/data/recently_deleted" , {
+            const response = await axios.post("http://localhost:5000/api/v1/delete/recently_deleted" , {
                workspace_name:title
             } ,{
                 withCredentials:true
