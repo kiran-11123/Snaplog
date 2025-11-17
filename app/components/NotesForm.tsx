@@ -169,7 +169,7 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
                 <form  className="space-y-3" >
 
                      <div className="w-full flex-flex-col">
-      <div className="text-sm text-red-600 font-mono">choose workspace</div>
+      <div className="text-sm font-mono">choose your workspace</div>
 
       <select
       title="dropdown"
