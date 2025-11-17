@@ -4,7 +4,8 @@ import mongoose from 'mongoose'
 const workspace_Schema = new mongoose.Schema({
       
     workspace_name:{type:String},
-    userid :{type:Number } , 
+    userid :{type:Number } ,
+    pin : {type:Boolean , default :false}, 
 
      notes:[{
         title:{type:Object},

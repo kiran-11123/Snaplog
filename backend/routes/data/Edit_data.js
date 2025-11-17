@@ -74,7 +74,42 @@ Edit_Router.post("/edit_notes" , Authentication_token , async(req,res)=>{
 })
 
 
+Edit_Router.post("/setPin"  , Authentication_token , async(req,res)=>{
+       
+  try{
+    
+    const workspace = req.body.workspace;
+    const find_workspace = await workspace_model.findOne({workspace_name : workspace})
 
+    if(!find_workspace){
+        logger.warn("Workspace is not present . please check...");
+        return res.status(404).json({
+          message:"Workspace is not present.."
+        })
+    }
+
+
+    find_workspace.pin = !find_workspace.pin;
+
+    await find_workspace.save();
+
+    logger.info("Pin changed successfully..");
+
+    return res.status(200).json({
+       message:"Pin changed successfully..."
+    })
+
+  }
+  catch(er){
+
+    logger.warn("Error occured while setting the pin for the workspace" , er);
+    return res.status(500).json({
+      message : "Internal server error",
+      error:er
+    })
+
+  }
+})
 
 
 
