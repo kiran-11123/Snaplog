@@ -17,8 +17,9 @@ import WorkspaceCard from "../components/workspaceCard";
 
 
 interface Components {
-  _id:string,
+   _id:string,
     workspace_name: string,
+    pin:boolean
 
 }
 
@@ -42,11 +43,16 @@ const [workspaceTitle, setWorkspaceTitle] = useState<string[]>([]);
         }) 
 
         if(response.status===200){
-           SetData(response.data.data);
+          const freshData = response.data.data;
 
-          const titles = response.data.data.map((item: Components) => item.workspace_name);
-            setWorkspaceTitle(titles);
+    // Sort using fresh data
+    const sorted = freshData.sort((a:Components, b:Components) => Number(b.pin) - Number(a.pin));
 
+    // Update state with sorted array
+    SetData(sorted);
+
+    const titles = sorted.map((item:Components) => item.workspace_name);
+    setWorkspaceTitle(titles);
         }
         
 
@@ -114,6 +120,7 @@ const [workspaceTitle, setWorkspaceTitle] = useState<string[]>([]);
                 <WorkspaceCard
                   _id={item._id}
                   workspace_name={item.workspace_name}
+                  pin = {item.pin}
                 />
               </div>
             ))

@@ -5,15 +5,18 @@ import { useRouter } from 'next/navigation';
 import { Trash } from 'lucide-react';
 import { useState } from 'react';
 import axios from 'axios';
+import { Pin } from 'lucide-react';
+
 interface Components {
    
     _id:string,
     workspace_name: string,
+    pin :boolean
    
 
 }
 
-export default function WorkspaceCard({ workspace_name }: Components) {
+export default function WorkspaceCard({ workspace_name ,pin }: Components) {
    
     const router = useRouter();
     const[message , setMessage] = useState('');
@@ -25,6 +28,40 @@ export default function WorkspaceCard({ workspace_name }: Components) {
 
 
         
+    }
+
+    async function setPin( workspace:string) {
+          
+        try{
+
+            const response = await axios.post("http://localhost:5000/api/v1/edit/setPin" , {
+                workspace : workspace_name
+            },{
+                withCredentials:true
+            })
+
+            if(response.status===200){
+                 setMessage(response.data.message);
+                window.location.reload();
+
+
+            }
+            else{
+                setMessage(response.data.message);
+            }
+
+        }
+        catch(er){
+             console.log(er)
+             setMessage("Error Occured while pinning the workspace")
+        }
+
+        finally{
+             setTimeout(()=>{
+                   setMessage('');
+             },1000)
+        }
+    
     }
 
     async function DeleteWorkspace( workspace:string) {
@@ -70,9 +107,16 @@ export default function WorkspaceCard({ workspace_name }: Components) {
                {workspace_name}
             </h1>
 
-            <button onClick={() => DeleteWorkspace(workspace_name)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Trash /></button>
+            <div className='flex items-center justify-between gap-2'>
+                         <button onClick={() => setPin(workspace_name)}  className={`font-sm cursor-pointer rounded-full transition-shadow ${pin ? " text-red-500" : "text-black"
+                            }`} title="X"> <Pin /></button>
 
-            
+
+                         <button onClick={() => DeleteWorkspace(workspace_name)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Trash /></button>
+             
+
+                        </div>
+
             
 
             </div>
