@@ -22,7 +22,7 @@ workspace_Router.post("/create" , Authentication_token , async(req,res)=>{
         if(check_workspace){
             logger.warn("Workspace has already created with this name..")
             return res.status(400).json({
-                message:"Workspace name alaready exists.."
+                message:"Workspace name already exists.."
             })
         }
 

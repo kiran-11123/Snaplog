@@ -114,12 +114,14 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
         
         const user_id = req.user.user_id;
         let workspace = req.body.workspace_name;
+
+         const user = await workspace_model.findOne({ workspace_name: workspace }); 
+        const count = user.recentlyDeleted.length;
       
         try{
 
         
         const cachedData = await redis_client.get(`workspace:${workspace}`);
-        const count = await redis_client.get('count');
 
         if(cachedData){
               
@@ -127,7 +129,8 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
                  logger.info(`No notes found for user: ${user_id} in redis cache`);
                  return res.status(200).json({
                   message: "Your Notes are Empty.",
-                  data: []
+                  data: [],
+                  count:count
                  })
           }
           else{
@@ -138,7 +141,7 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
                 message: "Data Fetched Successfully.",
                 data:cachedData ? JSON.parse(cachedData) : [],
                 workspace_name : workspace,
-                count: count ? JSON.parse(count) : 0
+                count: count 
              })
           }
         }  
@@ -149,14 +152,14 @@ data_Router.post("/workspace_get_data", Authentication_token, async (req, res) =
         
 
 
-        const user = await workspace_model.findOne({ workspace_name: workspace }); 
-        const count = user.recentlyDeleted.length;
+       
 
         if (user.notes.length === 0) {
               logger.info(`No notes found for user: ${user_id}`);
             return res.status(200).json({
                 message: "Your Notes are Empty.",
-                data: []
+                data: [],
+                count:count
             });
         }
 
