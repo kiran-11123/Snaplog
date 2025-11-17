@@ -2,6 +2,9 @@
 
 import { Plus } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { Trash } from 'lucide-react';
+import { useState } from 'react';
+import axios from 'axios';
 interface Components {
    
     _id:string,
@@ -13,6 +16,7 @@ interface Components {
 export default function WorkspaceCard({ workspace_name }: Components) {
    
     const router = useRouter();
+    const[message , setMessage] = useState('');
 
     async function  ToWorkSpace(workspace_name:string){
 
@@ -22,17 +26,52 @@ export default function WorkspaceCard({ workspace_name }: Components) {
 
         
     }
+
+    async function DeleteWorkspace( workspace:string) {
+
+        try{
+
+            const response = await axios.post("http://localhost:5000/api/v1/delete/delete_workspace" , {
+                workspace_name : workspace
+            },{
+                withCredentials:true
+            })
+
+            if(response.status===200){
+                 setMessage(response.data.message);
+                 window.location.reload();
+            }
+            else{
+                 setMessage(response.data.message);
+            }
+
+        }
+        catch(er){
+             console.log(er);
+            setMessage("Error Occured while deleting..")
+
+        }
+        finally{
+            setTimeout(()=>{
+                  setMessage('')
+            },1000)
+        }
+        
+    }
     
    
     return(
 
      <div className="w-full max-w-sm  backdrop-blur-xl bg-white/20  border-white h-96 p-4 shadow-xl rounded-md flex flex-col border items-center justify-between">
              
-             <div className='w-full flex items-center justify-center mb-1'>
+             <div className='w-full flex items-center justify-between mb-1'>
 
             <h1 className="text-center px-2 py-1 font-poppins font-semibold  text-lg">
                {workspace_name}
             </h1>
+
+            <button onClick={() => DeleteWorkspace(workspace_name)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Trash /></button>
+
             
             
 
@@ -44,6 +83,10 @@ export default function WorkspaceCard({ workspace_name }: Components) {
                  
                 </button>
             </div>
+
+
+            {message && <div className='text-md w-full font-inter text-gray-800'>{message}</div>}
+
 
 
     </div>
