@@ -107,28 +107,74 @@ const [workspaceTitle, setWorkspaceTitle] = useState<string[]>([]);
 
                   <Workspace isOpen={workspaceopenModal} onClose={()=>workspacesetOpenModal(false)} /> 
                   <Notes isOpen ={openModal } onClose={()=>setOpenModal(false)}  workItem = {workspaceTitle} /> 
-                  
-                     <div className='sm:hidden flex items-center'>
-
-                    <button onClick={() => isWidth(!width)} className="text-white focus:outline-none">
-                        {width ? <X className="h-8 w-8 text-black border rounded-full" /> : <Menu className="h-8 w-8 text-black hover:bg-gray-200" />}
-                    </button>
-
+               <div className="sm:hidden flex flex-col items-center">
+                      <button
+                        onClick={() => isWidth(!width)}
+                        className="text-white focus:outline-none"
+                        aria-expanded={width}
+                        aria-controls="mobile-menu"
+                      >
+                        {width ? (
+                          <X className="h-8 w-8 text-black border rounded-full" />
+                        ) : (
+                          <Menu className="h-8 w-8 text-black hover:bg-gray-200" />
+                        )}
+                      </button>
                     </div>
 
-
                     {width && (
-                
-                <div className="sm:hidden  w-full max-w-xl px-6 mt-2 flex flex-col gap-2 bg-gray-400 rounded-xl shadow-lg text-center py-4">
-                    <button title="add-content"  onClick={()=>workspacesetOpenModal(true)}   className="bg-gradient-to-r text-center from-[#d1d5db] via-[#6b7280] to-[#374151] text-white cursor-pointer   rounded-full px-2 py-2"><NotebookTabs /></button>
-                   
-                    <button title="add-content"  onClick={()=>setOpenModal(true)}   className="bg-yellow-500  text-center text-white cursor-pointer  hover:bg-gradient-to-r hover:from-yellow-500 hover:via-yellow-500 to-yellow-800 rounded-full px-2 py-2"><Plus /></button>
-                    <button onClick={logoutHandler}  className="px-4 cursor-pointer py-2 font-mono bg-gradient-to-b from-[#818cf8] via-[#6366f1] to-[#4f46e5] hover:bg-gradient-to-b hover:from-[#818cf8] hover:via-[#242568] hover:to-[#4f46e5] text-white  rounded-lg font-bold">Logout</button>
-                </div>
-            
+                      // backdrop closes menu when clicked
+                      <div
+                        id="mobile-menu-backdrop"
+                        className="sm:hidden fixed font-poppins inset-0 z-40 bg-black/30 flex items-start justify-center p-4"
+                        onClick={() => isWidth(false)}
+                        aria-hidden="true"
+                      >
+                        <div
+                          id="mobile-menu"
+                          role="dialog"
+                          aria-modal="true"
+                          onClick={(e) => e.stopPropagation()}
+                          className="w-full max-w-md bg-gray-400 rounded-xl shadow-lg text-center py-4 px-6 space-y-3"
+                        >
+                          <div className="flex justify-end">
+                            <button
+                              onClick={() => isWidth(false)}
+                              className="p-1 rounded hover:bg-gray-300"
+                              aria-label="Close menu"
+                            >
+                              <X />
+                            </button>
+                          </div>
 
+                          <div className="w-full max-w-md flex flex-col gap-2">
+                            <button
+                              title="add-workspace"
+                              onClick={() => { workspacesetOpenModal(true); isWidth(false); }}
+                              className="mx-auto bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151] text-white rounded-md px-3 py-2"
+                            >
+                              Create Workspace
+                            </button>
 
-                 )}
+                            <button
+                              title="add-note"
+                              onClick={() => { setOpenModal(true); isWidth(false); }}
+                              className="mx-auto bg-yellow-500 text-white rounded-md px-3 py-2"
+                            >
+                              Add Note
+                            </button>
+
+                            <button
+                              onClick={() => { logoutHandler(); isWidth(false); }}
+                              className="mx-auto text-lg px-4 py-2 font-mono bg-gradient-to-b from-[#818cf8] via-[#6366f1] to-[#4f46e5] text-white rounded-lg font-bold"
+                            >
+                              Logout
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
                   
                 
 

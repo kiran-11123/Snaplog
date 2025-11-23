@@ -158,7 +158,7 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
                  
                  <div className="flex items-center justify-between ">
 
-                    <h2 className="text-xl text-blue-700 ">Add Notes</h2>
+                    <h2 className="text-md sm:text-xl font-poppins text-blue-700 ">Add Notes</h2>
 
                     <button title="X" onClick={onClose} className="hover:text-red-600border rounded-full "><X /></button>
 
@@ -168,22 +168,26 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
 
                 <form  className="space-y-3" >
 
-                     <div className="w-full flex-flex-col">
-      <div className="text-sm font-mono">choose your workspace</div>
+                     <div className="w-full flex flex-col">
+      <div className="text-sm font-poppins  text-gray-800 mb-1">Choose your workspace</div>
 
       <select
-      title="dropdown"
+        title="dropdown"
         value={selected}
         onChange={(e) => setSelected(e.target.value)}
-        className="w-full sm:max-w-md max-w-sm text-sm p-2 rounded bg-gray-700 text-white border border-gray-500"
+        className="w-full sm:max-w-md max-w-sm rounded-md text-sm p-2  bg-gray-700 text-white border border-gray-500"
       >
-        <option value="Default" className="w-full max-w-full text-sm">Default</option>
-        
-        {workItem.map((name:string, index:number) => (
-          <option key={index} value={name} className="w-full max-w-sm text-sm">
-            {name}
-          </option>
-        ))}
+        <option value="" disabled>Select workspace</option>
+
+        {Array.isArray(workItem) && workItem.length > 0 ? (
+          workItem.map((name: string, index: number) => (
+            <option key={index} value={name} className="text-sm">
+              {name}
+            </option>
+          ))
+        ) : (
+          <option value="Default" className="text-sm">Default</option>
+        )}
       </select>
     </div>
   
