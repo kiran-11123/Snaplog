@@ -126,7 +126,7 @@ export default function Card({  workspace_name, id , title, data, created_at ,fa
     }
     return (
 
-        <div className="w-full max-w-md  backdrop-blur-xl bg-white/20  border-white h-96 p-4 shadow-xl rounded-md flex flex-col border items-center justify-between">
+        <div className="  sm:max-w-md  max-w-sm backdrop-blur-xl bg-white/20  border-white h-96 p-4 shadow-xl rounded-md flex flex-col border items-center justify-between">
 
             <div className='w-full flex items-center justify-between mb-1'>
 
