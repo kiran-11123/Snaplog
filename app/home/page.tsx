@@ -97,10 +97,10 @@ const [workspaceTitle, setWorkspaceTitle] = useState<string[]>([]);
                   
 
                    
-                  <div className="hidden px-15  py-2 flex items-center justify-between gap-10 text-lg">
+                  <div className=" hidden   px-15  py-2 sm:flex items-center justify-between gap-10 text-lg">
                     <button title="add-content"  onClick={()=>workspacesetOpenModal(true)}   className="bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151] text-white cursor-pointer   rounded-full px-2 py-2"><NotebookTabs /></button>
                    
-                    <button title="add-content"  onClick={()=>setOpenModal(true)}   className="bg-yellow-500 text-white cursor-pointer  hover:bg-gradient-to-r hover:from-yellow-500 hover:via-yellow-500 to-yellow-800 rounded-full px-2 py-2"><Plus /></button>
+                    <button title="add-content"  onClick={()=>setOpenModal(true)}   className="bg-yellow-500  text-center text-white cursor-pointer  hover:bg-gradient-to-r hover:from-yellow-500 hover:via-yellow-500 to-yellow-800 rounded-full px-2 py-2"><Plus /></button>
                     <button onClick={logoutHandler}  className="px-4 cursor-pointer py-2 font-mono bg-gradient-to-b from-[#818cf8] via-[#6366f1] to-[#4f46e5] hover:bg-gradient-to-b hover:from-[#818cf8] hover:via-[#242568] hover:to-[#4f46e5] text-white  rounded-lg font-bold">Logout</button>
                   </div>
                   
@@ -111,7 +111,7 @@ const [workspaceTitle, setWorkspaceTitle] = useState<string[]>([]);
                      <div className='sm:hidden flex items-center'>
 
                     <button onClick={() => isWidth(!width)} className="text-white focus:outline-none">
-                        {width ? <X className="h-6 w-6 text-black border rounded-full" /> : <Menu className="h-8 w-8 text-black hover:bg-gray-200" />}
+                        {width ? <X className="h-8 w-8 text-black border rounded-full" /> : <Menu className="h-8 w-8 text-black hover:bg-gray-200" />}
                     </button>
 
                     </div>
@@ -119,10 +119,10 @@ const [workspaceTitle, setWorkspaceTitle] = useState<string[]>([]);
 
                     {width && (
                 
-                <div className="sm:hidden  w-full max-w-4xl px-6 mt-2 flex flex-col gap-2 bg-gray-400 rounded-xl shadow-lg text-center py-4">
-                    <button title="add-content"  onClick={()=>workspacesetOpenModal(true)}   className="bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151] text-white cursor-pointer   rounded-full px-2 py-2"><NotebookTabs /></button>
+                <div className="sm:hidden  w-full max-w-xl px-6 mt-2 flex flex-col gap-2 bg-gray-400 rounded-xl shadow-lg text-center py-4">
+                    <button title="add-content"  onClick={()=>workspacesetOpenModal(true)}   className="bg-gradient-to-r text-center from-[#d1d5db] via-[#6b7280] to-[#374151] text-white cursor-pointer   rounded-full px-2 py-2"><NotebookTabs /></button>
                    
-                    <button title="add-content"  onClick={()=>setOpenModal(true)}   className="bg-yellow-500 text-white cursor-pointer  hover:bg-gradient-to-r hover:from-yellow-500 hover:via-yellow-500 to-yellow-800 rounded-full px-2 py-2"><Plus /></button>
+                    <button title="add-content"  onClick={()=>setOpenModal(true)}   className="bg-yellow-500  text-center text-white cursor-pointer  hover:bg-gradient-to-r hover:from-yellow-500 hover:via-yellow-500 to-yellow-800 rounded-full px-2 py-2"><Plus /></button>
                     <button onClick={logoutHandler}  className="px-4 cursor-pointer py-2 font-mono bg-gradient-to-b from-[#818cf8] via-[#6366f1] to-[#4f46e5] hover:bg-gradient-to-b hover:from-[#818cf8] hover:via-[#242568] hover:to-[#4f46e5] text-white  rounded-lg font-bold">Logout</button>
                 </div>
             

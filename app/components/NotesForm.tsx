@@ -175,12 +175,12 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
       title="dropdown"
         value={selected}
         onChange={(e) => setSelected(e.target.value)}
-        className="w-full  text-sm p-2 rounded bg-gray-700 text-white border border-gray-500"
+        className="w-full sm:max-w-md max-w-sm text-sm p-2 rounded bg-gray-700 text-white border border-gray-500"
       >
-        <option value="Default">Default</option>
+        <option value="Default" className="w-full max-w-full text-sm">Default</option>
         
         {workItem.map((name:string, index:number) => (
-          <option key={index} value={name}>
+          <option key={index} value={name} className="w-full max-w-sm text-sm">
             {name}
           </option>
         ))}
