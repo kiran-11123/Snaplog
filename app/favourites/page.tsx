@@ -30,13 +30,13 @@ export default function Favourites(){
             try{
                             
 
-                const response =await axios.post("http://localhost:5000/api/v1/data/favoruites" , {
+                const response =await axios.post("http://localhost:5000/api/v1/favoruites_data/get_favourties" , {
                      withCredentails:true
                 })
 
                 if(response.status === 201){
                      
-                    setFavourites(response.data.favoruites);
+                    setFavourites(response.data.favourites);
                     setMessage(response.data.message);
                 }
                 else{
