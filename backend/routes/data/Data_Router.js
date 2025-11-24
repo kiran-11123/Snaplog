@@ -267,113 +267,101 @@ data_Router.post("/share", Authentication_token, async (req, res) => {
 })
 data_Router.post("/favourites", Authentication_token, async (req, res) => {
   try {
-    logger.info("Request: POST /favourites");
+    const { contentId, workspace_name } = req.body;
 
-    const objId = req.body.contentId;
-    const workspace_name = req.body.workspace_name;
-
-    if (!objId || !workspace_name) {
+    if (!contentId || !workspace_name) {
       return res.status(400).json({
         message: "Missing contentId or workspace_name",
       });
     }
 
     const user_id = req.user?.user_id || req.user?.userid;
-    
-    if (!mongoose.Types.ObjectId.isValid(objId)) {
+
+    if (!mongoose.Types.ObjectId.isValid(contentId)) {
       return res.status(400).json({ message: "Invalid contentId" });
     }
-    const objIdObj = new mongoose.Types.ObjectId(objId);
 
-    // Find the workspace
+    const objIdObj = new mongoose.Types.ObjectId(contentId);
+
+    // ✔ FIX 1: Workspace must belong to the same user
     const workspace = await workspace_model.findOne({
-      workspace_name: workspace_name,
+      workspace_name,
+      userid: user_id,
     });
 
     if (!workspace) {
-      logger.warn("Workspace not found...");
-      return res.status(404).json({
-        message: "Workspace not found",
-      });
+      return res.status(404).json({ message: "Workspace not found" });
     }
 
-    // Find the note to toggle favourite
+    // Find note inside workspace
     const note = workspace.notes.id(objIdObj);
+
     if (!note) {
-      logger.warn("Note not found in workspace");
-      return res.status(404).json({
-        message: "Note not found",
-      });
+      return res.status(404).json({ message: "Note not found" });
     }
 
-    // Toggle favourite
+    // Toggle
     note.favourite = !note.favourite;
     await workspace.save();
 
-    logger.info(`Note favourite toggled to ${note.favourite} for user ${user_id}`);
+    // Update favourites collection
+    let favouritesDoc = await Favourites_model.findOne({ user_id: user_id });
 
-    // Manage favourites collection
     if (note.favourite) {
-      // Add to favourites
-      let favouritesDoc = await Favourites_model.findOne({ user_id: user_id });
-
       if (!favouritesDoc) {
         favouritesDoc = new Favourites_model({
           user_id: user_id,
-          Favourites: []
+          Favourites: [],
         });
       }
 
-      // Check if already in favourites
-      const exists = favouritesDoc.Favourites.some(fav => fav._id.toString() === objIdObj.toString());
-      
+      const exists = favouritesDoc.Favourites.some(
+        fav => fav._id.toString() === objIdObj.toString()
+      );
+
       if (!exists) {
         favouritesDoc.Favourites.push({
           _id: objIdObj,
           title: note.title,
           data: note.data,
-          workspace_name: workspace_name,
-          favourite: true
+          workspace_name,
+          favourite: true,
         });
+
         await favouritesDoc.save();
-        logger.info(`Note added to favourites for user ${user_id}`);
       }
     } else {
-      // Remove from favourites
-      const favouritesDoc = await Favourites_model.findOne({ user_id: user_id });
-      
       if (favouritesDoc) {
         favouritesDoc.Favourites = favouritesDoc.Favourites.filter(
           fav => fav._id.toString() !== objIdObj.toString()
         );
+
         await favouritesDoc.save();
-        logger.info(`Note removed from favourites for user ${user_id}`);
       }
     }
 
-    // Invalidate Redis caches
-    try {
-      await redis_client.del(`favourites_${user_id}`);
-      await redis_client.del(`workspace:${workspace_name}`);
-      logger.info("Redis caches invalidated for user and workspace");
-    } catch (redisErr) {
-      logger.warn("Redis invalidation error: " + redisErr.message);
-    }
+    // Clear redis
+    await redis_client.del(`favourites_${user_id}`);
+    await redis_client.del(`workspace:${workspace_name}`);
 
     return res.status(200).json({
-      message: "Favourite status updated successfully",
+      message: "Favourite updated",
       favourite: note.favourite,
+      note: {
+        _id: note._id,
+        title: note.title,
+        data: note.data,
+        favourite: note.favourite,
+      },
     });
 
-  } catch (er) {
-    logger.error("Error in /favourites: " + er.message);
+  } catch (err) {
     return res.status(500).json({
       message: "Internal Server Error",
-      error: er.message
+      error: err.message,
     });
   }
 });
-// ...existing code...
 
 
 data_Router.delete("/restore", Authentication_token, async (req, res) => {

@@ -23,7 +23,7 @@ Favourites_router.post("/get_favourites", Authentication_token, async (req, res)
             const cachedData = await redis_client.get(`favourites_${user_id}`);
             if (cachedData) {
                 logger.info(`Favourites fetched from cache for userid ${user_id}`);
-                return res.status(200).json({
+                return res.status(201).json({
                     message: "Favourites found successfully (from cache)...",
                     favourites: JSON.parse(cachedData),
                 });
@@ -37,7 +37,7 @@ Favourites_router.post("/get_favourites", Authentication_token, async (req, res)
 
         if (!user) {
             logger.warn(`User not found while fetching the favourites for userid ${user_id}`);
-            return res.status(200).json({
+            return res.status(201).json({
                 message: "No Favourites Present..",
                 favourites: []
             });
