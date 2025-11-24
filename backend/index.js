@@ -13,7 +13,8 @@ import Bot_Router from './routes/ai/bot.js';
 import logger from "./utils/logger.js";
 import Edit_Router from './routes/data/Edit_data.js';
 import workspace_Router from './routes/data/workspace.js';
-import Delete_Router from './routes/data/delete_data.js'
+import Delete_Router from './routes/data/delete_data.js';
+import Favourites_router from './routes/data/favourites_data.js';
 
 await connectDB()
   
@@ -43,6 +44,7 @@ app.use("/api/v1/ai", Bot_Router);
 app.use("/api/v1/workspace" , workspace_Router)
 app.use("/api/v1/edit" , Edit_Router)
 app.use("/api/v1/delete" , Delete_Router)
+app.use("/api/v1/favoruites_data" ,Favourites_router)
 
 // Global Error Logger
 app.use((err, req, res, next) => {

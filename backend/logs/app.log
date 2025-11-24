@@ -15623,3 +15623,848 @@
   level: 'info',
   timestamp: '2025-11-23T14:47:02.900Z'
 }
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T12:51:28.126Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T12:51:29.736Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T12:51:29.752Z'
+}
+{
+  message: 'OPTIONS /api/v1/users/signin',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:32.643Z'
+}
+{
+  message: 'POST /api/v1/users/signin',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:34.411Z'
+}
+{
+  message: 'POST /signin',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:34.418Z'
+}
+{
+  message: 'Login successful (kiran.12345sadara@gmail.com)',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:38.019Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:40.142Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:40.154Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:41.617Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:41.624Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:41.629Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:41.658Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:44.211Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:44.226Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:44.230Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:44.235Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:44.243Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:44.247Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:44.265Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:44.268Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:44.278Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:47.130Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:47.133Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:47.163Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:47.166Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:47.169Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:47.195Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:48.533Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:48.537Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:48.547Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:48.551Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:48.568Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:48.570Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:48.579Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:50.097Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:50.100Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:50.127Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:50.130Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:50.132Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-24T12:52:50.157Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:58:15.918Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-24T12:58:15.935Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-24T12:58:15.970Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/favoruites',
+  level: 'info',
+  timestamp: '2025-11-24T13:09:32.904Z'
+}
+{
+  message: 'POST /api/v1/data/favoruites',
+  level: 'info',
+  timestamp: '2025-11-24T13:09:32.914Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/favoruites',
+  level: 'info',
+  timestamp: '2025-11-24T13:11:52.806Z'
+}
+{
+  message: 'POST /api/v1/data/favoruites',
+  level: 'info',
+  timestamp: '2025-11-24T13:11:52.811Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:06.500Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:06.528Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:06.568Z'
+}
+{
+  message: 'GET /api/v1/workspace/get_data',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:06.573Z'
+}
+{
+  message: 'Request: workspace Get /get_data',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:06.575Z'
+}
+{
+  message: 'Workspace data fetched successfully...',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:06.599Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:09.870Z'
+}
+{
+  message: 'OPTIONS /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:09.876Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:09.883Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:09.888Z'
+}
+{
+  message: 'POST /api/v1/data/workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:09.895Z'
+}
+{
+  message: 'Request: POST /workspace_get_data',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:09.904Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and also stored in redis ',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:09.929Z'
+}
+{
+  message: 'Notes Data found for the workspace in redis cache.',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:09.934Z'
+}
+{
+  message: 'Fetched 1 notes for user: 6 and stored in redis',
+  level: 'info',
+  timestamp: '2025-11-24T13:13:09.942Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:15:55.470Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:15:56.242Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:15:56.252Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:06.398Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:06.855Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:06.862Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:09.819Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:13.272Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:14.755Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:15.232Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:15.237Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:18.606Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:19.291Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:19.296Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:29.113Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:29.579Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:29.592Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:34.384Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:34.917Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:34.922Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:38.032Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:38.451Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:38.461Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:40.858Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:41.241Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:41.245Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:55.527Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:56.007Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:56.017Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:16:59.857Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:00.264Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:00.272Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:02.223Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:02.689Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:02.694Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:04.149Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:04.562Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:04.568Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:13.024Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:13.468Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:35.054Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:35.487Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:38.607Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:39.009Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:17:39.013Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:18:18.904Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:18:19.747Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:18:19.754Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:18:21.768Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:18:22.160Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:18:22.167Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:18:44.069Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:18:45.102Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:18:45.114Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:00.940Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:01.769Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:01.774Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:07.893Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:08.379Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:08.384Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:15.770Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:17.586Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:17.998Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:18.008Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:23.081Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:23.597Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:23.606Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:26.722Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:27.121Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:27.126Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:19:59.740Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:20:00.466Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:20:00.482Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:20:02.327Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:20:03.134Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:20:03.144Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:37:34.640Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:37:35.584Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:37:35.588Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:38:02.628Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:38:03.125Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:38:03.131Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:38:23.985Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:38:24.391Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:38:24.397Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:38:37.319Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:38:37.733Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:38:37.741Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:38:43.746Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:38:44.242Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:38:44.249Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:01.530Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:01.922Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:01.926Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:05.662Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:06.076Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:06.082Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:08.645Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:09.038Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:09.044Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:15.378Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:15.772Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:15.777Z'
+}
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:17.340Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:17.869Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-24T13:39:17.876Z'
+}
