@@ -13,6 +13,7 @@ interface Components {
     data: string,
     favourite:boolean,
     createdAt: Date;
+    disabled?: boolean;
 
 
 }
@@ -84,6 +85,7 @@ export default function Favourites(){
                 data={item.data}
                 created_at={item.createdAt}
                 favourite={item.favourite}
+                disabled={true}
               />
                           </div>
                         ))

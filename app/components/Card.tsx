@@ -16,7 +16,7 @@ interface Components {
     data: string,
     created_at: Date
     favourite: boolean
-
+    disabled?: boolean;
 
 }
 
@@ -24,7 +24,7 @@ interface Components {
 
 
 
-export default function Card({  workspace_name, id , title, data, created_at ,favourite }: Components) {
+export default function Card({  workspace_name, id , title, data, created_at ,favourite  ,disabled }: Components) {
 
     const [copied, setCopied] = useState(false);
 
@@ -136,19 +136,19 @@ export default function Card({  workspace_name, id , title, data, created_at ,fa
 
                 <div className='flex justify-between gap-4 items-center'>
 
-                    <button
+                {!disabled &&   (  <button
                         onClick={() => HandleFavourites(id)}
                         className={`font-sm cursor-pointer rounded-full transition-shadow ${favourite ? " text-red-500" : "text-black"
                             }`}
                         title="heart"
                     >
                         <Heart />
-                    </button>
+                    </button>    )}
+ 
+                 { !disabled &&  (<button onClick={() => setOpenModal1(true)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Share2 /></button> )}
 
-                    <button onClick={() => setOpenModal1(true)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Share2 /></button>
 
-
-                    <button onClick={() => DeleteNotes(id)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Trash /></button>
+                  {!disabled &&  (<button onClick={() => DeleteNotes(id)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Trash /></button> )}``
 
 
                 </div>

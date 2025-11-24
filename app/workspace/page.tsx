@@ -25,6 +25,7 @@ interface Components {
     data: string,
     favourite:boolean,
     createdAt: Date;
+    disabled?: boolean;
 
 
 }
@@ -122,6 +123,7 @@ const[count,setCount] = useState<number>(0);
     data={item.data}
     created_at={item.createdAt}
     favourite={item.favourite}
+    disabled={false}
   />
               </div>
             ))
