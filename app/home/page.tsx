@@ -16,6 +16,7 @@ import Notes from "../components/NotesForm";
 import WorkspaceCard from "../components/workspaceCard";
 import {Menu} from 'lucide-react'
 import {X} from 'lucide-react'
+import {Heart} from 'lucide-react'
 
 interface Components {
    _id:string,
@@ -82,6 +83,10 @@ const [workspaceTitle, setWorkspaceTitle] = useState<string[]>([]);
         router.replace("/");
     }
 
+    function FavouritesPush(){
+       router.push("/favourites")
+    }
+
     const[width , isWidth] = useState(false);
 
   const[openModal , setOpenModal] = useState(false);
@@ -98,6 +103,7 @@ const [workspaceTitle, setWorkspaceTitle] = useState<string[]>([]);
 
                    
                   <div className=" hidden   px-15  py-2 sm:flex items-center justify-between gap-10 text-lg">
+                     <button title="favourites" onClick={FavouritesPush}  className="text-red-700 hover:text-red-800"><Heart size={36}/></button>
                     <button title="add-content"  onClick={()=>workspacesetOpenModal(true)}   className="bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151] text-white cursor-pointer   rounded-full px-2 py-2"><NotebookTabs /></button>
                    
                     <button title="add-content"  onClick={()=>setOpenModal(true)}   className="bg-yellow-500  text-center text-white cursor-pointer  hover:bg-gradient-to-r hover:from-yellow-500 hover:via-yellow-500 to-yellow-800 rounded-full px-2 py-2"><Plus /></button>
