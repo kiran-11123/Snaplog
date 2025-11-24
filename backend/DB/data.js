@@ -1,27 +1,30 @@
 import mongoose  from "mongoose";
 
 
-const data_Schema = new mongoose.Schema({
+const Favourites = new mongoose.Schema({
 
-     
-   
-     userid :{type:Number } , 
-     
-     notes:[{
+
+     user_id: {type:Number , unique:true} ,
+
+           Favourites:[{
+        
+        id:{type:String},
         title:{type:Object},
         data:{type:Object},
+        favourite :{type:Boolean , default:false},
         
-      createdAt:{type:Date , default:Date.now}
+        createdAt:{type:Date , default:Date.now}
 
 
-     }],
+     }]
+   
     
        
 })
 
 
-const data_model = mongoose.model("User_data" , data_Schema);
+const Favourites_model = mongoose.model("User_data" , Favourites);
 
 
 
-export default data_model;
+export default Favourites_model;

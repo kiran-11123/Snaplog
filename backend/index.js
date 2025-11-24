@@ -44,7 +44,7 @@ app.use("/api/v1/ai", Bot_Router);
 app.use("/api/v1/workspace" , workspace_Router)
 app.use("/api/v1/edit" , Edit_Router)
 app.use("/api/v1/delete" , Delete_Router)
-app.use("/api/v1/favoruites_data" ,Favourites_router)
+app.use("/api/v1/favourites_data" ,Favourites_router)
 
 // Global Error Logger
 app.use((err, req, res, next) => {
