@@ -30,8 +30,10 @@ export default function Favourites(){
             try{
                             
 
-                const response =await axios.post("http://localhost:5000/api/v1/favoruites_data/get_favourties" , {
-                     withCredentails:true
+                const response =await axios.post("http://localhost:5000/api/v1/favourites_data/get_favourites" , {
+                    
+                },{
+                    withCredentials:true
                 })
 
                 if(response.status === 201){
