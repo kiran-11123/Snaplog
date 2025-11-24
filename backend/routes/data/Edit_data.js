@@ -13,7 +13,7 @@ Edit_Router.post("/edit_notes" , Authentication_token , async(req,res)=>{
 
          const data_received = req.body.data;
          let workspace = req.body.workspace_name;
-        const user_id = req.user.userid;
+const user_id = req.user?.user_id || req.user?.userid;
 
         
 
