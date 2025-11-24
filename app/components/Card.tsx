@@ -183,8 +183,15 @@ export default function Card({  workspace_name, id , title, data, created_at ,fa
                 <div className='flex justify-between gap-2'>
                     <button onClick={() => setOpenModal2(true)} className='font-sm rounded-full hover:transition-shadow' title="X"> <SquarePen /></button>
 
-                {open2 && <EditNote isOpen={open2} onClose={() => setOpenModal2(false)} data={data} id={id} workspace_name={workspace_name}/>}
-
+                  {!disabled && open2 && (
+  <EditNote
+    isOpen={open2}
+    onClose={() => setOpenModal2(false)}
+    data={data}
+    id={id}
+    workspace_name={workspace_name}
+  />
+)}
 
                 <button title="Copy" onClick={handleCopy} className='flex items-center p-2 bg-gray-300 rounded-md hover:bg-gray-400 hover:opacity-80 transition-shadow shadow-md'>
                     <Copy size={16} color='black' />
