@@ -148,7 +148,7 @@ export default function Card({ workspace_name, id, title, data, created_at, favo
                     {!disabled && (<button onClick={() => setOpenModal1(true)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Share2 /></button>)}
 
 
-                    {!disabled && (<button onClick={() => DeleteNotes(id)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Trash /></button>)}``
+                    {!disabled && (<button onClick={() => DeleteNotes(id)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Trash /></button>)}
 
 
                 </div>
