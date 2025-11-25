@@ -24,14 +24,14 @@ interface Components {
 
 
 
-export default function Card({  workspace_name, id , title, data, created_at ,favourite  ,disabled }: Components) {
+export default function Card({ workspace_name, id, title, data, created_at, favourite, disabled }: Components) {
 
     const [copied, setCopied] = useState(false);
 
     const [open1, setOpenModal1] = useState(false);
 
-        const [open2, setOpenModal2] = useState(false);
-        const[message , setMessage] = useState<string>("");
+    const [open2, setOpenModal2] = useState(false);
+    const [message, setMessage] = useState<string>("");
 
 
 
@@ -40,38 +40,38 @@ export default function Card({  workspace_name, id , title, data, created_at ,fa
         try {
 
             const response = await axios.post(
-      "http://localhost:5000/api/v1/data/favourites",
-      {
-        contentId: id,
-        workspace_name: workspace_name,
-      },
-      {
-        withCredentials: true,
-      }
-    );
+                "http://localhost:5000/api/v1/data/favourites",
+                {
+                    contentId: id,
+                    workspace_name: workspace_name,
+                },
+                {
+                    withCredentials: true,
+                }
+            );
             if (response.status === 200) {
-                 setMessage(response.data.message);
+                setMessage(response.data.message);
                 setTimeout(() => {
                     window.location.reload();
                 }, 1000);
 
-                
+
             }
-            else{
+            else {
                 setMessage(response.data.message);
             }
 
         }
         catch (er) {
-            
+
             console.log(er);
-            alert("Error occured while making favourites: " );
+            alert("Error occured while making favourites: ");
 
         }
 
     }
 
-  
+
 
     async function DeleteNotes(id: string) {
 
@@ -98,7 +98,7 @@ export default function Card({  workspace_name, id , title, data, created_at ,fa
                 }, 1000);
             }
             else {
-                setMessage(response.data.message);   
+                setMessage(response.data.message);
                 console.log(response.data)
             }
 
@@ -136,25 +136,25 @@ export default function Card({  workspace_name, id , title, data, created_at ,fa
 
                 <div className='flex justify-between gap-4 items-center'>
 
-                {!disabled &&   (  <button
+                    {!disabled && (<button
                         onClick={() => HandleFavourites(id)}
                         className={`font-sm cursor-pointer rounded-full transition-shadow ${favourite ? " text-red-500" : "text-black"
                             }`}
                         title="heart"
                     >
                         <Heart />
-                    </button>    )}
- 
-                 { !disabled &&  (<button onClick={() => setOpenModal1(true)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Share2 /></button> )}
+                    </button>)}
+
+                    {!disabled && (<button onClick={() => setOpenModal1(true)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Share2 /></button>)}
 
 
-                  {!disabled &&  (<button onClick={() => DeleteNotes(id)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Trash /></button> )}``
+                    {!disabled && (<button onClick={() => DeleteNotes(id)} className='font-sm rounded-full hover:transition-shadow' title="X"> <Trash /></button>)}``
 
 
                 </div>
 
 
-                {open1 && <DataShare isOpen={open1} onClose={() => setOpenModal1(false)} data={data}  />}
+                {open1 && <DataShare isOpen={open1} onClose={() => setOpenModal1(false)} data={data} />}
 
 
 
@@ -180,33 +180,34 @@ export default function Card({  workspace_name, id , title, data, created_at ,fa
 
                 </span>
 
-                <div className='flex justify-between gap-2'>
+       {!disabled  &&   
+             (<div className='flex justify-between gap-2'>
                     <button onClick={() => setOpenModal2(true)} className='font-sm rounded-full hover:transition-shadow' title="X"> <SquarePen /></button>
 
-                  {!disabled && open2 && (
-  <EditNote
-    isOpen={open2}
-    onClose={() => setOpenModal2(false)}
-    data={data}
-    id={id}
-    workspace_name={workspace_name}
-  />
-)}
+                    { open2 && (
+                        <EditNote
+                            isOpen={open2}
+                            onClose={() => setOpenModal2(false)}
+                            data={data}
+                            id={id}
+                            workspace_name={workspace_name}
+                        />
+                    )}
 
-                <button title="Copy" onClick={handleCopy} className='flex items-center p-2 bg-gray-300 rounded-md hover:bg-gray-400 hover:opacity-80 transition-shadow shadow-md'>
-                    <Copy size={16} color='black' />
+                    <button title="Copy" onClick={handleCopy} className='flex items-center p-2 bg-gray-300 rounded-md hover:bg-gray-400 hover:opacity-80 transition-shadow shadow-md'>
+                        <Copy size={16} color='black' />
 
-                    {copied && <span className='text-xs text-black '>Copied!</span>}
-                </button>
+                        {copied && <span className='text-xs text-black '>Copied!</span>}
+                    </button>
+
+                </div>   )}
+
+
 
             </div>
 
-         
 
-            </div>
-
-
-               {message && <div className='text-md w-full font-inter text-gray-800'>{message}</div>}
+            {message && <div className='text-md w-full font-inter text-gray-800'>{message}</div>}
 
 
 

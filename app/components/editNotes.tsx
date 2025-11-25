@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { X } from 'lucide-react';
 import axios from "axios";
-
 export default function EditNote({ isOpen, onClose  , data , id , workspace_name}: { isOpen?: boolean; onClose?: () => void , data: string , id:string , workspace_name:string}){
 
     const[newdata,setNewData] = useState(data) ;

@@ -94,9 +94,9 @@ const [workspaceTitle, setWorkspaceTitle] = useState<string[]>([]);
      return(
 
         <AuthGuard >
-        <div className="bg-gray-100  flex  flex-col justify-between w-full ">
+        <div className="  flex  flex-col justify-between w-full ">
 
-            <div className="flex justify-between items-center mt-2  w-full text-black bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#44403c] via-[#78716c] to-[#d6d3d1] rounded-md px-6 py-4 font-bold shadow-xl ">
+            <div className="flex justify-between items-center mt-2  w-full text-black  rounded-md px-6 py-4 font-bold shadow-xl ">
                   
                   <h1 className="font-serif hover:bg-gray-300 cursor-pointer px-4 py-2 rounded-lg shadow-2xl bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#27272a] via-[#52525b] to-[#a1a1aa] text-xl">NeuraNote</h1>
                   
@@ -157,22 +157,30 @@ const [workspaceTitle, setWorkspaceTitle] = useState<string[]>([]);
                             <button
                               title="add-workspace"
                               onClick={() => { workspacesetOpenModal(true); isWidth(false); }}
-                              className="mx-auto bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151] text-white rounded-md px-3 py-2"
+                              className="mx-auto bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151] text-white rounded-md px-10 py-2"
                             >
                               Create Workspace
+                            </button>
+
+                             <button
+                              title="favourites"
+                              onClick={FavouritesPush}
+                              className="mx-auto bg-red-300 text-white rounded-md px-10 py-2"
+                            >
+                              Favourites
                             </button>
 
                             <button
                               title="add-note"
                               onClick={() => { setOpenModal(true); isWidth(false); }}
-                              className="mx-auto bg-yellow-500 text-white rounded-md px-3 py-2"
+                              className="mx-auto bg-yellow-500 text-white rounded-md px-10 py-2"
                             >
                               Add Note
                             </button>
 
                             <button
                               onClick={() => { logoutHandler(); isWidth(false); }}
-                              className="mx-auto text-lg px-4 py-2 font-mono bg-gradient-to-b from-[#818cf8] via-[#6366f1] to-[#4f46e5] text-white rounded-lg font-bold"
+                              className="mx-auto text-lg px-10 py-2 font-mono bg-gradient-to-b from-[#818cf8] via-[#6366f1] to-[#4f46e5] text-white rounded-lg font-bold"
                             >
                               Logout
                             </button>
