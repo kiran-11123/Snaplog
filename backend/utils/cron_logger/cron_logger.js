@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const logFilePath = path.join(__dirname, "..", "logs", "cron.log");
+const logFilePath = path.join(__dirname, "../../", "logs", "cron.log");
 
 const cron_logger = winston.createLogger({
     level: "info",

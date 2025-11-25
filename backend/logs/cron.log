@@ -1,0 +1,45 @@
+{
+  message: 'Old data in replica deleted successfully..',
+  level: 'info',
+  timestamp: '2025-11-25T14:33:20.043Z'
+}
+{
+  message: 'Data Fetched from the master favourties schema successfully..',
+  level: 'info',
+  timestamp: '2025-11-25T14:33:20.115Z'
+}
+{
+  message: 'Data replicated to replicaiton favourties schema successfully..',
+  level: 'info',
+  timestamp: '2025-11-25T14:33:20.170Z'
+}
+{
+  message: 'Old data in replica deleted successfully..',
+  level: 'info',
+  timestamp: '2025-11-25T14:33:30.051Z'
+}
+{
+  message: 'Data Fetched from the master favourties schema successfully..',
+  level: 'info',
+  timestamp: '2025-11-25T14:33:30.082Z'
+}
+{
+  message: 'Data replicated to replicaiton favourties schema successfully..',
+  level: 'info',
+  timestamp: '2025-11-25T14:33:30.114Z'
+}
+{
+  message: 'Old data in replica deleted successfully..',
+  level: 'info',
+  timestamp: '2025-11-25T14:33:40.057Z'
+}
+{
+  message: 'Data Fetched from the master favourties schema successfully..',
+  level: 'info',
+  timestamp: '2025-11-25T14:33:40.081Z'
+}
+{
+  message: 'Data replicated to replicaiton favourties schema successfully..',
+  level: 'info',
+  timestamp: '2025-11-25T14:33:40.114Z'
+}

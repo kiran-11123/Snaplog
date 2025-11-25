@@ -2,7 +2,7 @@ import cron from 'node-cron'
 import Favourites_replication_model from '../../DB/replication_data/data_replication.js'
 import Favourites_model from '../../DB/data.js'
 import cron_logger from '../cron_logger/cron_logger.js'
-cron.schedule("0 * * * * *" , async()=>{
+cron.schedule('0 0 * * *' , async()=>{
 
     try{ 
 
