@@ -16,7 +16,7 @@ import workspace_Router from './routes/data/workspace.js';
 import Delete_Router from './routes/data/delete_data.js';
 import Favourites_router from './routes/data/favourites_data.js';
 import './utils/cron.js';
-
+import './utils/replication_cron_dbs/db_replication_cron.js'
 await connectDB()
   
 
