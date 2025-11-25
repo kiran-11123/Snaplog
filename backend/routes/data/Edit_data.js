@@ -4,6 +4,7 @@ import workspace_model from '../../DB/workspace.js';
 import Authentication_token from '../../middlewares/Authentication_middeware.js';
 import logger from '../../utils/logger.js';
 import mongoose from 'mongoose';
+import redis_client from '../redis/redis-client.js';
 Edit_Router.post("/edit_notes" , Authentication_token , async(req,res)=>{
        
     try{
@@ -52,6 +53,7 @@ const user_id = req.user?.user_id || req.user?.userid;
     note.createdAt = Date.now();
 
     await find_workspace.save();
+    await redis_client.del(`workspace:${workspace}`);
 
       logger.info(`Notes Edited successfully for the userid ${user_id}`);
     return res.status(200).json({
