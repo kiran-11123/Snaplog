@@ -103,7 +103,7 @@ const [workspaceTitle, setWorkspaceTitle] = useState<string[]>([]);
 
                    
                   <div className=" hidden   px-15  py-2 sm:flex items-center justify-between gap-10 text-lg">
-                     <button title="favourites" onClick={FavouritesPush}  className=" px-1 py-1 bg-gray-300 rounded-full "><Heart size={36}/></button>
+                     <button title="favourites" onClick={FavouritesPush}  className=" px-1 py-1 bg-gray-300 rounded-full "><Heart size={32}/></button>
                     <button title="add-content"  onClick={()=>workspacesetOpenModal(true)}   className=" rounded-full bg-gradient-to-r from-[#d1d5db] via-[#6b7280] to-[#374151] text-white cursor-pointer   rounded-full px-2 py-2"><NotebookTabs /></button>
                    
                     <button title="add-content"  onClick={()=>setOpenModal(true)}   className="bg-yellow-500  text-center text-white cursor-pointer  hover:bg-gradient-to-r hover:from-yellow-500 hover:via-yellow-500 to-yellow-800 rounded-full px-2 py-2"><Plus /></button>
