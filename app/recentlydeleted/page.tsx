@@ -1,9 +1,6 @@
-import dynamic from 'next/dynamic';
+'use client'; // MUST be the very first line
 
-const RecentlyDeletedClient = dynamic(
-  () => import('../components/RecentlyDeletedClient'),
-  { ssr: false } // <-- disables server-side rendering
-);
+import RecentlyDeletedClient from '../components/RecentlyDeletedClient';
 
 export default function RecentlyDeletedPage() {
   return <RecentlyDeletedClient />;
