@@ -178,6 +178,7 @@ export default function DeleteCard({  workspace_name, id , title, data, created_
 
              {message && <div className='text-md w-full font-inter text-gray-800'>{message}</div> }
 
+            
 
 
 
