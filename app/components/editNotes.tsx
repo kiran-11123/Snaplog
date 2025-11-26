@@ -3,11 +3,13 @@
 import { useState } from "react";
 import { X } from 'lucide-react';
 import axios from "axios";
+import { useRouter } from "next/navigation";
 export default function EditNote({ isOpen, onClose  , data , id , workspace_name}: { isOpen?: boolean; onClose?: () => void , data: string , id:string , workspace_name:string}){
 
     const[newdata,setNewData] = useState(data) ;
     const[message , setMessage] = useState('');
  const [loading, setLoading] = useState(false);
+ const router = useRouter();
 
         if (!isOpen) return null;
 
