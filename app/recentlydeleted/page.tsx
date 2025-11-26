@@ -1,11 +1,9 @@
 'use client';
-export const dynamic = 'force-dynamic';
 
-import axios from "axios";
-import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
-import DeleteCard from "../components/RecentlyDeleted";
-
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+import DeleteCard from '../components/RecentlyDeleted';
 interface Components {
   _id: string;
   workspace_name: string | null;
@@ -14,22 +12,22 @@ interface Components {
   createdAt: Date;
 }
 
-export default function RecentlyDeleted() {
+export default function RecentlyDeletedClient() {
   const [data, setData] = useState<Components[]>([]);
   const searchParams = useSearchParams();
-  const title: string = searchParams.get('title') ?? "Default";
+  const title: string = searchParams.get('title') ?? 'Default';
 
   useEffect(() => {
     async function getRecentlyDeleted() {
       try {
         const response = await axios.post(
-          "http://localhost:5000/api/v1/delete/recently_deleted",
+          `${process.env.NEXT_PUBLIC_API_URL}/api/v1/delete/recently_deleted`,
           { workspace_name: title },
           { withCredentials: true }
         );
         if (response.status === 200) setData(response.data.data);
       } catch (er) {
-        console.error("Error fetching content", er);
+        console.error('Error fetching content', er);
       }
     }
     getRecentlyDeleted();
