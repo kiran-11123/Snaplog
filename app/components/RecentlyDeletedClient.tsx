@@ -1,9 +1,7 @@
 'use client';
 
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
-import DeleteCard from './RecentlyDeleted';
+import { useEffect, useState } from "react";
+import DeleteCard from "./RecentlyDeleted";
 
 interface Components {
   _id: string;
@@ -13,32 +11,40 @@ interface Components {
   createdAt: Date;
 }
 
-export default function RecentlyDeletedClient() {
+interface Props {
+  title: string;
+}
+
+export default function RecentlyDeletedClient({ title }: Props) {
   const [data, setData] = useState<Components[]>([]);
-  const searchParams = useSearchParams();
-  const title: string = searchParams.get('title') ?? 'Default';
 
   useEffect(() => {
-    async function fetchData() {
+    async function fetchRecentlyDeleted() {
       try {
-        const res = await axios.post(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/v1/delete/recently_deleted`,
-          { workspace_name: title },
-          { withCredentials: true }
-        );
-        if (res.status === 200) setData(res.data.data);
+        const res = await fetch("http://localhost:5000/api/v1/delete/recently_deleted", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ workspace_name: title }),
+          credentials: "include", // if needed
+        });
+
+        if (!res.ok) throw new Error("Failed to fetch");
+
+        const json = await res.json();
+        setData(json.data);
       } catch (err) {
-        console.error(err);
+        console.error("Error fetching data:", err);
       }
     }
-    fetchData();
+
+    fetchRecentlyDeleted();
   }, [title]);
 
   return (
     <div className="bg-gray-100 flex flex-col justify-between w-full">
       <div className="flex justify-between items-center mt-2 w-full text-black bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#44403c] via-[#78716c] to-[#d6d3d1] rounded-md px-6 py-4 font-bold shadow-xl">
         <h1 className="hidden sm:block font-serif px-4 py-2 rounded-lg shadow-2xl bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#27272a] via-[#52525b] to-[#a1a1aa] text-lg text-blue-800">
-          Recently Deleted : {title}
+          Recently Deleted: {title}
         </h1>
         <h1 className="sm:hidden font-serif px-4 py-2 rounded-lg shadow-2xl bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-[#27272a] via-[#52525b] to-[#a1a1aa] text-lg text-blue-800">
           {title}
@@ -48,7 +54,7 @@ export default function RecentlyDeletedClient() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 p-4 justify-center items-center md:grid-cols-3 gap-6 mt-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 p-4 gap-6 mt-5 justify-center items-center">
         {data.length > 0 ? (
           data.map((item) => (
             <div
