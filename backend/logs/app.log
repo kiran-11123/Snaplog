@@ -58,3 +58,18 @@
   level: 'info',
   timestamp: '2025-11-25T14:33:13.415Z'
 }
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-25T14:33:53.999Z'
+}
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-25T14:33:54.775Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-25T14:33:54.780Z'
+}
