@@ -1,4 +1,5 @@
-import workspaceModel from '../../models/workspaceModel.js';
+
+import workspace_model from '../../DB/workspace.js';
 import cron_logger from '../cron_logger/cron_logger.js';
 import cron from 'node-cron'
 
@@ -8,7 +9,7 @@ async function delete_bin(){
 
         cron_logger.info("Entered into the function to Permanent delete the data into bin")
         
-        const find_alldata = await workspaceModel.find({})
+        const find_alldata = await workspace_model.find({})
         
         for(let i=0;i<find_alldata.length;i++){
 
