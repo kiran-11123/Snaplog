@@ -1,0 +1,5 @@
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-26T17:53:59.708Z'
+}
