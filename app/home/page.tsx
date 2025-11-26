@@ -5,7 +5,7 @@
 
 import { Plus } from "lucide-react";
 import AuthGuard from "../components/AuthGuard"
-import { useSearchParams } from "next/navigation";
+
 import { use, useState , useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";

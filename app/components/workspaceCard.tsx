@@ -23,7 +23,7 @@ export default function WorkspaceCard({ workspace_name ,pin }: Components) {
 
     async function  ToWorkSpace(workspace_name:string){
 
-     router.push(`/workspace?title=${encodeURIComponent(workspace_name)}`);
+     router.push(`/workspace/${encodeURIComponent(workspace_name)}`);
         
 
 

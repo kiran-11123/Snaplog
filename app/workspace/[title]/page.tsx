@@ -5,15 +5,15 @@
 
 
 import { Plus } from "lucide-react";
-import AuthGuard from "../components/AuthGuard"
-import { permanentRedirect, useSearchParams } from "next/navigation";
+import AuthGuard from "../../components/AuthGuard"
+import { permanentRedirect } from "next/navigation";
 import { use, useState , useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import Card from "../components/Card";
+import Card from "../../components/Card";
 import { NotebookTabs } from 'lucide-react';
-import Workspace from "../components/workspace";
-import Notes from "../components/NotesForm";
+import Workspace from "../../components/workspace";
+import Notes from "../../components/NotesForm";
 import { Trash2 } from 'lucide-react';
 
 
@@ -29,12 +29,15 @@ interface Components {
 
 
 }
+interface Props {
+  params: Promise<{ title: string }>; // <-- IMPORTANT
+}
 
-export default function workspace_page(){
+export default function workspace_page({ params }: Props){
 
        
-   const searchParams = useSearchParams();
-const title: string = searchParams.get('title') ?? "Default";
+    let { title } = use(params);
+    title = decodeURIComponent(title);
 const[count,setCount] = useState<number>(0);
 
 
@@ -45,7 +48,7 @@ const[count,setCount] = useState<number>(0);
     async function FetchData(){
          
       try{
-
+            console.log("Fetching data for workspace:", title);
         const response  = await axios.post("http://localhost:5000/api/v1/data/workspace_get_data", {
                workspace_name:title
             } ,{
@@ -71,7 +74,8 @@ const[count,setCount] = useState<number>(0);
 
    function recentlyDeleted() {
 
-         router.push(`/recentlydeleted?title=${encodeURIComponent(title)}`);
+router.push(`/recentlydeleted/${encodeURIComponent(title)}`);
+
    
   }
 
