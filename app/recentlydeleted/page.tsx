@@ -1,17 +1,8 @@
-// page.tsx
-import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
+'use client'; // top of page.tsx
+export const dynamic = 'force-dynamic';
 
-// Dynamically import the client component so it's never rendered on the server
-const RecentlyDeletedClient = dynamic(
-  () => import('../components/RecentlyDeletedClient'),
-  { ssr: false } // <-- important, disables server-side rendering
-);
+import RecentlyDeletedClient from '../components/RecentlyDeletedClient';
 
 export default function RecentlyDeletedPage() {
-  return (
-    <Suspense fallback={<p>Loading recently deleted...</p>}>
-      <RecentlyDeletedClient />
-    </Suspense>
-  );
+  return <RecentlyDeletedClient />;
 }
