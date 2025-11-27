@@ -20,23 +20,18 @@ import './utils/delete_bin/delete_bin.js'
 import './utils/replication_cron_dbs/db_replication_cron.js'
 await connectDB()
   
-app.use(cors({
+const corsOptions =   {
   origin:['http://localhost:3000',
   'https://snaplog-hj1nfyo1n-kirans-projects-03ef1a03.vercel.app'
   ],
   credentials:true,
   methods:['GET','POST','PUT','DELETE' ,'OPTIONS'],
   allowedHeaders:['Content-Type','Authorization']
-})); 
+}
 
-app.options('*', cors({
-  origin:['http://localhost:3000',
-  'https://snaplog-hj1nfyo1n-kirans-projects-03ef1a03.vercel.app'
-  ],
-  credentials:true,
-  methods:['GET','POST','PUT','DELETE' ,'OPTIONS'],
-  allowedHeaders:['Content-Type','Authorization']
-}));
+app.use(cors(corsOptions));
+
+
 const limiter = rateLimit({
   windowMs :15*60*1000,
   max:1000,
