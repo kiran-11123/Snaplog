@@ -22,7 +22,7 @@ await connectDB()
   
 const corsOptions =   {
   origin:['http://localhost:3000',
-  'https://snaplog-hj1nfyo1n-kirans-projects-03ef1a03.vercel.app'
+  'https://snaplog-git-frontend-kirans-projects-03ef1a03.vercel.app'
   ],
   credentials:true,
   methods:['GET','POST','PUT','DELETE' ,'OPTIONS'],
