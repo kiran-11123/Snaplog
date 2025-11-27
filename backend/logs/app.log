@@ -3,3 +3,13 @@
   level: 'info',
   timestamp: '2025-11-26T17:53:59.708Z'
 }
+{
+  message: 'MongoDB connected..',
+  level: 'info',
+  timestamp: '2025-11-26T17:54:01.640Z'
+}
+{
+  message: '🚀 Server is running on port 5000',
+  level: 'info',
+  timestamp: '2025-11-26T17:54:01.670Z'
+}
