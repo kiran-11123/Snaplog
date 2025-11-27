@@ -32,7 +32,7 @@ export default function EditNote({ isOpen, onClose  , data , id , workspace_name
             console.log(id , workspace_name , newdata);
 
              const response = await axios.post(
-                "http://localhost:5000/api/v1/edit/edit_notes",
+                "https://snaplog-6.onrender.com/api/v1/edit/edit_notes",
                 {
                     contentId: id,
                     workspace_name: workspace_name,

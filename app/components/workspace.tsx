@@ -26,7 +26,7 @@ function Workspace({ isOpen, onClose }: { isOpen?: boolean; onClose?: () => void
         try{
 
 
-            const response = await axios.post("http://localhost:5000/api/v1/workspace/create" , {
+            const response = await axios.post("https://snaplog-6.onrender.com/api/v1/workspace/create" , {
                 
                workspace_title :  title
             }, {withCredentials : true})

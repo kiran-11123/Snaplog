@@ -26,7 +26,7 @@ function DataShare({ isOpen, onClose  , data}: { isOpen?: boolean; onClose?: () 
         try{
 
 
-            const response = await axios.post("http://localhost:5000/api/v1/data/share" , {
+            const response = await axios.post("https://snaplog-6.onrender.com/api/v1/data/share" , {
                 data,
                 email
             }, {withCredentials : true})

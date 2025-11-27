@@ -26,7 +26,7 @@ export default function signup(){
                 return;
             }
 
-            const response = await axios.post("http://localhost:5000/api/v1/users/signup" ,{
+            const response = await axios.post("https://snaplog-6.onrender.com/api/v1/users/signup" ,{
                 email,
                 username,
                 Password,

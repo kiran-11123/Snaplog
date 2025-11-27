@@ -40,7 +40,7 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
 
            
 
-            const response = await axios.post("http://localhost:5000/api/v1/ai/content" , {
+            const response = await axios.post("https://snaplog-6.onrender.com/api/v1/ai/content" , {
                 question:note,
               
             }, {withCredentials : true})
@@ -91,7 +91,7 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
             
             
 
-            const response = await axios.post("http://localhost:5000/api/v1/data/upload_data",{
+            const response = await axios.post("https://snaplog-6.onrender.com/api/v1/data/upload_data",{
                 title:title,
                 workspace:selected,
                 data : note

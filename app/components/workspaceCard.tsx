@@ -34,7 +34,7 @@ export default function WorkspaceCard({ workspace_name ,pin }: Components) {
           
         try{
 
-            const response = await axios.post("http://localhost:5000/api/v1/edit/setPin" , {
+            const response = await axios.post("https://snaplog-6.onrender.com/api/v1/edit/setPin" , {
                 workspace : workspace_name
             },{
                 withCredentials:true
@@ -68,7 +68,7 @@ export default function WorkspaceCard({ workspace_name ,pin }: Components) {
 
         try{
 
-            const response = await axios.post("http://localhost:5000/api/v1/delete/delete_workspace" , {
+            const response = await axios.post("https://snaplog-6.onrender.com/api/v1/delete/delete_workspace" , {
                 workspace_name : workspace
             },{
                 withCredentials:true

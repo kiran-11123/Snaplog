@@ -21,7 +21,7 @@ export default function forgetpassword() {
         try {
 
 
-            const response = await axios.post("http://localhost:5000/api/v1/users/verify-code", {
+            const response = await axios.post("https://snaplog-6.onrender.com/api/v1/users/verify-code", {
 
                 email: email,
                 code: code,
@@ -94,7 +94,7 @@ export default function forgetpassword() {
 
 
 
-            const response = await axios.post("http://localhost:5000/api/v1/users/resetpassword", {
+            const response = await axios.post("https://snaplog-6.onrender.com/api/v1/users/resetpassword", {
                 email: email,
             }, {
                 withCredentials: true
@@ -175,7 +175,7 @@ export default function forgetpassword() {
             }
 
 
-            const response = await axios.put("http://localhost:5000/api/v1/users/resetPassword"  ,{
+            const response = await axios.put("https://snaplog-6.onrender.com/api/v1/users/resetPassword"  ,{
                 email:email,
                 Password : Password ,
             },{

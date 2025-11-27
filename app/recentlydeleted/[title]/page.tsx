@@ -25,7 +25,7 @@ export default function RecentlyDeletedClient({ params }: Props) {
     async function fetchData() {
       try {
         const res = await axios.post(
-          `http://localhost:5000/api/v1/delete/recently_deleted`,
+          `https://snaplog-6.onrender.com/api/v1/delete/recently_deleted`,
           { workspace_name: title },
           { withCredentials: true }
         );

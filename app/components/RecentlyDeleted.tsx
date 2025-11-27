@@ -32,7 +32,7 @@ export default function DeleteCard({  workspace_name, id , title, data, created_
         try {
 
 
-            const response = await axios.delete("http://localhost:5000/api/v1/data/restore", {
+            const response = await axios.delete("https://snaplog-6.onrender.com/api/v1/data/restore", {
                 data: {
                     contentId: id,
                     workspace_name: workspace_name
@@ -74,7 +74,7 @@ export default function DeleteCard({  workspace_name, id , title, data, created_
         try {
 
 
-            const response = await axios.delete("http://localhost:5000/api/v1/delete/permanent_delete", {
+            const response = await axios.delete("https://snaplog-6.onrender.com/api/v1/delete/permanent_delete", {
                 data: {
                     contentId: id,
                     workspace_name: workspace_name

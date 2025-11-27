@@ -40,7 +40,7 @@ export default function Card({ workspace_name, id, title, data, created_at, favo
         try {
 
             const response = await axios.post(
-                "http://localhost:5000/api/v1/data/favourites",
+                "https://snaplog-6.onrender.com/api/v1/data/favourites",
                 {
                     contentId: id,
                     workspace_name: workspace_name,
@@ -80,7 +80,7 @@ export default function Card({ workspace_name, id, title, data, created_at, favo
         try {
 
 
-            const response = await axios.delete("http://localhost:5000/api/v1/delete/delete", {
+            const response = await axios.delete("https://snaplog-6.onrender.com/api/v1/delete/delete", {
                 data: {
                     contentId: id,
                     workspace_name: workspace_name

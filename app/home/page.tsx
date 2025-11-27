@@ -40,7 +40,7 @@ const [workspaceTitle, setWorkspaceTitle] = useState<string[]>([]);
          
       try{
 
-        const response = await axios.get("http://localhost:5000/api/v1/workspace/get_data" , {
+        const response = await axios.get("https://snaplog-6.onrender.com/api/v1/workspace/get_data" , {
           withCredentials:true
         }) 
 
@@ -240,7 +240,7 @@ export default function Home(){
          
       try{
 
-        const response = await axios.get("http://localhost:5000/api/v1/data/get_data" , {
+        const response = await axios.get("https://snaplog-6.onrender.com/api/v1/data/get_data" , {
           withCredentials:true
         }) 
 

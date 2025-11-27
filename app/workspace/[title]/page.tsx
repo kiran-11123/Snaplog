@@ -49,7 +49,7 @@ const[count,setCount] = useState<number>(0);
          
       try{
             console.log("Fetching data for workspace:", title);
-        const response  = await axios.post("http://localhost:5000/api/v1/data/workspace_get_data", {
+        const response  = await axios.post("https://snaplog-6.onrender.com/api/v1/data/workspace_get_data", {
                workspace_name:title
             } ,{
                 withCredentials:true
