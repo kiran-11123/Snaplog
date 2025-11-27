@@ -28,6 +28,15 @@ app.use(cors({
   methods:['GET','POST','PUT','DELETE' ,'OPTIONS'],
   allowedHeaders:['Content-Type','Authorization']
 })); 
+
+app.options('*', cors({
+  origin:['http://localhost:3000',
+  'https://snaplog-hj1nfyo1n-kirans-projects-03ef1a03.vercel.app'
+  ],
+  credentials:true,
+  methods:['GET','POST','PUT','DELETE' ,'OPTIONS'],
+  allowedHeaders:['Content-Type','Authorization']
+}));
 const limiter = rateLimit({
   windowMs :15*60*1000,
   max:1000,
