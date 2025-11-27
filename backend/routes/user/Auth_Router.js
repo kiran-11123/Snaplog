@@ -117,7 +117,7 @@ Auth_Router.post("/signin" , async(req,res)=>{
 
         res.cookie("token", token, {
             httpOnly: true,
-            secure: false,
+            secure: true,
             sameSite: "lax",
             maxAge: 3600000
         });

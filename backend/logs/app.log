@@ -13,3 +13,1339 @@
   level: 'info',
   timestamp: '2025-11-26T17:54:01.670Z'
 }
+{
+  message: 'Connecting to Redis...',
+  level: 'info',
+  timestamp: '2025-11-27T16:23:33.313Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:23:35.997Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:23:37.126Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:23:38.370Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:23:39.677Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:23:41.123Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:23:42.986Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:23:45.812Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:23:48.959Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:23:52.126Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:23:55.280Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:23:58.423Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:01.589Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:04.784Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:07.865Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:11.071Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:14.185Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:17.321Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:20.387Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:23.419Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:26.563Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:29.780Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:32.952Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:36.083Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:39.121Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:42.224Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:45.258Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:48.348Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:51.398Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:54.531Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:24:57.557Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:00.634Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:03.812Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:06.949Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:10.121Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:13.166Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:16.196Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:19.328Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:22.469Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:25.562Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:28.643Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:31.728Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:34.832Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:37.853Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:41.031Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:44.110Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:47.334Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:50.415Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:53.589Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:56.765Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:25:59.855Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:03.068Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:06.149Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:09.294Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:12.509Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:15.625Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:18.689Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:21.769Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:24.912Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:28.088Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:31.254Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:34.399Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:37.422Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:40.634Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:43.765Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:46.856Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:49.931Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:53.015Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:56.140Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:26:59.207Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:02.308Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:05.362Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:08.537Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:11.736Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:14.890Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:18.044Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:21.225Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:24.271Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:27.317Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:30.460Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:33.609Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:36.786Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:39.955Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:43.044Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:46.220Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:49.435Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:52.599Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:55.775Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:27:58.927Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:02.082Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:05.161Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:08.365Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:11.420Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:14.526Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:17.722Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:20.931Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:24.019Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:27.105Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:30.209Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:33.375Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:36.427Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:39.583Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:42.734Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:45.896Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:49.012Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:52.066Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:55.246Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:28:58.282Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:01.303Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:04.405Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:07.487Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:10.513Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:13.608Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:16.791Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:19.822Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:22.904Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:26.008Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:29.201Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:32.320Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:35.514Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:38.707Z'
+}
+{
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'red-d4k644juibrs73f9fvqg',
+  level: 'error',
+  message: 'Redis Client Error getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg',
+  stack: 'Error: getaddrinfo ENOTFOUND red-d4k644juibrs73f9fvqg\n' +
+    '    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)',
+  timestamp: '2025-11-27T16:29:41.883Z'
+}
