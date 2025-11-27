@@ -33,7 +33,9 @@ app.use((req, res, next) => {
   next();
 });
 app.use(cors({
-  origin:'http://localhost:3000',
+  origin:['http://localhost:3000',
+  'https://snaplog-hj1nfyo1n-kirans-projects-03ef1a03.vercel.app'
+  ],
   credentials:true
 }));
 app.use(cookieParser());
