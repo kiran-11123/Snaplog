@@ -21,6 +21,7 @@ import './utils/replication_cron_dbs/db_replication_cron.js'
 await connectDB()
   
 
+app.options('*', cors());
 const limiter = rateLimit({
   windowMs :15*60*1000,
   max:1000,
