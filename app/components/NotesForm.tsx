@@ -152,7 +152,7 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
     
 
     return (
-         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
+         <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50 overflow-auto">
             
              <div className="bg-white max-w-lg w-[90%] rounded-lg shadow-md p-6 space-y-4">
                  
@@ -186,7 +186,7 @@ function Notes({isOpen , onClose ,workItem} :NotesProps) {
             </option>
           ))
         ) : (
-          <option value="Default" className="text-sm">Default</option>
+          <option value="Default" className="text-sm" disabled>Choose Any option</option>
         )}
       </select>
     </div>
